@@ -21,6 +21,7 @@ import {
   Tractor,
   Disc3,
   Wind,
+  Zap,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -48,7 +49,7 @@ const serviceIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } =
     '/mobile-tire-services': Tractor,
     '/mobile-brake-repairs': Disc3,
     '/fuel-system-services': Fuel,
-    '/mobile-electrical-repairs': Battery,
+    '/mobile-electrical-repairs': Zap,
     '/engine-diagnostics-repair': Cog,
     '/cooling-system-repairs': Snowflake,
     '/aftertreatment-services': Wind,
