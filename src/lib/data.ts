@@ -87,6 +87,20 @@ export const services = [
     ]
   },
   {
+    title: 'CARB Clean Truck Check Testing',
+    url: '/carb-clean-truck-check-testing',
+    keywords: 'CARB testing, clean truck check, diesel emissions test, California compliance',
+    description: 'We provide official CARB Clean Truck Check testing to ensure your heavy-duty vehicles are compliant with California\'s emissions regulations, helping you avoid penalties and keep your fleet on the road.',
+    imageHint: 'emission test',
+    serviceArea: 'California Central Coast',
+    subServices: [
+        'Official On-Board Diagnostics (OBD) Data Submission',
+        'Periodic Smoke Opacity Testing',
+        'Compliance Certificates',
+        'Pre-inspection Readiness Checks',
+    ]
+  },
+  {
     title: 'Engine Diagnostics & Repair',
     url: '/engine-diagnostics-repair',
     keywords: 'engine diagnostics, diesel engine repair, check engine light',
