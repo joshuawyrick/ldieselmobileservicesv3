@@ -52,7 +52,7 @@ const serviceIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } =
     '/engine-diagnostics-repair': Cog,
     '/cooling-system-repairs': Snowflake,
     '/aftertreatment-services': Wind,
-    '/carb-clean-truck-check-testing': Car,
+    '/carb-clean-truck-check-testing': Truck,
 }
 
 
