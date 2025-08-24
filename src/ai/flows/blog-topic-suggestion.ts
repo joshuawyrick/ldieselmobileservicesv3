@@ -18,7 +18,8 @@ const BlogTopicSuggestionInputSchema = z.object({
   industryFocus: z
     .string()
     .describe(
-      'The industry focus to tailor blog topics (e.g., agriculture, tourism).'n    ),
+      'The industry focus to tailor blog topics (e.g., agriculture, tourism).'
+    ),
   keywords: z
     .string()
     .describe(
