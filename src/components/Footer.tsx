@@ -1,9 +1,10 @@
+
 'use client';
 
 import Link from 'next/link';
-import { Truck, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Truck, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
 import { footerLinks } from '@/lib/data';
-import { COMPANY_NAME, PHONE_NUMBER, PHONE_NUMBER_RAW } from '@/lib/constants';
+import { COMPANY_NAME, PHONE_NUMBER, PHONE_NUMBER_RAW, EMAIL_ADDRESS } from '@/lib/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,10 +18,15 @@ export default function Footer() {
               <Truck className="h-8 w-8 text-accent" />
               <span className="font-bold text-lg font-headline">{COMPANY_NAME}</span>
             </Link>
-            <div className="mt-4">
-                <p className="text-sm uppercase text-background/80">24/7 Emergency Service</p>
-                <a href={`tel:${PHONE_NUMBER_RAW}`} className="font-headline text-2xl text-accent hover:text-white transition-colors">{PHONE_NUMBER}</a>
-                <p className="text-sm text-background/80">Available Day & Night</p>
+            <div className="mt-4 space-y-4">
+                <div>
+                    <p className="text-sm uppercase text-background/80">24/7 Emergency Service</p>
+                    <a href={`tel:${PHONE_NUMBER_RAW}`} className="font-headline text-2xl text-accent hover:text-white transition-colors">{PHONE_NUMBER}</a>
+                </div>
+                 <div>
+                    <p className="text-sm uppercase text-background/80">Email Us</p>
+                    <a href={`mailto:${EMAIL_ADDRESS}`} className="font-headline text-lg text-accent hover:text-white transition-colors break-all">{EMAIL_ADDRESS}</a>
+                </div>
             </div>
           </div>
 
