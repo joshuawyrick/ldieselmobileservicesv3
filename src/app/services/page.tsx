@@ -4,7 +4,7 @@ import { Check, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
+import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: '24/7 Diesel Repair Services San Luis Obispo & Santa Maria CA',
@@ -129,7 +129,7 @@ export default function ServicesPage() {
             </div>
              <div className="bg-accent border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Mechanic Now?</h2>
-                <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across {service.serviceArea}.</p>
+                <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across {SERVICE_AREA}.</p>
                 <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground hover:-translate-y-0.5 transition-transform">
                     <Phone className='inline-block mr-3' />
                     {PHONE_NUMBER}
