@@ -15,12 +15,12 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   const title = `Mobile Brake Repair for Heavy-Duty Trucks | ${COMPANY_NAME}`;
-  const description = `24/7 mobile brake repair for semi-trucks, trailers, and heavy-duty vehicles in ${SERVICE_AREA}. DOT certified air brake service. Call ${PHONE_NUMBER} for immediate assistance.`;
+  const description = `24/7 mobile brake repair for semi-trucks, trailers, and heavy-duty vehicles in ${SERVICE_AREA}. DOT certified air brake service on Highway 101. Call ${PHONE_NUMBER} for immediate assistance.`;
 
   return {
     title,
     description,
-    keywords: "mobile brake repair, truck brake service, air brake repair, DOT brake inspection, semi-truck brakes, San Luis Obispo, Santa Maria, Paso Robles",
+    keywords: "mobile brake repair, truck brake service, air brake repair, DOT brake inspection, semi-truck brakes, San Luis Obispo, Santa Maria, Paso Robles, Highway 101",
     alternates: {
       canonical: `/services${service.url}`,
     },
@@ -51,7 +51,7 @@ export default function ServiceDetailPage() {
          <div className="absolute inset-0 w-full h-full">
             <Image
               src="https://placehold.co/1440x400.png"
-              alt="Mobile brake repair service for heavy-duty trucks"
+              alt="Mobile brake repair service for heavy-duty trucks on the Central Coast"
               className="w-full h-full object-cover"
               fill
               priority
@@ -64,7 +64,7 @@ export default function ServiceDetailPage() {
             {service.title}
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
-            DOT-certified mobile air brake diagnostics, repairs, and inspections for heavy-duty trucks.
+            DOT-certified mobile air brake diagnostics, repairs, and inspections for heavy-duty trucks along Highway 101 and the Central Coast.
           </p>
         </div>
       </section>
@@ -77,13 +77,13 @@ export default function ServiceDetailPage() {
         </Link>
         <div className="prose max-w-none prose-h2:text-primary prose-h2:uppercase prose-h2:font-headline prose-h3:text-primary prose-h3:uppercase prose-h3:font-headline prose-headings:font-headline prose-headings:uppercase prose-strong:text-foreground">
             <p className="text-xl text-muted-foreground">
-              When your truck's brakes fail, everything stops—including your business. Our mobile mechanics specialize in heavy-duty air brake systems, providing on-site diagnostics and repairs to get you back on the road safely and in compliance with all DOT regulations.
+              When your truck's brakes fail, everything stops—including your business. Our mobile mechanics specialize in heavy-duty air brake systems, providing on-site diagnostics and repairs in Paso Robles, San Luis Obispo, and Santa Maria to get you back on the road safely and in compliance with all DOT regulations.
             </p>
         </div>
         
         {/* What's Included Section */}
         <div className="my-16">
-            <h2 className="text-3xl font-bold font-headline text-primary text-center mb-8">Included Brake Repair Services</h2>
+            <h2 className="text-3xl font-bold font-headline text-primary text-center mb-8">Included Mobile Brake Repair Services</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                  <div className="p-4 bg-secondary/50 rounded-lg border">
                     <h4 className="font-semibold">Air Brake System Repairs</h4>
@@ -139,27 +139,27 @@ export default function ServiceDetailPage() {
             <div className="grid md:grid-cols-2 gap-8 p-6 bg-secondary/50 border-2 border-foreground rounded-2xl shadow-card">
                  <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
                     <h4 className="font-bold">Air System Leaks</h4>
-                    <p className="text-muted-foreground">Locating and repairing leaks in air lines, fittings, and valves to restore pressure.</p>
+                    <p className="text-muted-foreground">Locating and repairing leaks in air lines, fittings, and valves to restore pressure for trucks in Atascadero and surrounding areas.</p>
                 </div>
                  <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
                     <h4 className="font-bold">Worn Brake Pads & Shoes</h4>
-                    <p className="text-muted-foreground">On-site replacement for worn pads and shoes causing grinding or reduced stopping power.</p>
+                    <p className="text-muted-foreground">On-site replacement for worn pads and shoes causing grinding or reduced stopping power, available 24/7.</p>
                 </div>
                  <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
                     <h4 className="font-bold">Slack Adjuster Problems</h4>
-                    <p className="text-muted-foreground">Adjusting or replacing faulty slack adjusters to prevent uneven braking.</p>
+                    <p className="text-muted-foreground">Adjusting or replacing faulty slack adjusters to prevent uneven braking, a common issue for heavy-haul trucks.</p>
                 </div>
                 <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
                     <h4 className="font-bold">ABS Malfunctions</h4>
-                    <p className="text-muted-foreground">Diagnosing and repairing ABS warning lights, sensors, and control modules.</p>
+                    <p className="text-muted-foreground">Diagnosing and repairing ABS warning lights, sensors, and control modules for commercial fleets.</p>
                 </div>
                 <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
                     <h4 className="font-bold">Brake Chamber Failures</h4>
-                    <p className="text-muted-foreground">Replacing damaged diaphragms or springs causing brake drag or failure.</p>
+                    <p className="text-muted-foreground">Replacing damaged diaphragms or springs causing brake drag or failure, a critical roadside repair.</p>
                 </div>
                  <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
                     <h4 className="font-bold">Glazed or Cracked Drums</h4>
-                    <p className="text-muted-foreground">Inspecting brake drums for heat damage and providing replacement when necessary.</p>
+                    <p className="text-muted-foreground">Inspecting brake drums for heat damage on steep grades like the Cuesta Grade and providing replacement when necessary.</p>
                 </div>
             </div>
         </div>
@@ -170,27 +170,27 @@ export default function ServiceDetailPage() {
             <h2 className="text-3xl font-bold font-headline text-primary text-center mb-8">Frequently Asked Questions</h2>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger>What are signs my truck's air brakes need service?</AccordionTrigger>
+                <AccordionTrigger>What are signs my truck's air brakes need service on the Central Coast?</AccordionTrigger>
                 <AccordionContent>
-                  Warning signs include squealing or grinding noises, the truck pulling to one side when braking, a soft or spongy brake pedal, slow-to-build air pressure, or the ABS warning light staying on.
+                  Warning signs include squealing or grinding noises, the truck pulling to one side when braking, a soft or spongy brake pedal, slow-to-build air pressure, or the ABS warning light staying on. These issues are especially critical on roads like Highway 101.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>How quickly can you respond to a brake-related emergency?</AccordionTrigger>
+                <AccordionTrigger>How quickly can you respond to a brake-related emergency in San Luis Obispo or Santa Maria?</AccordionTrigger>
                 <AccordionContent>
-                  Brake issues are a top priority. We treat these as emergencies and dispatch a technician for the fastest possible response to ensure your safety and minimize downtime.
+                  Brake issues are a top priority. We treat these as emergencies and dispatch a technician for the fastest possible response to ensure your safety and minimize downtime anywhere in our service area.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Do you perform mobile DOT brake inspections?</AccordionTrigger>
+                <AccordionTrigger>Do you perform mobile DOT brake inspections near me?</AccordionTrigger>
                 <AccordionContent>
-                 Yes, we are certified to perform comprehensive mobile DOT brake inspections. We can make any necessary on-site repairs to ensure your heavy-duty truck meets all federal safety requirements.
+                 Yes, we are certified to perform comprehensive mobile DOT brake inspections across the Central Coast. We can make any necessary on-site repairs to ensure your heavy-duty truck meets all federal safety requirements.
                 </AccordionContent>
               </AccordionItem>
                <AccordionItem value="item-4">
                 <AccordionTrigger>What parts do you use for brake repairs?</AccordionTrigger>
                 <AccordionContent>
-                 We use high-quality, OEM-spec parts for all our brake repairs to ensure maximum safety, reliability, and longevity. This includes brake pads, chambers, slack adjusters, and other critical components.
+                 We use high-quality, OEM-spec parts for all our brake repairs to ensure maximum safety, reliability, and longevity. This includes brake pads, chambers, slack adjusters, and other critical components suited for heavy-duty commercial use.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
