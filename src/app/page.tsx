@@ -11,6 +11,14 @@ import {
   Phone,
   MapPin,
   CircleCheck,
+  Fuel,
+  Siren,
+  Car,
+  Cog,
+  Shield,
+  Snowflake,
+  Battery,
+  Tractor,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,7 +32,27 @@ const icons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
   Award,
   Truck,
   CircleCheck,
+  Siren,
+  Car,
+  Shield,
+  Cog,
+  Snowflake,
+  Fuel,
+  Battery,
+  Tractor,
 };
+
+const serviceIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
+    '/mobile-tire-services': Tractor,
+    '/mobile-brake-repairs': Shield,
+    '/fuel-system-services': Fuel,
+    '/mobile-electrical-repairs': Battery,
+    '/engine-diagnostics-repair': Cog,
+    '/cooling-system-repairs': Snowflake,
+    '/aftertreatment-services': ShieldCheck,
+    '/carb-clean-truck-check-testing': Car,
+}
+
 
 export default function Home() {
   return (
@@ -95,13 +123,18 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
-                    {services.slice(0, 8).map((service) => (
-                        <Link href={`/services${service.url}`} key={service.title} className="text-center p-4 rounded-lg transition-transform hover:-translate-y-1">
-                            <Wrench className="h-16 w-16 text-primary mx-auto mb-4" />
-                            <h3 className="text-2xl md:text-3xl">{service.title.split(' ')[0]}</h3>
+                    {services.slice(1, 9).map((service) => {
+                        const Icon = serviceIcons[service.url] || Wrench;
+                        return (
+                        <Link href={`/services${service.url}`} key={service.title} className="group block border-2 border-foreground rounded-2xl p-6 text-center transition-all duration-300 hover:shadow-card hover:-translate-y-1">
+                            <div className="flex justify-center mb-4">
+                                <Icon className="h-12 w-12 text-primary transition-transform duration-300 group-hover:scale-110" />
+                            </div>
+                            <h3 className="font-headline text-xl md:text-2xl text-foreground uppercase">{service.title.replace('Mobile', '').replace('Services', '').replace('Repairs', '').trim()}</h3>
                             <p className="text-sm text-muted-foreground mt-2">{service.description.split('.')[0]}.</p>
                         </Link>
-                    ))}
+                        )
+                    })}
                 </div>
                 <div className="text-center">
                     <Link href="/services" className="btn btn-primary">Explore Services</Link>
