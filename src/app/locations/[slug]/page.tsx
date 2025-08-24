@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
-import { ArrowLeft, Check, Phone, Wrench } from 'lucide-react';
+import { ArrowLeft, Check, Phone } from 'lucide-react';
 import Image from 'next/image';
 
 export async function generateStaticParams() {
@@ -84,7 +84,7 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
                     />
 
                     {isSantaMaria ? (
-                      <div className='prose max-w-none text-foreground'>
+                      <div className='prose max-w-none text-foreground prose-h2:text-primary prose-h2:text-3xl prose-h3:text-primary prose-h3:text-2xl'>
                         <h2>Santa Maria Service Areas</h2>
                         <h3>Greater Santa Maria Metropolitan Area</h3>
                         <ul>
@@ -150,17 +150,17 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
 
                       </div>
                     ) : (
-                      <>
-                        <h2 className='text-3xl font-bold font-headline text-primary mt-12 mb-4'>Your On-Site Repair Experts in {cityName}</h2>
-                        <p className='text-muted-foreground'>
+                      <div className='prose max-w-none text-foreground prose-h2:text-primary prose-h2:text-3xl prose-h3:text-primary prose-h3:text-2xl'>
+                        <h2>Your On-Site Repair Experts in {cityName}</h2>
+                        <p>
                             When your truck or heavy equipment breaks down in {cityName}, you need a fast and reliable solution. L Diesel Mobile Services brings the repair shop to you, whether you're on a busy highway like the US-101, at a construction site, or on a farm in the heart of the Central Coast. Our mobile service trucks are fully equipped to handle a wide range of repairs on-site, minimizing your downtime and getting you back to work as quickly as possible.
                         </p>
 
-                        <h2 className='text-3xl font-bold font-headline text-primary mt-12 mb-4'>Serving the Needs of {cityName} Industries</h2>
-                        <p className='text-muted-foreground'>
+                        <h2>Serving the Needs of {cityName} Industries</h2>
+                        <p>
                             We understand the unique demands of the local economy in {cityName}. From the agricultural fields that rely on heavy machinery to the commercial trucks that are the lifeblood of our local businesses, we have the expertise to service all types of diesel vehicles. We are committed to providing professional, high-quality repairs that you can depend on.
                         </p>
-                      </>
+                      </div>
                     )}
                 </main>
             </div>
