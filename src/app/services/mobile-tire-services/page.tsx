@@ -1,3 +1,4 @@
+
 import { services } from '@/lib/data';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
@@ -6,6 +7,7 @@ import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 import { ArrowLeft, Phone, CheckCircle, ShieldCheck, Clock, Users, Wrench, AlertTriangle, Tractor } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { notFound } from 'next/navigation';
 
 const service = services.find((s) => s.url === '/mobile-tire-services');
 
@@ -29,12 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function ServiceDetailPage() {
   if (!service) {
-    return (
-        <div className="container mx-auto px-4 py-12">
-            <h1 className="text-4xl font-bold">Service not found</h1>
-            <Link href="/services">Back to services</Link>
-        </div>
-    );
+    notFound();
   }
   
   const relatedServices = [
@@ -172,7 +169,7 @@ export default function ServiceDetailPage() {
                 <AccordionTrigger>Can you repair a punctured semi-truck tire on the roadside?</AccordionTrigger>
                 <AccordionContent>
                  Absolutely. For many common punctures, we can perform a safe and durable repair on-site to get you back on the road without needing a full replacement, saving you time and money.
-                </"AccordionContent>
+                </AccordionContent>
               </AccordionItem>
                <AccordionItem value="item-4">
                 <AccordionTrigger>Do you service agricultural tires for tractors and farm equipment?</AccordionTrigger>
