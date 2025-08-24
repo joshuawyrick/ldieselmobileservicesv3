@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-background/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-background/10">
           <div className="lg:col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Truck className="h-8 w-8 text-accent" />

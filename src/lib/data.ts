@@ -244,10 +244,11 @@ export const footerLinks = {
   services: {
     title: 'Services',
     links: [
-      { label: 'Emergency Roadside', href: '/services/emergency-roadside-assistance'},
-      { label: 'Mobile Tire Service', href: '/services/mobile-tire-services'},
-      { label: 'Brake Repairs', href: '/services/mobile-brake-repairs'},
-      { label: 'Engine Diagnostics', href: '/services/engine-diagnostics-repair'},
+      ...services.map(service => ({
+        label: service.title.replace('Mobile', '').replace('Services', '').replace('Repairs', '').replace('Assistance', '').trim(),
+        href: `/services${service.url}`
+      })),
+      { label: 'All Services →', href: '/services' },
     ],
   },
   locations: {
@@ -257,6 +258,7 @@ export const footerLinks = {
       { label: 'Santa Maria', href: '/locations/santa-maria-ca'},
       { label: 'Paso Robles', href: '/locations/paso-robles-ca'},
       { label: 'Pismo Beach', href: '/locations/pismo-beach-ca'},
+      { label: 'More Service Locations →', href: '/locations' },
     ],
   },
   company: {
