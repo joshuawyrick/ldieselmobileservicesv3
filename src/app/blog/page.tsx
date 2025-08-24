@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import BlogTopicGenerator from '@/components/BlogTopicGenerator';
 import { BrainCircuit, Newspaper } from 'lucide-react';
@@ -5,6 +6,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/lib/data';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 
 export const metadata: Metadata = {
@@ -62,20 +69,31 @@ export default function BlogPage() {
 
 
       <div className="max-w-3xl mx-auto bg-card p-6 sm:p-8 rounded-xl shadow-lg border mt-16">
-         <div className="flex items-center space-x-4 mb-6">
-            <div className="flex-shrink-0">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
-                    <BrainCircuit className="h-6 w-6" />
-                </div>
-            </div>
-            <div>
-                <h2 className="text-2xl font-bold font-headline text-primary">AI Blog Topic Suggester</h2>
-                <p className="text-muted-foreground">
-                  Stuck on content ideas? Enter some details to get relevant blog topic suggestions.
-                </p>
-            </div>
-        </div>
-        <BlogTopicGenerator />
+        <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+                <AccordionTrigger>
+                    <div className="flex items-center space-x-4">
+                        <div className="flex-shrink-0">
+                            <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
+                                <BrainCircuit className="h-6 w-6" />
+                            </div>
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold font-headline text-primary text-left">AI Blog Topic Suggester</h2>
+                             <p className="text-muted-foreground text-left">
+                                Click to expand and generate content ideas.
+                            </p>
+                        </div>
+                    </div>
+                </AccordionTrigger>
+                <AccordionContent className="pt-6">
+                    <p className="text-muted-foreground mb-4">
+                        Stuck on content ideas? Enter some details to get relevant blog topic suggestions.
+                    </p>
+                    <BlogTopicGenerator />
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
       </div>
 
     </div>
