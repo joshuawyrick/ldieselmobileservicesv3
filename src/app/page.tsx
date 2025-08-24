@@ -10,18 +10,20 @@ import {
   Truck,
   Phone,
   MapPin,
+  CircleCheck,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 
-const icons = {
+const icons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
   ShieldCheck,
   Wrench,
   Clock,
   Users,
   Award,
   Truck,
+  CircleCheck,
 };
 
 export default function Home() {
@@ -29,153 +31,133 @@ export default function Home() {
     <div className="flex flex-col">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 bg-primary/10">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-primary tracking-tight">
-              {COMPANY_NAME}
+        <section className="relative h-[912px] overflow-hidden -mt-[102px]">
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src="https://placehold.co/1440x912.png"
+              alt="Diesel mechanic working on truck"
+              className="w-full h-full object-cover"
+              fill
+              priority
+              data-ai-hint="diesel truck road"
+            />
+            <div className="absolute inset-0 bg-black/50"></div>
+          </div>
+          <div className="relative z-10 flex flex-col items-center justify-center gap-8 min-h-screen text-center text-white px-4">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight">
+              Mobile Diesel Mechanic
+              <br />
+              {SERVICE_AREA}
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-foreground max-w-3xl mx-auto">
-              24/7 Mobile Diesel Mechanic for {SERVICE_AREA}
-            </p>
-            <p className="mt-2 text-md md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Emergency Roadside Assistance, On-Site Truck Repair & Fleet Maintenance
+            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">
+              Emergency Roadside Assistance & On-Site Diesel Repairs
+              <br />
+              Serving All Makes and Models | Call Now for Fast, Reliable Service.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <a href={`tel:${PHONE_NUMBER}`}>
-                  <Phone className="mr-2 h-5 w-5" /> Emergency Service
+                <a href={`tel:${PHONE_NUMBER}`} className="btn btn-primary">
+                  <Phone className="mr-2 h-5 w-5" /> Call Now For Service
                 </a>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/services">Our Services</Link>
-              </Button>
+                <Link href="/contact" className="btn btn-secondary">
+                  Get a Quote
+                </Link>
             </div>
           </div>
         </section>
 
-        {/* Value Propositions Section */}
-        <section id="why-us" className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold font-headline text-primary">
-                Your Reliable Partner on the Road
-              </h2>
-              <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
-                We provide fast, professional, and reliable mobile diesel services to keep you moving.
-              </p>
+        {/* Services Intro Section */}
+        <section id="services-intro" className="py-24 bg-white">
+            <div className="container mx-auto px-4">
+                <div className="text-center mb-24">
+                     <h2 className="text-4xl md:text-5xl font-headline text-foreground">24/7 Emergency Roadside Assistance</h2>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-24">
+                    <Link href="/services/emergency-roadside-assistance" className="block border-2 border-foreground rounded-2xl p-8 text-center shadow-card hover:shadow-[15px_15px_0px_hsl(var(--foreground))] hover:-translate-y-1 transition-all">
+                        <h3 className="text-3xl md:text-4xl">Emergency Roadside Assistance</h3>
+                        <p className="mt-4 text-muted-foreground">Fast response for breakdowns, no matter where you are.</p>
+                         <div className="flex justify-between items-center mt-5 pt-5 border-t border-border/20">
+                            <span className="font-headline text-accent uppercase text-lg">Learn More</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </Link>
+                     <Link href="/services/engine-diagnostics-repair" className="block border-2 border-foreground rounded-2xl p-8 text-center shadow-card hover:shadow-[15px_15px_0px_hsl(var(--foreground))] hover:-translate-y-1 transition-all">
+                        <h3 className="text-3xl md:text-4xl">On-Site Mechanic Services</h3>
+                        <p className="mt-4 text-muted-foreground">We bring the repair shop to you, saving you time and getting you back on the road.</p>
+                         <div className="flex justify-between items-center mt-5 pt-5 border-t border-border/20">
+                            <span className="font-headline text-accent uppercase text-lg">Learn More</span>
+                            <span>&rarr;</span>
+                        </div>
+                    </Link>
+                </div>
+
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-headline text-foreground">Mobile Truck Repair Services</h2>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
+                    {services.slice(0, 8).map((service) => (
+                        <Link href={`/services${service.url}`} key={service.title} className="text-center p-4 rounded-lg transition-transform hover:-translate-y-1">
+                            <Wrench className="h-16 w-16 text-primary mx-auto mb-4" />
+                            <h3 className="text-2xl md:text-3xl">{service.title.split(' ')[0]}</h3>
+                            <p className="text-sm text-muted-foreground mt-2">{service.description.split('.')[0]}.</p>
+                        </Link>
+                    ))}
+                </div>
+                <div className="text-center">
+                    <Link href="/services" className="btn btn-primary">Explore Services</Link>
+                </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </section>
+
+        {/* Why Us Section */}
+        <section id="why-us" className="py-24 bg-secondary">
+          <div className="container mx-auto px-4">
+             <div className="bg-accent border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto mb-24">
+                <h2 className="text-4xl md:text-5xl text-accent-foreground">Need Help Now?</h2>
+                <p className="text-lg text-accent-foreground/90 mt-4">Call us 24/7 for immediate assistance</p>
+                <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground hover:-translate-y-0.5 transition-transform">
+                    {PHONE_NUMBER}
+                </a>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto mb-24">
               {valueProps.map((prop) => {
                 const Icon = icons[prop.icon];
                 return (
-                  <div key={prop.title} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary text-primary-foreground">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold">{prop.title}</h3>
-                      <p className="mt-1 text-muted-foreground">
-                        {prop.description}
-                      </p>
-                    </div>
+                  <div key={prop.title} className="text-center">
+                    <Icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-3xl">{prop.title}</h3>
+                    <p className="mt-2 text-muted-foreground">
+                      {prop.description}
+                    </p>
                   </div>
                 );
               })}
             </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section id="services" className="py-16 bg-primary/10">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold font-headline text-primary">
-                Comprehensive Diesel Repair Services
-              </h2>
-              <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
-                From emergency repairs to routine maintenance, we have you covered.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-              {services.slice(0, 10).map((service) => (
-                <Link href={`/services${service.url}`} key={service.title}>
-                  <Card className="h-full text-center hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
-                    <CardHeader>
-                      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary/20 mx-auto mb-4">
-                         <Wrench className="h-8 w-8 text-primary" />
-                      </div>
-                      <CardTitle className="text-md font-semibold">{service.title}</CardTitle>
-                    </CardHeader>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-             <div className="text-center mt-12">
-              <Button asChild size="lg" variant="secondary">
-                <Link href="/services">View All Services</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* Company Background Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold font-headline text-primary">
-                  Local Experts for the Central Coast
-                </h2>
-                <p className="mt-4 text-muted-foreground">
-                  L Diesel Mobile Services was founded to provide top-tier, on-site diesel mechanic services to the vital industries of California's Central Coast. We understand the importance of keeping your agricultural equipment, transport trucks, and commercial fleets running smoothly.
-                </p>
-                <p className="mt-4 text-muted-foreground">
-                  Our team of certified mechanics is equipped with state-of-the-art diagnostic tools and a commitment to quality service, available 24/7 to handle any emergency.
-                </p>
-                <Button asChild className="mt-6">
-                  <Link href="/about">More About Us</Link>
-                </Button>
-              </div>
-              <div>
-                <Image
-                  src="https://placehold.co/600x400.png"
-                  alt="Diesel truck repair"
-                  data-ai-hint="diesel truck"
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg"
-                />
-              </div>
+            <div className="text-center">
+                 <h2 className="text-3xl md:text-4xl">{COMPANY_NAME} is Your Trusted Mobile Mechanic Partner</h2>
             </div>
           </div>
         </section>
 
         {/* Coverage Area Map Section */}
-        <section id="coverage" className="py-16 bg-primary/10">
+        <section id="coverage" className="py-24 bg-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold font-headline text-primary">
-              Serving {SERVICE_AREA}
+            <h2 className="text-4xl md:text-5xl">
+              Service Area Map
             </h2>
-            <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">
-              We provide rapid response across the Central Coast, including key highways like US-101, CA-46, and CA-1.
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              24/7 Mobile Diesel Repair Services Along the Central Coast Highways
             </p>
-            <div className="mt-8">
+            <div className="mt-12">
                <Image
                   src="https://placehold.co/1200x600.png"
                   alt="Service area map for San Luis Obispo and Santa Barbara counties"
                   data-ai-hint="service area map"
                   width={1200}
                   height={600}
-                  className="rounded-lg shadow-lg mx-auto"
+                  className="rounded-2xl shadow-card border-2 border-foreground mx-auto"
                 />
             </div>
-            <Button asChild size="lg" className="mt-8">
-              <Link href="/locations">
-                <MapPin className="mr-2 h-5 w-5" /> View Service Locations
-              </Link>
-            </Button>
           </div>
         </section>
       </main>

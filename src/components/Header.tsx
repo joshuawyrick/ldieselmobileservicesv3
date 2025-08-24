@@ -12,20 +12,20 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm shadow-md">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-[102px]">
           <Link href="/" className="flex items-center space-x-2">
-            <Truck className="h-8 w-8 text-primary" />
-            <span className="font-bold text-lg font-headline hidden sm:inline-block">{COMPANY_NAME}</span>
+            <Truck className="h-10 w-10 text-primary" />
+            <span className="font-bold text-2xl font-headline hidden sm:inline-block">{COMPANY_NAME}</span>
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="font-headline text-xl text-foreground hover:text-accent transition-colors uppercase"
               >
                 {link.label}
               </Link>
@@ -33,20 +33,14 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center space-x-4">
-             <Button asChild className="hidden lg:flex" variant="ghost">
-                <a href={`tel:${PHONE_NUMBER}`} className="flex items-center">
-                    <Phone className="mr-2 h-4 w-4" />
-                    {PHONE_NUMBER}
-                </a>
-            </Button>
-            <Button asChild className="hidden sm:flex bg-accent hover:bg-accent/90">
-              <a href={`tel:${PHONE_NUMBER}`}>Emergency Service</a>
-            </Button>
+             <a href={`tel:${PHONE_NUMBER}`} className="hidden md:inline-flex btn btn-primary">
+                Call Now
+             </a>
             
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild className="md:hidden">
+              <SheetTrigger asChild className="lg:hidden">
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-8 w-8" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
@@ -68,21 +62,16 @@ export default function Header() {
                         key={link.href}
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                        className="text-2xl font-headline text-foreground hover:text-accent transition-colors uppercase"
                       >
                         {link.label}
                       </Link>
                     ))}
                   </nav>
                    <div className="mt-8 pt-8 border-t">
-                    <Button asChild className="w-full bg-accent hover:bg-accent/90 text-lg py-6">
-                      <a href={`tel:${PHONE_NUMBER}`}>
+                    <a href={`tel:${PHONE_NUMBER}`} className="w-full btn btn-primary">
                         <Phone className="mr-2 h-5 w-5" />
-                        Emergency Call
-                      </a>
-                    </Button>
-                    <a href={`tel:${PHONE_NUMBER}`} className="block text-center mt-4 text-lg font-medium text-primary">
-                        {PHONE_NUMBER}
+                        Call Now
                     </a>
                    </div>
                 </div>

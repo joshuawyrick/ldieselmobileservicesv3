@@ -4,47 +4,51 @@
 
 @layer base {
   :root {
-    --background: 228 100% 94%;
-    --foreground: 224 22% 15%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
     --card: 0 0% 100%;
-    --card-foreground: 224 22% 15%;
+    --card-foreground: 0 0% 13%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 22% 15%;
-    --primary: 224.3 76.3% 48%;
+    --popover-foreground: 0 0% 13%;
+    /* Royal Blue */
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 228 50% 90%;
-    --secondary-foreground: 224 22% 15%;
-    --muted: 228 30% 92%;
-    --muted-foreground: 224 10% 45%;
-    --accent: 0 72.2% 50.6%;
+    /* Light Grey */
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 0 0% 9%;
+    /* Grey */
+    --muted: 240 5% 96%;
+    --muted-foreground: 0 0% 45%;
+    /* Cherry Red */
+    --accent: 0 84% 60%;
     --accent-foreground: 0 0% 98%;
-    --destructive: 0 72.2% 50.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 228 20% 85%;
-    --input: 228 20% 85%;
-    --ring: 224.3 76.3% 48%;
-    --radius: 0.5rem;
+    --border: 0 0% 13%;
+    --input: 240 5% 90%;
+    --ring: 221 83% 53%;
+    --radius: 1.25rem;
   }
   .dark {
-    --background: 224 22% 15%;
+    --background: 0 0% 13%;
     --foreground: 0 0% 98%;
-    --card: 224 22% 15%;
+    --card: 0 0% 13%;
     --card-foreground: 0 0% 98%;
-    --popover: 224 22% 15%;
+    --popover: 0 0% 13%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 224 22% 15%;
-    --secondary: 228 10% 25%;
+    --primary-foreground: 0 0% 13%;
+    --secondary: 0 0% 20%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 228 10% 25%;
-    --muted-foreground: 228 10% 65%;
-    --accent: 0 72.2% 50.6%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 84% 60%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 228 10% 25%;
-    --input: 228 10% 25%;
-    --ring: 0 72.2% 50.6%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 84% 60%;
   }
 }
 
@@ -55,6 +59,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline uppercase;
+  }
 }
 
 @keyframes fadeIn {
@@ -64,4 +71,20 @@
 
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.shadow-card {
+    box-shadow: 10px 10px 0px hsl(var(--foreground));
+}
+
+.btn {
+    @apply inline-flex items-center justify-center rounded-full font-headline uppercase text-xl px-8 py-4 border-2 transition-all duration-300 ease-in-out;
+}
+
+.btn-primary {
+    @apply bg-accent text-accent-foreground border-accent hover:bg-transparent hover:text-accent;
+}
+
+.btn-secondary {
+    @apply bg-background text-foreground border-foreground hover:bg-foreground hover:text-background;
 }
