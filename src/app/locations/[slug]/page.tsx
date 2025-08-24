@@ -54,32 +54,29 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
   }
   
   const cityName = location.name.replace(', CA', '');
+  const otherLocations = locations.filter(l => l.url !== `/${params.slug}`).slice(0, 3);
+
 
   const pageContent: {[key: string]: JSX.Element} = {
     'santa-maria-ca': (
         <div className='prose max-w-none prose-h2:text-primary prose-h2:font-headline prose-h2:uppercase prose-h3:text-primary prose-h3:font-headline prose-h3:uppercase prose-strong:text-foreground'>
             <h2>24/7 Mobile Diesel Service in Santa Maria</h2>
             <p>
-              {COMPANY_NAME} provides professional mobile diesel mechanic services throughout Santa Maria and the greater metropolitan area. Our certified technicians bring expert heavy-duty truck repair and maintenance services directly to your location, offering fast response for breakdowns and scheduled fleet service.
+              {COMPANY_NAME} provides professional mobile diesel mechanic services throughout Santa Maria and the greater metropolitan area. As the agricultural heart of the Central Coast, Santa Maria's economy relies on heavy-duty trucks and farm equipment. Our certified technicians bring expert heavy-duty truck repair and maintenance services directly to your location, offering fast response for breakdowns on Highway 101, Betteravia Road, or right on the farm.
             </p>
-            <h3>Service Areas in Santa Maria</h3>
+            <h3>Key Service Corridors in Santa Maria</h3>
             <ul>
-                <li><strong>Greater Santa Maria Metro:</strong> Including the downtown business district, industrial zones, and the Santa Maria Airport (SMX) area.</li>
-                <li><strong>Surrounding Communities:</strong> We provide full mobile diesel service to Orcutt, Guadalupe, Los Alamos, and the Santa Ynez Valley wine country.</li>
+                <li><strong>Highway 101:</strong> Complete roadside assistance for semi-trucks and commercial vehicles traveling through Santa Maria.</li>
+                <li><strong>Betteravia Road & Stowell Road:</strong> Rapid response for delivery trucks and commercial fleets in Santa Maria's main business and industrial zones.</li>
+                <li><strong>Santa Maria Airport (SMX) area:</strong> Full support for logistics, transport, and industrial businesses.</li>
+                <li><strong>Surrounding Agricultural Areas:</strong> We provide full mobile diesel service to the farms and vineyards of Orcutt, Guadalupe, and the Santa Maria Valley.</li>
             </ul>
 
             <h2>Why Choose Our Santa Maria Mobile Mechanics?</h2>
             <ul>
-                <li><strong>Local Expertise:</strong> We know Santa Maria's agricultural roads, major highways like the 101, and business districts for faster response times.</li>
-                <li><strong>Agricultural & Fleet Experience:</strong> Extensive experience with Santa Maria-area commercial, agricultural, and transport fleets, including tractors and harvesters.</li>
-                <li><strong>Emergency Coverage:</strong> 24/7 emergency roadside assistance for semi-trucks and commercial vehicles throughout the Santa Maria metro area and beyond.</li>
-            </ul>
-
-            <h2>Mobile Truck Repair Services in Santa Maria</h2>
-            <ul>
-                <li><strong>Commercial Fleet Services:</strong> On-site maintenance and repair for delivery trucks, construction equipment, and municipal vehicles.</li>
-                <li><strong>Emergency Roadside Assistance:</strong> US-101, CA-1, and CA-135 emergency response for breakdowns, tires, and fuel issues.</li>
-                <li><strong>Agricultural Equipment Repair:</strong> Specializing in on-farm repair for tractors, harvesters, and irrigation pump engines.</li>
+                <li><strong>Local Agricultural Expertise:</strong> We understand the unique demands of Santa Maria's agricultural sector, servicing tractors, harvesters, and irrigation pumps.</li>
+                <li><strong>Fast, Local Response:</strong> Our local presence means less downtime for you. We know Santa Maria's roads for faster, more efficient service.</li>
+                <li><strong>Emergency Coverage:</strong> 24/7 emergency roadside assistance for semi-trucks and commercial vehicles throughout the Santa Maria metro area.</li>
             </ul>
         </div>
     ),
@@ -91,15 +88,15 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
             </p>
             <h3>Serving All of San Luis Obispo and Surrounding Areas</h3>
             <ul>
-                <li><strong>Downtown & Commercial Hubs:</strong> Rapid response for delivery trucks and commercial vehicles in the city center.</li>
                 <li><strong>Highway 101 Corridor:</strong> 24/7 emergency roadside truck service on the Cuesta Grade and throughout SLO.</li>
+                <li><strong>Downtown & Commercial Hubs:</strong> Rapid response for delivery trucks and commercial vehicles in the city center.</li>
                 <li><strong>South SLO & Airport Area:</strong> Full support for logistics, transport, and industrial businesses.</li>
                 <li><strong>Edna Valley & Wineries:</strong> Specialized service for agricultural tractors and wine production equipment.</li>
                 <li><strong>Surrounding Communities:</strong> We also serve Avila Beach, Los Osos, and Santa Margarita.</li>
             </ul>
             <h2>Why {COMPANY_NAME} is the Go-To Mobile Mechanic in SLO</h2>
             <ul>
-                <li><strong>Local Knowledge:</strong> We understand the unique challenges of navigating SLO's roads and the needs of its diverse industries.</li>
+                <li><strong>Local Knowledge:</strong> We understand the unique challenges of navigating SLO's roads and the needs of its diverse industries, from tourism to agriculture.</li>
                 <li><strong>Fast, Efficient Service:</strong> Our local presence means less downtime for you. We pride ourselves on our rapid response and efficient repairs for all heavy-duty vehicles.</li>
                 <li><strong>Comprehensive Diesel Care:</strong> From emergency roadside assistance on the Cuesta Grade to scheduled fleet maintenance, we handle it all.</li>
             </ul>
@@ -123,7 +120,6 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
                 <li><strong>Agricultural Equipment Repair:</strong> Expert diagnostics and repair for John Deere, Kubota, and other major tractor brands.</li>
                 <li><strong>Emergency Roadside Truck Repair:</strong> 24/7 service for breakdowns, tires, and fuel issues on the US-101 and rural county roads.</li>
                 <li><strong>Fleet Maintenance:</strong> Preventive maintenance plans to keep your agricultural or commercial fleet running reliably.</li>
-                <li><strong>Hydraulic Systems:</strong> On-site repair for hydraulic hoses, pumps, and systems on heavy equipment.</li>
             </ul>
         </div>
     )
@@ -143,80 +139,97 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
   )
 
   return (
-    <div className="bg-white py-12 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="mb-8">
-            <Link href="/locations" className="inline-flex items-center text-sm font-medium text-primary hover:underline">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to All Locations
-            </Link>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-            <div className="lg:col-span-2">
-                <main>
-                    <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">
-                      {`Mobile Diesel Mechanic in ${location.name}`}
-                    </h1>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                        {
-                            params.slug === 'santa-maria-ca' ? `${COMPANY_NAME} provides 24/7 mobile diesel mechanic services throughout Santa Maria, California. Our certified technicians bring expert heavy-duty truck repair, emergency roadside assistance, and maintenance services directly to your location.` :
-                            params.slug === 'san-luis-obispo-ca' ? `Your reliable 24/7 mobile diesel mechanic serving the entire San Luis Obispo area. We come to you for emergency heavy-duty truck repairs, fleet maintenance, and agricultural equipment service.` :
-                            params.slug === 'paso-robles-ca' ? `Your 24/7 mobile diesel repair specialists for Paso Robles, CA. We provide on-site service for commercial trucks, agricultural equipment, and RVs throughout North SLO County.` :
-                            `${COMPANY_NAME} provides fast and reliable 24/7 mobile diesel repair services to ${cityName} and the surrounding areas. ${location.description ? ` We are familiar with the specific needs of industries in the area, including ${location.description.toLowerCase()}.` : ''}`
-                        }
-                    </p>
-                    
-                    <Image 
-                        src="https://placehold.co/800x400.png"
-                        alt={`Mobile diesel mechanic truck service in ${location.name}`}
-                        data-ai-hint="diesel truck"
-                        width={800}
-                        height={400}
-                        className="rounded-lg shadow-card border-2 border-foreground my-8"
-                    />
-                    {pageContent[params.slug] || defaultContent}
-                </main>
+    <div>
+        <section className="relative h-[300px] md:h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
+             <div className="absolute inset-0 w-full h-full">
+                <Image
+                    src="https://placehold.co/1440x400.png"
+                    alt={`Mobile Diesel Mechanic services in ${cityName}`}
+                    className="w-full h-full object-cover"
+                    fill
+                    priority
+                    data-ai-hint="california highway"
+                />
+                <div className="absolute inset-0 bg-black/60"></div>
+             </div>
+            <div className="relative z-10 px-4 container mx-auto">
+                <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white">
+                    {`Mobile Diesel Mechanic in ${cityName}`}
+                </h1>
+                <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
+                    Professional Mobile Diesel Repair Services in {location.name}
+                </p>
             </div>
-
-            <aside className="lg:col-span-1 sticky top-24">
-                <div className="border-2 border-foreground rounded-2xl shadow-card p-6">
-                    <h3 className="text-2xl font-bold font-headline text-primary text-center mb-4">
-                        Need a Mechanic in {cityName}?
-                    </h3>
-                     <div className="bg-accent text-accent-foreground text-center font-headline text-lg uppercase rounded-full py-2 px-4 mb-4">
-                        24/7 EMERGENCY SERVICE
-                     </div>
-                     <Button asChild size="lg" className="w-full btn-primary mb-4 text-lg">
-                         <a href={`tel:${PHONE_NUMBER}`}>
-                            <Phone className="mr-2 h-5 w-5" /> Call Now
-                        </a>
-                    </Button>
-
-                    <div className="mt-6 pt-6 border-t border-border/20">
-                         <h4 className="text-xl font-bold font-headline text-primary mb-3">Our Mobile Services</h4>
-                         <ul className="space-y-2">
-                            {services.slice(0, 5).map(service => (
-                                <li key={service.title} className="flex items-start">
-                                    <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                                    <Link href={`/services${service.url}`} className="text-muted-foreground hover:text-primary">{service.title}</Link>
-                                </li>
-                            ))}
-                             <li className="flex items-start">
-                                <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
-                                <Link href="/services" className="text-muted-foreground hover:text-primary">And More...</Link>
-                            </li>
-                         </ul>
-                    </div>
-
-                    <div className="mt-6 pt-6 border-t border-border/20">
-                        <h4 className="text-xl font-bold font-headline text-primary mb-3">Service Area</h4>
-                        <p className="text-muted-foreground">We proudly serve all of {SERVICE_AREA}, providing rapid response for roadside assistance to {cityName} and beyond.</p>
-                    </div>
+        </section>
+        
+        <section className="py-12 md:py-24">
+            <div className="container mx-auto px-4">
+                 <div className="mb-8">
+                    <Link href="/locations" className="inline-flex items-center text-sm font-medium text-primary hover:underline">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
+                    Back to All Locations
+                    </Link>
                 </div>
-            </aside>
-        </div>
-      </div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                    <main className="lg:col-span-2">
+                        {pageContent[params.slug] || defaultContent}
+                    </main>
+
+                    <aside className="lg:col-span-1 sticky top-24">
+                        <div className="border-2 border-foreground rounded-2xl shadow-card p-6">
+                            <h3 className="text-2xl font-bold font-headline text-primary text-center mb-4">
+                                Need a Mechanic in {cityName}?
+                            </h3>
+                            <div className="bg-accent text-accent-foreground text-center font-headline text-lg uppercase rounded-full py-2 px-4 mb-4">
+                                24/7 EMERGENCY SERVICE
+                            </div>
+                            <Button asChild size="lg" className="w-full btn-primary mb-4 text-lg">
+                                <a href={`tel:${PHONE_NUMBER}`}>
+                                    <Phone className="mr-2 h-5 w-5" /> Call Now
+                                </a>
+                            </Button>
+
+                            <div className="mt-6 pt-6 border-t border-border/20">
+                                <h4 className="text-xl font-bold font-headline text-primary mb-3">Our Mobile Services</h4>
+                                <ul className="space-y-2">
+                                    {services.slice(0, 5).map(service => (
+                                        <li key={service.title} className="flex items-start">
+                                            <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
+                                            <Link href={`/services${service.url}`} className="text-muted-foreground hover:text-primary">{service.title}</Link>
+                                        </li>
+                                    ))}
+                                    <li className="flex items-start">
+                                        <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
+                                        <Link href="/services" className="text-muted-foreground hover:text-primary">And More...</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        
+        {otherLocations.length > 0 && (
+             <section className="py-12 md:py-24 bg-secondary">
+                <div className="container mx-auto px-4">
+                     <h2 className="text-3xl md:text-4xl font-headline text-foreground text-center mb-8">Nearby Service Areas</h2>
+                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        {otherLocations.map(loc => (
+                             <Link href={`/locations${loc.url}`} key={loc.url} className="block group">
+                                <div className="bg-card p-6 rounded-lg border-2 border-transparent group-hover:border-primary group-hover:-translate-y-1 transition-transform h-full shadow-md">
+                                    <h4 className="text-xl font-semibold text-foreground">{loc.name}</h4>
+                                    <p className="text-sm text-muted-foreground mt-1">{loc.description}</p>
+                                    <div className="flex justify-end items-center mt-4 pt-4 border-t border-border/10">
+                                        <span className="text-sm font-semibold text-primary">View Details &rarr;</span>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                     </div>
+                </div>
+            </section>
+        )}
     </div>
   );
 }
