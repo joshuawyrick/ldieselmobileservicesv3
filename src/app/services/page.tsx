@@ -1,8 +1,10 @@
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { services } from '@/lib/data';
-import { Wrench } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { services, valueProps } from '@/lib/data';
+import { Check, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: '24/7 Diesel Repair Services San Luis Obispo & Santa Maria CA',
@@ -10,41 +12,131 @@ export const metadata: Metadata = {
   keywords: 'diesel repair services, mobile mechanic, San Luis Obispo, Santa Maria, Central Coast',
 };
 
+const icons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
+  ShieldCheck: Check,
+  Wrench: Check,
+  Clock: Check,
+  Users: Check,
+  Award: Check,
+  Truck: Check,
+  CircleCheck: Check,
+};
+
+
 export default function ServicesPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">
-          Our Services
-        </h1>
-        <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          We offer a complete range of mobile diesel mechanic services to keep your trucks and equipment operating at peak performance. Available 24/7 for your convenience.
-        </p>
-      </div>
+    <div>
+      {/* Hero Section */}
+      <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
+         <div className="absolute inset-0 w-full h-full">
+            <Image
+              src="https://placehold.co/1440x400.png"
+              alt="Diesel service truck on the Central Coast"
+              className="w-full h-full object-cover"
+              fill
+              priority
+              data-ai-hint="diesel truck road"
+            />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+        <div className="relative z-10 px-4">
+          <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight text-white">
+            Mobile Diesel Repair Services
+          </h1>
+          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
+            Expert on-site diesel solutions across San Luis Obispo & Santa Maria
+          </p>
+        </div>
+      </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service) => (
-          <Link href={`/services${service.url}`} key={service.title} className="block hover:-translate-y-1 transition-transform duration-300">
-            <Card className="h-full flex flex-col">
-              <CardHeader>
-                <div className="flex items-center space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
-                      <Wrench className="h-6 w-6" />
-                    </div>
+      {/* Services List Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 space-y-24">
+          {services.map((service, index) => (
+            <div
+              key={service.title}
+              className="grid md:grid-cols-2 gap-12 items-center"
+            >
+              <div
+                className={`order-2 ${
+                  index % 2 === 0 ? 'md:order-1' : 'md:order-2'
+                }`}
+              >
+                <h2 className="text-3xl font-bold font-headline text-primary">
+                  {service.title}
+                </h2>
+                <p className="mt-4 text-muted-foreground">
+                  {service.description}
+                </p>
+                {service.subServices && (
+                  <div className="mt-6">
+                    <h3 className="text-xl font-semibold text-foreground mb-3">What's Included:</h3>
+                    <ul className="space-y-2">
+                      {service.subServices.map((sub) => (
+                        <li key={sub} className="flex items-start">
+                          <Check className="h-5 w-5 text-primary mr-2 mt-1 flex-shrink-0" />
+                          <span>{sub}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <div>
-                    <CardTitle>{service.title}</CardTitle>
+                )}
+                <Button asChild className="mt-6 btn-primary">
+                  <Link href={`/services${service.url}`}>Learn More</Link>
+                </Button>
+              </div>
+              <div
+                className={`order-1 ${
+                  index % 2 === 0 ? 'md:order-2' : 'md:order-1'
+                }`}
+              >
+                <Image
+                  src={`https://placehold.co/600x400.png`}
+                  alt={service.title}
+                  data-ai-hint={service.imageHint}
+                  width={600}
+                  height={400}
+                  className="rounded-lg shadow-card border-2 border-foreground"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+       {/* Why Us Section */}
+        <section id="why-us" className="py-24 bg-secondary">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+                 <h2 className="text-4xl md:text-5xl font-headline text-foreground">Why Choose {COMPANY_NAME}?</h2>
+                 <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                    We are dedicated to providing the fastest, most reliable mobile diesel service on the Central Coast.
+                </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto mb-16">
+              {valueProps.slice(0,3).map((prop) => {
+                const Icon = icons[prop.icon];
+                return (
+                  <div key={prop.title} className="text-center">
+                    <Icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-3xl">{prop.title}</h3>
+                    <p className="mt-2 text-muted-foreground">
+                      {prop.description}
+                    </p>
                   </div>
-                </div>
-              </CardHeader>
-              <CardDescription className="p-6 pt-0 flex-grow">
-                {service.description}
-              </CardDescription>
-            </Card>
-          </Link>
-        ))}
-      </div>
+                );
+              })}
+            </div>
+             <div className="bg-accent border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto">
+                <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Mechanic Now?</h2>
+                <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across {service.serviceArea}.</p>
+                <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground hover:-translate-y-0.5 transition-transform">
+                    <Phone className='inline-block mr-3' />
+                    {PHONE_NUMBER}
+                </a>
+            </div>
+          </div>
+        </section>
     </div>
   );
 }

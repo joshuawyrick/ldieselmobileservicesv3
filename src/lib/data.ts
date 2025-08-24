@@ -20,61 +20,141 @@ export const services = [
     title: 'Emergency Roadside Assistance',
     url: '/emergency-roadside-assistance',
     keywords: 'emergency diesel repair, roadside assistance, breakdown service',
-    description: '24/7 emergency support for unexpected breakdowns. We provide fast, reliable roadside assistance to get you back on the road anytime, anywhere on the Central Coast.',
+    description: '24/7 emergency support for unexpected breakdowns. We provide fast, reliable roadside assistance to get you back on the road anytime, anywhere on the Central Coast, from Paso Robles to Santa Barbara.',
+    imageHint: 'towing truck',
+    serviceArea: 'San Luis Obispo & Santa Barbara Counties',
+    subServices: [
+        '24/7 Emergency Dispatch',
+        'Roadside Engine Diagnostics',
+        'Jump Starts & Battery Issues',
+        'Mobile Fuel Delivery',
+    ]
   },
   {
     title: 'Mobile Tire Services',
     url: '/mobile-tire-services',
     keywords: 'mobile tire repair, truck tire service, commercial tires',
-    description: 'Complete mobile tire services, including repairs, replacements, and installations for commercial trucks and trailers. We bring the tire shop to you.',
+    description: 'Complete mobile tire services, including repairs, replacements, and installations for commercial trucks and agricultural equipment in the Santa Maria Valley and beyond. We bring the tire shop to you.',
+    imageHint: 'truck tire',
+    serviceArea: 'Santa Maria Valley & SLO County',
+    subServices: [
+        'Tire Repair & Patching',
+        'New Tire Installation & Mounting',
+        'Wheel Balancing',
+        'Tire Rotation',
+    ]
   },
   {
     title: 'Mobile Brake Repairs',
     url: '/mobile-brake-repairs',
     keywords: 'brake repair, air brake service, DOT brake inspection',
-    description: 'Expert on-site brake repairs and inspections. We service air brakes and hydraulic systems to ensure your vehicle meets DOT standards and operates safely.',
+    description: 'Expert on-site brake repairs and inspections for heavy-duty trucks. We service air brakes and hydraulic systems to ensure your vehicle meets DOT standards and operates safely on highways like the US-101.',
+    imageHint: 'truck brakes',
+    serviceArea: 'Central Coast, including US-101 corridor',
+    subServices: [
+        'Air Brake System Diagnostics',
+        'Brake Chamber Replacement',
+        'Slack Adjuster & S-Cam Service',
+        'DOT Brake Inspections',
+    ]
   },
   {
     title: 'Cooling System Repairs',
     url: '/cooling-system-repairs',
     keywords: 'cooling system repair, radiator repair, overheating',
-    description: 'Comprehensive cooling system diagnostics and repairs. We handle everything from radiator leaks to thermostat replacements to prevent engine overheating.',
+    description: 'Comprehensive cooling system diagnostics and repairs to prevent engine overheating, crucial for vehicles operating in the variable climates of the Central Coast. We handle everything from radiator leaks to thermostat replacements.',
+    imageHint: 'truck radiator',
+    serviceArea: 'San Luis Obispo & Santa Barbara Counties',
+    subServices: [
+        'Radiator & Hose Repair',
+        'Water Pump Replacement',
+        'Thermostat Service',
+        'Coolant Flush & Refill',
+    ]
   },
   {
-    title: 'Aftertreatment Services',
+    title: 'Aftertreatment Services (DPF & DEF)',
     url: '/aftertreatment-services',
     keywords: 'DPF cleaning, DEF system, emissions repair',
-    description: 'Specialized diesel particulate filter (DPF) and diesel exhaust fluid (DEF) system services. We help you meet emissions standards and maintain engine performance.',
+    description: 'Specialized diesel particulate filter (DPF) and diesel exhaust fluid (DEF) system services. We help you meet California\'s strict emissions standards and maintain engine performance across SLO and Santa Barbara counties.',
+    imageHint: 'exhaust system',
+    serviceArea: 'California Central Coast',
+    subServices: [
+        'Forced DPF Regeneration',
+        'DEF System Diagnostics',
+        'Sensor Replacement (NOx, Temp)',
+        'Component Cleaning & Repair',
+    ]
   },
   {
     title: 'Engine Diagnostics & Repair',
     url: '/engine-diagnostics-repair',
     keywords: 'engine diagnostics, diesel engine repair, check engine light',
-    description: 'Advanced engine diagnostics to accurately identify issues. Our mechanics perform expert repairs on all major diesel engine makes and models.',
+    description: 'Advanced mobile engine diagnostics to accurately identify issues. Our mechanics perform expert repairs on all major diesel engine makes and models, serving industries from agriculture in Santa Maria to transport in San Luis Obispo.',
+    imageHint: 'diesel engine',
+    serviceArea: 'San Luis Obispo & Santa Maria',
+    subServices: [
+        'Check Engine Light Diagnostics',
+        'Engine Component Repair',
+        'Performance Tuning',
+        'Complete Engine Overhauls',
+    ]
   },
   {
     title: 'Mobile Electrical Repairs',
     url: '/mobile-electrical-repairs',
     keywords: 'electrical repair, alternator, starter, battery',
-    description: 'On-site diagnosis and repair of complex electrical systems. We service batteries, alternators, starters, and wiring to resolve power issues quickly.',
+    description: 'On-site diagnosis and repair of complex truck electrical systems. We service batteries, alternators, starters, and wiring to resolve power issues quickly and efficiently, wherever you are located.',
+    imageHint: 'truck wiring',
+    serviceArea: 'Central Coast',
+    subServices: [
+        'Battery Testing & Replacement',
+        'Alternator & Starter Repair',
+        'Wiring & Harness Diagnostics',
+        'Lighting System Repairs',
+    ]
   },
   {
     title: 'Fuel System Services',
     url: '/fuel-system-services',
     keywords: 'fuel system repair, fuel injector, fuel pump',
-    description: 'Complete fuel system services to ensure optimal engine efficiency. We repair and replace fuel pumps, injectors, and filters to resolve performance problems.',
+    description: 'Complete fuel system services to ensure optimal engine efficiency and power. We repair and replace fuel pumps, injectors, and filters to resolve performance problems for fleets and independent operators.',
+    imageHint: 'fuel tank',
+    serviceArea: 'Paso Robles to Santa Barbara',
+     subServices: [
+        'Fuel Filter Replacement',
+        'Fuel Injector Service',
+        'Fuel Pump Repair',
+        'Fuel Tank Cleaning',
+    ]
   },
   {
     title: 'Hydraulic & Suspension Repairs',
     url: '/hydraulic-suspension-repairs',
     keywords: 'hydraulic repair, suspension repair, air suspension',
-    description: 'Expert mobile repairs for hydraulic systems and vehicle suspensions. We service everything from hydraulic leaks to air suspension components for a smooth ride.',
+    description: 'Expert mobile repairs for hydraulic systems on heavy equipment and vehicle suspensions. We service everything from hydraulic leaks to air suspension components for agricultural machinery and commercial trucks.',
+    imageHint: 'truck suspension',
+    serviceArea: 'Santa Maria & San Luis Obispo Agricultural Areas',
+     subServices: [
+        'Hydraulic Hose Repair',
+        'Air Suspension Diagnostics',
+        'Leaf Spring Replacement',
+        'Shock & Strut Service',
+    ]
   },
   {
     title: 'Mobile Fleet Maintenance',
     url: '/mobile-fleet-maintenance',
     keywords: 'fleet maintenance, commercial fleet, preventive maintenance',
-    description: 'Customized preventive maintenance programs for commercial fleets. We help you minimize downtime, reduce costs, and extend the life of your vehicles.',
+    description: 'Customized preventive maintenance programs for commercial fleets in San Luis Obispo and Santa Barbara counties. We help you minimize downtime, reduce costs, and extend the life of your vehicles with on-site service.',
+    imageHint: 'fleet trucks',
+    serviceArea: 'Central Coast Fleets',
+     subServices: [
+        'Scheduled Oil & Filter Changes',
+        'DOT Inspection Readiness',
+        'Fluid Analysis',
+        'Comprehensive Vehicle Check-ups',
+    ]
   },
 ];
 
