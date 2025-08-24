@@ -76,14 +76,14 @@ export default function Home() {
           </div>
           <div className="relative z-10 flex flex-col items-center justify-center gap-8 min-h-screen text-center text-white px-4">
             <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight">
-              Mobile Diesel Mechanic
+              24/7 Mobile Diesel Mechanic
               <br />
               {SERVICE_AREA}
             </h1>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto">
-              Emergency Roadside Assistance & On-Site Diesel Repairs
+              Emergency Roadside Assistance & On-Site Heavy-Duty Truck Repair
               <br />
-              Serving All Makes and Models | Call Now for Fast, Reliable Service.
+              Serving All Makes and Models on Highway 101 & Across the Central Coast. Call Now for Fast Service.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={`tel:${PHONE_NUMBER}`} className="btn btn-primary">
@@ -100,20 +100,20 @@ export default function Home() {
         <section id="services-intro" className="py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-24">
-                     <h2 className="text-4xl md:text-5xl font-headline text-foreground">24/7 Emergency Roadside Assistance</h2>
+                     <h2 className="text-4xl md:text-5xl font-headline text-foreground">24-Hour Emergency Roadside Truck Service</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-24">
                     <Link href="/services/emergency-roadside-assistance" className="block border-2 border-foreground rounded-2xl p-8 text-center shadow-card hover:shadow-[15px_15px_0px_hsl(var(--foreground))] hover:-translate-y-1 transition-all">
-                        <h3 className="text-3xl md:text-4xl">Emergency Roadside Assistance</h3>
-                        <p className="mt-4 text-muted-foreground">Fast response for breakdowns, no matter where you are.</p>
+                        <h3 className="text-3xl md:text-4xl">Heavy-Duty Roadside Assistance</h3>
+                        <p className="mt-4 text-muted-foreground">Fast response for truck breakdowns on Highway 101 and across the Central Coast.</p>
                          <div className="flex justify-between items-center mt-5 pt-5 border-t border-border/20">
                             <span className="font-headline text-accent uppercase text-lg">Learn More</span>
                             <span>&rarr;</span>
                         </div>
                     </Link>
                      <Link href="/services/engine-diagnostics-repair" className="block border-2 border-foreground rounded-2xl p-8 text-center shadow-card hover:shadow-[15px_15px_0px_hsl(var(--foreground))] hover:-translate-y-1 transition-all">
-                        <h3 className="text-3xl md:text-4xl">On-Site Mechanic Services</h3>
-                        <p className="mt-4 text-muted-foreground">We bring the repair shop to you, saving you time and getting you back on the road.</p>
+                        <h3 className="text-3xl md:text-4xl">On-Site Diesel Mechanic Services</h3>
+                        <p className="mt-4 text-muted-foreground">We bring the repair shop to you, saving you time and getting you back on the road, day or night.</p>
                          <div className="flex justify-between items-center mt-5 pt-5 border-t border-border/20">
                             <span className="font-headline text-accent uppercase text-lg">Learn More</span>
                             <span>&rarr;</span>
@@ -140,7 +140,7 @@ export default function Home() {
                     })}
                 </div>
                 <div className="text-center">
-                    <Link href="/services" className="btn btn-primary">Explore Services</Link>
+                    <Link href="/services" className="btn btn-primary">Explore All Services</Link>
                 </div>
             </div>
         </section>
@@ -149,8 +149,8 @@ export default function Home() {
         <section id="why-us" className="py-24 bg-secondary">
           <div className="container mx-auto px-4">
              <div className="bg-accent border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto mb-24">
-                <h2 className="text-4xl md:text-5xl text-accent-foreground">Need Help Now?</h2>
-                <p className="text-lg text-accent-foreground/90 mt-4">Call us 24/7 for immediate assistance</p>
+                <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Heavy-Duty Mobile Mechanic Now?</h2>
+                <p className="text-lg text-accent-foreground/90 mt-4">Call us 24/7 for immediate mobile diesel repair near you.</p>
                 <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground hover:-translate-y-0.5 transition-transform">
                     {PHONE_NUMBER}
                 </a>
@@ -170,7 +170,7 @@ export default function Home() {
               })}
             </div>
             <div className="text-center">
-                 <h2 className="text-3xl md:text-4xl">{COMPANY_NAME} is Your Trusted Mobile Mechanic Partner</h2>
+                 <h2 className="text-3xl md:text-4xl">{COMPANY_NAME}: Your Trusted Partner for Mobile Truck Service</h2>
             </div>
           </div>
         </section>
@@ -179,10 +179,10 @@ export default function Home() {
         <section id="coverage" className="py-24 bg-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl">
-              Service Area Map
+              Our Central Coast Service Area
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              24/7 Mobile Diesel Repair Services Along the Central Coast Highways
+              We provide 24/7 mobile diesel repair services from Paso Robles to Santa Maria, including full coverage of Highway 101 and all major routes in San Luis Obispo and Santa Barbara Counties.
             </p>
             <div className="mt-12">
                <Image

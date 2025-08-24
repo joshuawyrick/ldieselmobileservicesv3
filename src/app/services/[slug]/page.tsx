@@ -3,7 +3,7 @@ import { services } from '@/lib/data';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { PHONE_NUMBER } from '@/lib/constants';
+import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
 import { ArrowLeft, Phone } from 'lucide-react';
 import Image from 'next/image';
 
@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return {};
   }
 
-  const title = `${service.title} | L Diesel Mobile Services`;
-  const description = `${service.description} Mobile mechanics serving San Luis Obispo & Santa Maria. Available 24/7. Call ${PHONE_NUMBER} now!`;
+  const title = `${service.title} | ${COMPANY_NAME}`;
+  const description = `${service.description} Mobile heavy-duty mechanics serving San Luis Obispo & Santa Maria. Available 24/7. Call ${PHONE_NUMBER} now!`;
 
   return {
     title,
@@ -64,18 +64,19 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             />
         </div>
 
-        <div className="prose max-w-none text-foreground">
+        <div className="prose max-w-none prose-h2:text-primary prose-h2:font-headline prose-h2:uppercase prose-h3:text-primary prose-h3:font-headline prose-h3:uppercase prose-strong:text-foreground">
+          <h2>On-Site {service.title.replace('Mobile', '').trim()}</h2>
           <p>
-            At L Diesel Mobile Services, we understand that downtime is costly. That's why we bring our expert {service.title} directly to your location. Our mobile service trucks are fully equipped with advanced diagnostic tools and high-quality parts to perform repairs efficiently and effectively, minimizing your vehicle's time off the road.
+            At {COMPANY_NAME}, we understand that downtime is costly for your heavy-duty trucks. That's why we bring our expert {service.title} directly to your location, whether you're on Highway 101 or at a job site. Our mobile service trucks are fully equipped with advanced diagnostic tools and high-quality parts to perform repairs efficiently and effectively, minimizing your vehicle's time off the road.
           </p>
           <p>
-            Whether you're stranded on the US-101, need a repair at your farm, or require scheduled maintenance for your fleet, our certified technicians are ready to help 24/7. We are committed to providing reliable, professional service across San Luis Obispo and Santa Barbara counties.
+            Whether you're stranded with a semi-truck on the US-101, need a repair for agricultural equipment at your farm, or require scheduled maintenance for your commercial fleet, our certified technicians are ready to help 24/7. We are committed to providing reliable, professional heavy-duty truck service across San Luis Obispo and Santa Barbara counties.
           </p>
         </div>
 
         <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Need {service.title} Now?</h2>
-            <p className="mt-2 text-muted-foreground">We offer 24/7 emergency service. Call us anytime.</p>
+            <h2 className="text-2xl font-bold text-primary">Need Emergency {service.title.replace('Mobile', '').replace('Services', '').trim()}?</h2>
+            <p className="mt-2 text-muted-foreground">We offer 24/7 emergency service. Call us anytime for immediate help.</p>
             <Button asChild size="lg" className="mt-4 bg-accent hover:bg-accent/90">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help

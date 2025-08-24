@@ -7,9 +7,9 @@ import Link from 'next/link';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: '24/7 Diesel Repair Services San Luis Obispo & Santa Maria CA',
-  description: 'Mobile diesel repair services: emergency roadside assistance, tire & brake repairs, engine diagnostics. Serving San Luis Obispo CA & Santa Maria CA 24/7. Call now!',
-  keywords: 'diesel repair services, mobile mechanic, San Luis Obispo, Santa Maria, Central Coast',
+  title: '24/7 Mobile Diesel Repair Services | San Luis Obispo & Santa Maria, CA',
+  description: `Mobile diesel repair services for heavy-duty trucks: emergency roadside assistance, tire & brake repairs, engine diagnostics. Serving ${SERVICE_AREA} 24/7. Call now!`,
+  keywords: 'diesel repair services, mobile mechanic, San Luis Obispo, Santa Maria, Central Coast, heavy-duty truck repair, commercial truck service',
 };
 
 const icons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
@@ -44,7 +44,7 @@ export default function ServicesPage() {
             Mobile Diesel Repair Services
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
-            Expert on-site diesel solutions across San Luis Obispo & Santa Maria
+            Expert on-site diesel solutions for heavy-duty trucks across San Luis Obispo & Santa Maria
           </p>
         </div>
       </section>
@@ -108,9 +108,9 @@ export default function ServicesPage() {
         <section id="why-us" className="py-24 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-                 <h2 className="text-4xl md:text-5xl font-headline text-foreground">Why Choose {COMPANY_NAME}?</h2>
+                 <h2 className="text-4xl md:text-5xl font-headline text-foreground">Why Choose Our Mobile Mechanics?</h2>
                  <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                    We are dedicated to providing the fastest, most reliable mobile diesel service on the Central Coast.
+                    We are dedicated to providing the fastest, most reliable mobile diesel service for commercial trucks on the Central Coast.
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto mb-16">
@@ -128,8 +128,8 @@ export default function ServicesPage() {
               })}
             </div>
              <div className="bg-accent border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto">
-                <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Mechanic Now?</h2>
-                <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across {SERVICE_AREA}.</p>
+                <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Mobile Truck Mechanic Now?</h2>
+                <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across {SERVICE_AREA} for emergency truck repair.</p>
                 <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground hover:-translate-y-0.5 transition-transform">
                     <Phone className='inline-block mr-3' />
                     {PHONE_NUMBER}

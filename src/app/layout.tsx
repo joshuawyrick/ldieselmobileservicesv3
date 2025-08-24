@@ -8,13 +8,13 @@ import Template from './template';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Mobile Diesel Mechanic San Luis Obispo CA & Santa Maria CA | 24/7 | L Diesel Mobile Services',
+    default: `24/7 Mobile Diesel Mechanic on the Central Coast | ${COMPANY_NAME}`,
     template: `%s | ${COMPANY_NAME}`,
   },
-  description: '24/7 mobile diesel mechanic San Luis Obispo CA & Santa Maria CA. Emergency roadside assistance, on-site truck repair & fleet maintenance. Call (805) 310-1147 now!',
+  description: `24/7 mobile diesel mechanic for San Luis Obispo & Santa Barbara. Emergency roadside assistance for heavy-duty trucks, on-site repair & fleet maintenance on Highway 101. Call ${PHONE_NUMBER} now!`,
   metadataBase: new URL(SITE_URL),
   openGraph: {
-    title: 'Mobile Diesel Mechanic San Luis Obispo CA & Santa Maria CA | 24/7 | L Diesel Mobile Services',
+    title: `24/7 Mobile Diesel Mechanic on the Central Coast | ${COMPANY_NAME}`,
     description: '24/7 mobile diesel mechanic for San Luis Obispo & Santa Maria. Emergency roadside assistance, on-site truck repair & fleet maintenance.',
     url: SITE_URL,
     siteName: COMPANY_NAME,
@@ -76,7 +76,7 @@ export default function RootLayout({
       }
     ],
     "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-    "description": "24/7 Mobile Diesel Mechanic services in San Luis Obispo and Santa Barbara counties."
+    "description": "24/7 Mobile Diesel Mechanic services in San Luis Obispo and Santa Barbara counties, specializing in heavy-duty truck repair and emergency roadside assistance."
   };
 
   return (

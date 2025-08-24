@@ -8,8 +8,8 @@ import Image from 'next/image';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Service Locations | L Diesel Mobile Services',
-  description: `L Diesel Mobile Services provides mobile diesel repair services across ${SERVICE_AREA}. Find our service areas and emergency response times.`,
+  title: `Mobile Diesel Mechanic Service Locations | ${COMPANY_NAME}`,
+  description: `${COMPANY_NAME} provides 24/7 mobile diesel mechanic services across ${SERVICE_AREA}, including Paso Robles, San Luis Obispo, and Santa Maria. Find our service areas for emergency roadside assistance and truck repair.`,
 };
 
 export default function LocationsPage() {
@@ -23,7 +23,7 @@ export default function LocationsPage() {
             <div className="absolute inset-0 w-full h-full">
             <Image
                 src="https://placehold.co/1440x400.png"
-                alt="Diesel service truck on the Central Coast"
+                alt="Diesel service truck on Highway 101 on the Central Coast"
                 className="w-full h-full object-cover"
                 fill
                 priority
@@ -36,7 +36,7 @@ export default function LocationsPage() {
                 Service Locations
             </h1>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90">
-                Mobile Diesel Repair Services Across {SERVICE_AREA}
+                24/7 Mobile Diesel Repair Services Across {SERVICE_AREA}
             </p>
             </div>
         </section>
@@ -49,7 +49,7 @@ export default function LocationsPage() {
                         Serving the Entire Central Coast
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
-                        {COMPANY_NAME} provides comprehensive mobile diesel repair services throughout San Luis Obispo and Santa Barbara counties. Our strategically positioned mobile units ensure rapid response times for emergency roadside assistance and on-site repairs.
+                        {COMPANY_NAME} provides comprehensive mobile diesel repair for heavy-duty trucks throughout San Luis Obispo and Santa Barbara counties. Our strategically positioned mobile units ensure rapid response times for emergency roadside assistance and on-site repairs.
                     </p>
                 </div>
 
@@ -95,12 +95,12 @@ export default function LocationsPage() {
         <section id="coverage" className="py-24 bg-secondary">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-headline text-foreground">
-              Full Coverage Area
+              Full Heavy-Duty Coverage Area
             </h2>
             <div className="mt-12">
                <Image
                   src="https://placehold.co/1200x600.png"
-                  alt={`Map of service area: ${SERVICE_AREA}`}
+                  alt={`Map of service area for mobile truck repair: ${SERVICE_AREA}`}
                   data-ai-hint="service area map"
                   width={1200}
                   height={600}
@@ -114,11 +114,11 @@ export default function LocationsPage() {
                 </div>
                  <div className="text-center">
                     <h3 className="text-5xl font-headline text-accent">24/7</h3>
-                    <p className="mt-2 text-muted-foreground text-lg">Emergency Service</p>
+                    <p className="mt-2 text-muted-foreground text-lg">Emergency Roadside Service</p>
                 </div>
                  <div className="text-center">
                     <h3 className="text-5xl font-headline text-accent">2 Counties</h3>
-                    <p className="mt-2 text-muted-foreground text-lg">Covered</p>
+                    <p className="mt-2 text-muted-foreground text-lg">Covered on the Central Coast</p>
                 </div>
             </div>
           </div>
@@ -127,8 +127,8 @@ export default function LocationsPage() {
          <section className="py-24 bg-white">
             <div className="container mx-auto px-4">
                  <div className="bg-accent border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Mechanic Now?</h2>
-                    <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across {SERVICE_AREA}.</p>
+                    <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Roadside Diesel Mechanic Now?</h2>
+                    <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 for emergency truck repair across {SERVICE_AREA}.</p>
                     <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground hover:-translate-y-0.5 transition-transform">
                         <Phone className='inline-block mr-3' />
                         {PHONE_NUMBER}
