@@ -21,12 +21,18 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
   
   const cityName = location.name.replace(', CA', '');
 
-  let title = `Mobile Diesel Mechanic in ${location.name} | L Diesel Mobile Services`;
+  let title = `Mobile Diesel Mechanic in ${location.name} | ${COMPANY_NAME}`;
   let description = `24/7 mobile diesel mechanic in ${cityName}, CA. Emergency roadside assistance, on-site truck repairs, fleet maintenance. Fast response. Call ${PHONE_NUMBER}.`;
 
   if (params.slug === 'santa-maria-ca') {
     title = 'Santa Maria CA Diesel Mechanics - Mobile Diesel Repair Service';
     description = `Professional mobile diesel mechanics serving Santa Maria CA and surrounding areas. Expert diesel repair, maintenance, and emergency service. Call ${PHONE_NUMBER}.`;
+  } else if (params.slug === 'san-luis-obispo-ca') {
+    title = `Mobile Diesel Mechanic San Luis Obispo, CA | ${COMPANY_NAME}`;
+    description = `Top-rated mobile diesel mechanic in San Luis Obispo, CA. We offer 24/7 emergency truck repair, fleet services, and roadside assistance. Call ${PHONE_NUMBER}.`;
+  } else if (params.slug === 'paso-robles-ca') {
+      title = `Mobile Diesel Mechanic Paso Robles, CA | ${COMPANY_NAME}`;
+      description = `24/7 mobile diesel mechanic for Paso Robles, CA. Specializing in vineyard and agricultural equipment repair, plus commercial trucks. Call now for fast service.`;
   }
 
   return {
@@ -49,7 +55,138 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
   
   const cityName = location.name.replace(', CA', '');
 
-  const isSantaMaria = params.slug === 'santa-maria-ca';
+  const pageContent: {[key: string]: JSX.Element} = {
+    'santa-maria-ca': (
+        <div className='prose max-w-none prose-h2:text-primary prose-h2:font-headline prose-h2:uppercase prose-h3:text-primary prose-h3:font-headline prose-h3:uppercase prose-strong:text-foreground'>
+            <h2>Santa Maria Service Areas</h2>
+            <h3>Greater Santa Maria Metropolitan Area</h3>
+            <ul>
+                <li>Uptown Santa Maria and downtown business district</li>
+                <li>South Santa Maria including Orcutt and Guadalupe</li>
+                <li>North Santa Maria including agricultural and industrial zones</li>
+                <li>East Santa Maria including the Santa Maria Airport area</li>
+                <li>West Santa Maria towards the coast</li>
+            </ul>
+
+            <h3>Surrounding Santa Barbara County Communities:</h3>
+            <ul>
+                <li>Guadalupe and the fertile agricultural plains</li>
+                <li>Orcutt and its residential and commercial centers</li>
+                <li>Lompoc and the Vandenberg Space Force Base area</li>
+                <li>Buellton and the Santa Ynez Valley wine country</li>
+                <li>Los Alamos and the surrounding rural communities</li>
+            </ul>
+
+            <h2>Why Choose Santa Maria Mobile Diesel Service?</h2>
+            <ul>
+                <li><strong>Local Expertise:</strong> We know Santa Maria's agricultural roads, major highways like the 101, and business districts.</li>
+                <li><strong>Fast Response:</strong> Strategic positioning for quick response times across the Santa Maria Valley.</li>
+                <li><strong>Business-Friendly:</strong> We understand the needs of Santa Maria's agricultural and commercial industries.</li>
+                <li><strong>Fleet Experience:</strong> Extensive experience with Santa Maria-area commercial, agricultural, and transport fleets.</li>
+                <li><strong>Emergency Coverage:</strong> 24/7 emergency service throughout the Santa Maria metro area and beyond.</li>
+            </ul>
+
+            <h2>Santa Maria Diesel Services</h2>
+            <h3>Commercial Fleet Services</h3>
+            <ul>
+                <li>Corporate fleet maintenance for Santa Maria businesses</li>
+                <li>Delivery truck and commercial vehicle service</li>
+                <li>Construction equipment and contractor fleet service</li>
+                <li>Municipal and government fleet maintenance</li>
+                <li>Transportation and logistics company support</li>
+            </ul>
+            
+            <h3>Emergency Services</h3>
+            <ul>
+                <li>US-101, CA-1, and CA-135 emergency response</li>
+                <li>Santa Maria Public Airport (SMX) area emergency service</li>
+                <li>Downtown Santa Maria emergency breakdown response</li>
+                <li>Industrial area and warehouse district service</li>
+                <li>24/7 emergency response throughout Santa Maria</li>
+            </ul>
+
+            <h3>Individual Vehicle Service</h3>
+            <ul>
+                <li>Personal diesel truck and SUV service</li>
+                <li>RV and motorhome diesel service</li>
+                <li>Agricultural equipment service for surrounding farms</li>
+                <li>Recreational vehicle and boat diesel service</li>
+            </ul>
+
+            <h2>Santa Maria Industry Experience</h2>
+            <ul>
+                <li><strong>Agriculture:</strong> Tractors, harvesters, and irrigation pump engines are our specialty.</li>
+                <li><strong>Transportation and Logistics:</strong> Major Santa Maria shipping and freight companies on the US-101 corridor.</li>
+                <li><strong>Construction:</strong> Santa Maria's construction and development industry.</li>
+                <li><strong>Wine Production:</strong> Vineyard equipment and transport vehicle maintenance.</li>
+            </ul>
+        </div>
+    ),
+    'san-luis-obispo-ca': (
+        <div className='prose max-w-none prose-h2:text-primary prose-h2:font-headline prose-h2:uppercase prose-h3:text-primary prose-h3:font-headline prose-h3:uppercase prose-strong:text-foreground'>
+            <h2>On-Site Diesel Mechanic Services in San Luis Obispo</h2>
+            <p>
+                From the rolling hills of Edna Valley to the bustling downtown core, {COMPANY_NAME} is San Luis Obispo's trusted source for mobile diesel repair. We bring our fully equipped service trucks to your location, whether you're a commercial fleet manager near the airport, a construction foreman on a new development, or an RV owner enjoying the Central Coast.
+            </p>
+            <h3>Serving All of San Luis Obispo and Surrounding Areas</h3>
+            <ul>
+                <li><strong>Downtown & Commercial Hubs:</strong> Rapid response for delivery trucks and commercial vehicles in the city center.</li>
+                <li><strong>Cal Poly & Educational Institutions:</strong> Maintenance for university fleet vehicles and equipment.</li>
+                <li><strong>South SLO & Airport Area:</strong> Full support for logistics, transport, and industrial businesses.</li>
+                <li><strong>Edna Valley & Wineries:</strong> Specialized service for agricultural tractors and wine production equipment.</li>
+                <li><strong>Surrounding Communities:</strong> We also serve Avila Beach, Los Osos, and Santa Margarita.</li>
+            </ul>
+            <h2>Why {COMPANY_NAME} for SLO?</h2>
+            <ul>
+                <li><strong>Local Knowledge:</strong> We understand the unique challenges of navigating SLO's roads and the needs of its diverse industries.</li>
+                <li><strong>Fast, Efficient Service:</strong> Our local presence means less downtime for you. We pride ourselves on our rapid response and efficient repairs.</li>
+                <li><strong>Comprehensive Diesel Care:</strong> From emergency roadside assistance on the Cuesta Grade to scheduled fleet maintenance, we handle it all.</li>
+            </ul>
+            <h2>Industries We Serve in San Luis Obispo</h2>
+            <ul>
+                <li><strong>Tourism & Hospitality:</strong> Service for tour buses, shuttle vans, and delivery vehicles.</li>
+                <li><strong>Construction & Development:</strong> On-site repairs for excavators, loaders, and other heavy equipment.</li>
+                <li><strong>Wine & Agriculture:</strong> Expert maintenance and repair for tractors, harvesters, and irrigation pumps.</li>
+                <li><strong>Transportation & Logistics:</strong> Keeping local and regional delivery fleets running on time.</li>
+            </ul>
+        </div>
+    ),
+     'paso-robles-ca': (
+        <div className='prose max-w-none prose-h2:text-primary prose-h2:font-headline prose-h2:uppercase prose-h3:text-primary prose-h3:font-headline prose-h3:uppercase prose-strong:text-foreground'>
+            <h2>Your Go-To Mobile Mechanic in Paso Robles Wine Country</h2>
+            <p>
+                {COMPANY_NAME} delivers expert mobile diesel mechanic services across Paso Robles and North San Luis Obispo County. We specialize in servicing the agricultural and wine industries, providing on-site repairs for tractors, harvesters, and irrigation engines. We also offer complete 24/7 emergency roadside assistance for commercial trucks on Highway 46 and the US-101.
+            </p>
+            <h3>Service Area Highlights in and around Paso Robles</h3>
+            <ul>
+                <li><strong>East & West Side Wineries:</strong> On-site service for all agricultural and vineyard equipment to prevent costly downtime during harvest.</li>
+                <li><strong>Highway 46 Corridor:</strong> Rapid emergency response for commercial trucks and travelers.</li>
+                <li><strong>Downtown Paso Robles:</strong> Maintenance and repair for local delivery fleets and commercial vehicles.</li>
+                <li><strong>Surrounding Areas:</strong> Complete coverage for Templeton, Atascadero, and San Miguel.</li>
+            </ul>
+            <h2>Specialized Services for the Paso Robles Area</h2>
+            <ul>
+                <li><strong>Agricultural Equipment Repair:</strong> Expert diagnostics and repair for John Deere, Kubota, and other major tractor brands.</li>
+                <li><strong>Emergency Roadside Assistance:</strong> 24/7 service for breakdowns on the US-101 and rural county roads.</li>
+                <li><strong>Fleet Maintenance:</strong> Preventive maintenance plans to keep your agricultural or commercial fleet running reliably.</li>
+                <li><strong>Hydraulic Systems:</strong> On-site repair for hydraulic hoses, pumps, and systems on heavy equipment.</li>
+            </ul>
+        </div>
+    )
+  };
+
+  const defaultContent = (
+      <div className='prose max-w-none prose-h2:text-primary prose-h2:font-headline prose-h2:uppercase prose-h3:text-primary prose-h3:font-headline prose-h3:uppercase prose-strong:text-foreground'>
+        <h2>Your On-Site Repair Experts in {cityName}</h2>
+        <p>
+            When your truck or heavy equipment breaks down in {cityName}, you need a fast and reliable solution. {COMPANY_NAME} brings the repair shop to you, whether you're on a busy highway like the US-101, at a construction site, or on a farm in the heart of the Central Coast. Our mobile service trucks are fully equipped to handle a wide range of repairs on-site, minimizing your downtime and getting you back to work as quickly as possible.
+        </p>
+        <h2>Serving the Needs of {cityName} Industries</h2>
+        <p>
+            We understand the unique demands of the local economy in {cityName}. {location.description ? `From the ${location.description.toLowerCase()} that rely on heavy machinery to the commercial trucks that are the lifeblood of our local businesses, we have the expertise to service all types of diesel vehicles.` : 'From agriculture to commercial transport, we have the expertise to service all types of diesel vehicles.'} We are committed to providing professional, high-quality repairs that you can depend on.
+        </p>
+    </div>
+  )
 
   return (
     <div className="bg-white py-12 md:py-24">
@@ -65,13 +202,15 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
             <div className="lg:col-span-2">
                 <main>
                     <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">
-                      {isSantaMaria ? 'Santa Maria CA Diesel Mechanics' : `Mobile Diesel Mechanic in ${location.name}`}
+                      {`Mobile Diesel Mechanic in ${location.name}`}
                     </h1>
                     <p className="mt-4 text-lg text-muted-foreground">
-                      {isSantaMaria 
-                        ? `L Diesel Mobile Services provides professional mobile diesel mechanic services throughout Santa Maria, California and the greater Santa Maria metropolitan area. Our certified technicians bring expert diesel repair and maintenance services directly to your location in Santa Maria.`
-                        : `${COMPANY_NAME} provides fast and reliable 24/7 mobile diesel repair services to ${cityName} and the surrounding areas. ${location.description ? ` We are familiar with the specific needs of industries in the area, including ${location.description.toLowerCase()}.` : ''}`
-                      }
+                        {
+                            params.slug === 'santa-maria-ca' ? `L Diesel Mobile Services provides professional mobile diesel mechanic services throughout Santa Maria, California and the greater Santa Maria metropolitan area. Our certified technicians bring expert diesel repair and maintenance services directly to your location in Santa Maria.` :
+                            params.slug === 'san-luis-obispo-ca' ? `Your reliable 24/7 mobile diesel mechanic serving the entire San Luis Obispo area. We come to you for emergency repairs, fleet maintenance, and agricultural equipment service.` :
+                            params.slug === 'paso-robles-ca' ? `Your 24/7 mobile diesel repair specialists for Paso Robles, CA. We provide on-site service for commercial trucks, agricultural equipment, and RVs throughout North County.` :
+                            `${COMPANY_NAME} provides fast and reliable 24/7 mobile diesel repair services to ${cityName} and the surrounding areas. ${location.description ? ` We are familiar with the specific needs of industries in the area, including ${location.description.toLowerCase()}.` : ''}`
+                        }
                     </p>
                     
                     <Image 
@@ -82,86 +221,7 @@ export default function LocationDetailPage({ params }: { params: { slug: string 
                         height={400}
                         className="rounded-lg shadow-card border-2 border-foreground my-8"
                     />
-
-                    {isSantaMaria ? (
-                      <div className='prose max-w-none text-foreground prose-h2:text-primary prose-h2:text-3xl prose-h3:text-primary prose-h3:text-2xl'>
-                        <h2>Santa Maria Service Areas</h2>
-                        <h3>Greater Santa Maria Metropolitan Area</h3>
-                        <ul>
-                          <li>Uptown Santa Maria and downtown business district</li>
-                          <li>South Santa Maria including Orcutt and Guadalupe</li>
-                          <li>North Santa Maria including agricultural and industrial zones</li>
-                          <li>East Santa Maria including the Santa Maria Airport area</li>
-                          <li>West Santa Maria towards the coast</li>
-                        </ul>
-
-                        <h3>Surrounding Santa Barbara County Communities:</h3>
-                        <ul>
-                            <li>Guadalupe and the fertile agricultural plains</li>
-                            <li>Orcutt and its residential and commercial centers</li>
-                            <li>Lompoc and the Vandenberg Space Force Base area</li>
-                            <li>Buellton and the Santa Ynez Valley wine country</li>
-                            <li>Los Alamos and the surrounding rural communities</li>
-                        </ul>
-
-                        <h2>Why Choose Santa Maria Mobile Diesel Service?</h2>
-                        <ul>
-                            <li><strong>Local Expertise:</strong> We know Santa Maria's agricultural roads, major highways like the 101, and business districts.</li>
-                            <li><strong>Fast Response:</strong> Strategic positioning for quick response times across the Santa Maria Valley.</li>
-                            <li><strong>Business-Friendly:</strong> We understand the needs of Santa Maria's agricultural and commercial industries.</li>
-                            <li><strong>Fleet Experience:</strong> Extensive experience with Santa Maria-area commercial, agricultural, and transport fleets.</li>
-                            <li><strong>Emergency Coverage:</strong> 24/7 emergency service throughout the Santa Maria metro area and beyond.</li>
-                        </ul>
-
-                        <h2>Santa Maria Diesel Services</h2>
-                        <h3>Commercial Fleet Services</h3>
-                        <ul>
-                            <li>Corporate fleet maintenance for Santa Maria businesses</li>
-                            <li>Delivery truck and commercial vehicle service</li>
-                            <li>Construction equipment and contractor fleet service</li>
-                            <li>Municipal and government fleet maintenance</li>
-                            <li>Transportation and logistics company support</li>
-                        </ul>
-                        
-                        <h3>Emergency Services</h3>
-                        <ul>
-                            <li>US-101, CA-1, and CA-135 emergency response</li>
-                            <li>Santa Maria Public Airport (SMX) area emergency service</li>
-                            <li>Downtown Santa Maria emergency breakdown response</li>
-                            <li>Industrial area and warehouse district service</li>
-                            <li>24/7 emergency response throughout Santa Maria</li>
-                        </ul>
-
-                        <h3>Individual Vehicle Service</h3>
-                        <ul>
-                            <li>Personal diesel truck and SUV service</li>
-                            <li>RV and motorhome diesel service</li>
-                            <li>Agricultural equipment service for surrounding farms</li>
-                            <li>Recreational vehicle and boat diesel service</li>
-                        </ul>
-
-                         <h2>Santa Maria Industry Experience</h2>
-                        <ul>
-                            <li><strong>Agriculture:</strong> Tractors, harvesters, and irrigation pump engines are our specialty.</li>
-                            <li><strong>Transportation and Logistics:</strong> Major Santa Maria shipping and freight companies on the US-101 corridor.</li>
-                            <li><strong>Construction:</strong> Santa Maria's construction and development industry.</li>
-                            <li><strong>Wine Production:</strong> Vineyard equipment and transport vehicle maintenance.</li>
-                        </ul>
-
-                      </div>
-                    ) : (
-                      <div className='prose max-w-none text-foreground prose-h2:text-primary prose-h2:text-3xl prose-h3:text-primary prose-h3:text-2xl'>
-                        <h2>Your On-Site Repair Experts in {cityName}</h2>
-                        <p>
-                            When your truck or heavy equipment breaks down in {cityName}, you need a fast and reliable solution. L Diesel Mobile Services brings the repair shop to you, whether you're on a busy highway like the US-101, at a construction site, or on a farm in the heart of the Central Coast. Our mobile service trucks are fully equipped to handle a wide range of repairs on-site, minimizing your downtime and getting you back to work as quickly as possible.
-                        </p>
-
-                        <h2>Serving the Needs of {cityName} Industries</h2>
-                        <p>
-                            We understand the unique demands of the local economy in {cityName}. From the agricultural fields that rely on heavy machinery to the commercial trucks that are the lifeblood of our local businesses, we have the expertise to service all types of diesel vehicles. We are committed to providing professional, high-quality repairs that you can depend on.
-                        </p>
-                      </div>
-                    )}
+                    {pageContent[params.slug] || defaultContent}
                 </main>
             </div>
 
