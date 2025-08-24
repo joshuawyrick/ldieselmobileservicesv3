@@ -114,13 +114,13 @@ ${data.message}`
              </Card>
         </div>
         
-        <div>
-          <Card>
+        <div className="flex flex-col">
+          <Card className="flex-grow flex flex-col">
             <CardHeader>
               <CardTitle>Send Us a Message</CardTitle>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <CardContent className="flex-grow flex flex-col">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 flex-grow flex flex-col">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name</Label>
@@ -143,9 +143,9 @@ ${data.message}`
                    <Input id="service" {...register('service')} placeholder="e.g., Emergency Repair, Tire Service" />
                    {errors.service && <p className="text-sm text-destructive mt-1">{errors.service.message}</p>}
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 flex-grow flex flex-col">
                   <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" {...register('message')} placeholder="Please describe your issue and location." />
+                  <Textarea id="message" {...register('message')} placeholder="Please describe your issue and location." className="flex-grow" />
                   {errors.message && <p className="text-sm text-destructive mt-1">{errors.message.message}</p>}
                 </div>
                 <Button type="submit" className="w-full">Submit Request</Button>
