@@ -3,7 +3,7 @@ import { locations, services } from '@/lib/data';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
+import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 import { ArrowLeft, Check, Phone, Wrench } from 'lucide-react';
 import Image from 'next/image';
 
