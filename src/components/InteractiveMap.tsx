@@ -5,16 +5,20 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import { locations } from '@/lib/data';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Fix for default icon issue with webpack
-delete (L.Icon.Default.prototype as any)._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-  iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+const DefaultIcon = L.icon({
+    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
 });
+
+L.Marker.prototype.options.icon = DefaultIcon;
+
 
 // Hardcoded coordinates for locations
 const locationCoordinates: { [key: string]: [number, number] } = {
@@ -46,7 +50,16 @@ const locationCoordinates: { [key: string]: [number, number] } = {
 
 
 export default function InteractiveMap() {
+    const [isMounted, setIsMounted] = useState(false);
     const center: [number, number] = [35.2, -120.5];
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) {
+        return <div className="h-[500px] w-full rounded-2xl shadow-card border-2 border-foreground bg-secondary animate-pulse"></div>;
+    }
 
     return (
         <MapContainer center={center} zoom={9} scrollWheelZoom={false} className="h-[500px] w-full rounded-2xl shadow-card border-2 border-foreground">
