@@ -36,7 +36,7 @@ export default function AboutPage() {
             </div>
             <div className="order-1 md:order-2">
                 <Image
-                src="https://i.imgur.com/83n4Ua5.jpeg"
+                src="https://placehold.co/600x400.png"
                 alt="Our team of diesel mechanics ready for mobile truck repair"
                 data-ai-hint="team portrait"
                 width={600}

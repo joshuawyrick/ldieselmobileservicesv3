@@ -47,7 +47,7 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://i.imgur.com/gT3h1eC.jpeg"
+              src="https://placehold.co/1200x400.png"
               alt="Diesel fuel system service"
               className="w-full h-full object-cover"
               fill

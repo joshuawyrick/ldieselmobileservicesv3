@@ -67,7 +67,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'MobileBusiness',
     name: COMPANY_NAME,
-    image: 'https://i.imgur.com/pHfPUUt.png',
+    image: 'https://placehold.co/200x80.png',
     url: SITE_URL,
     telephone: PHONE_NUMBER,
     address: {
