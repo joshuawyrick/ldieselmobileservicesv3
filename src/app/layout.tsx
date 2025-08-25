@@ -4,9 +4,10 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA, SITE_URL } from '@/lib/constants';
+import { COMPANY_NAME, PHONE_NUMBER, SITE_URL } from '@/lib/constants';
 import Template from './template';
-import { Roboto, Roboto_Condensed } from 'next/font/google'
+import { Roboto, Roboto_Condensed } from 'next/font/google';
+import Chatbot from '@/components/Chatbot';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -63,40 +64,44 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": COMPANY_NAME,
-    "url": SITE_URL,
-    "telephone": PHONE_NUMBER,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "390 Apricot St.",
-      "addressLocality": "Nipomo",
-      "addressRegion": "CA",
-      "postalCode": "93444",
-      "addressCountry": "US"
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: COMPANY_NAME,
+    url: SITE_URL,
+    telephone: PHONE_NUMBER,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '390 Apricot St.',
+      addressLocality: 'Nipomo',
+      addressRegion: 'CA',
+      postalCode: '93444',
+      addressCountry: 'US',
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 35.0444,
-      "longitude": -120.4752
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 35.0444,
+      longitude: -120.4752,
     },
-    "areaServed": [
+    areaServed: [
       {
-        "@type": "AdministrativeArea",
-        "name": "San Luis Obispo County"
+        '@type': 'AdministrativeArea',
+        name: 'San Luis Obispo County',
       },
       {
-        "@type": "AdministrativeArea",
-        "name": "Santa Barbara County"
-      }
+        '@type': 'AdministrativeArea',
+        name: 'Santa Barbara County',
+      },
     ],
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
-    "description": "24/7 Mobile Diesel Mechanic services in San Luis Obispo and Santa Barbara counties, specializing in heavy-duty truck repair and emergency roadside assistance."
+    openingHours: 'Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59',
+    description:
+      '24/7 Mobile Diesel Mechanic services in San Luis Obispo and Santa Barbara counties, specializing in heavy-duty truck repair and emergency roadside assistance.',
   };
 
   return (
-    <html lang="en" className={`${roboto.variable} ${robotoCondensed.variable} scroll-smooth`}>
+    <html
+      lang="en"
+      className={`${roboto.variable} ${robotoCondensed.variable} scroll-smooth`}
+    >
       <head>
         <script
           type="application/ld+json"
@@ -107,6 +112,7 @@ export default function RootLayout({
         <Header />
         <Template>{children}</Template>
         <Footer />
+        <Chatbot />
         <Toaster />
       </body>
     </html>
