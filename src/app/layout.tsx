@@ -52,6 +52,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  icons: {
+    icon: '/LDieselMobileMechanic.svg',
+    shortcut: '/LDieselMobileMechanic.svg',
+    apple: '/LDieselMobileMechanic.svg',
+  },
 };
 
 export const viewport: Viewport = {
