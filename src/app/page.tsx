@@ -27,7 +27,6 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
-import InteractiveMapLoader from '@/components/InteractiveMapLoader';
 
 
 const icons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
@@ -188,7 +187,13 @@ export default function Home() {
               We provide 24/7 mobile diesel repair services from Paso Robles to Santa Maria, including full coverage of Highway 101 and all major routes in San Luis Obispo and Santa Barbara Counties.
             </p>
             <div className="mt-12">
-               <InteractiveMapLoader />
+               <Image 
+                src="https://i.imgur.com/8Z5f2Q5.png" 
+                alt="Service area map for L Diesel Mobile Services"
+                width={1200}
+                height={800}
+                className="rounded-2xl shadow-card border-2 border-foreground w-full h-auto"
+                />
             </div>
           </div>
         </section>
