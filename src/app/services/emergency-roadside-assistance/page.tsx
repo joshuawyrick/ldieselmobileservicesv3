@@ -47,7 +47,7 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://images.unsplash.com/photo-1533106418989-88406e768d67?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1533106418989-88406e768d67?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Emergency roadside assistance for a heavy-duty truck on the Central Coast"
               className="w-full h-full object-cover"
               fill
@@ -74,7 +74,7 @@ export default function ServiceDetailPage() {
         </Link>
         <div className="prose max-w-none prose-h2:text-primary prose-h2:uppercase prose-h2:font-headline prose-h3:text-primary prose-h3:uppercase prose-h3:font-headline prose-headings:font-headline prose-headings:uppercase prose-strong:text-foreground">
             <p className="text-xl text-muted-foreground">
-                When your truck breaks down on the road, every minute of downtime costs you money. That's why our mobile diesel mechanics are available 24/7 to provide emergency roadside assistance for tire blowouts, dead batteries, fuel shortages, and minor mechanical issues anywhere in {SERVICE_AREA}.
+                When your truck breaks down on the road, every minute of downtime costs you money. That's why our mobile diesel mechanics are available 24/7 to provide emergency roadside assistance throughout San Luis Obispo County and northern Santa Barbara County south to Lompoc.
             </p>
         </div>
         
@@ -155,7 +155,7 @@ export default function ServiceDetailPage() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>How quickly can you respond to an emergency on the Central Coast?</AccordionTrigger>
                 <AccordionContent>
-                  We prioritize emergency roadside calls and aim for the fastest possible response time. Our local dispatch provides an accurate ETA based on your location in San Luis Obispo or Santa Barbara County.
+                  We prioritize emergency roadside calls and aim for the fastest possible response time. Our local dispatch provides an accurate ETA based on your location in San Luis Obispo County or northern Santa Barbara County.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
