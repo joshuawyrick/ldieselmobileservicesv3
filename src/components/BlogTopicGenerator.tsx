@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -8,8 +9,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
-import { Loader2, Lightbulb } from 'lucide-react';
+import { Loader2, Lightbulb, PenSquare, Copy } from 'lucide-react';
 import { suggestBlogTopic, type BlogTopicSuggestionOutput } from '@/ai/flows/blog-topic-suggestion';
+import { writeBlogPost, type BlogPostWriterOutput } from '@/ai/flows/blog-post-writer';
+import { Textarea } from './ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 
 const FormSchema = z.object({
   location: z.string().min(2, 'Location is required.'),
@@ -20,9 +24,12 @@ const FormSchema = z.object({
 type FormValues = z.infer<typeof FormSchema>;
 
 export default function BlogTopicGenerator() {
-  const [loading, setLoading] = useState(false);
+  const [loadingSuggestions, setLoadingSuggestions] = useState(false);
+  const [loadingPost, setLoadingPost] = useState(false);
   const [suggestions, setSuggestions] = useState<BlogTopicSuggestionOutput | null>(null);
+  const [generatedPost, setGeneratedPost] = useState<BlogPostWriterOutput | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const { toast } = useToast();
 
   const {
     register,
@@ -38,8 +45,9 @@ export default function BlogTopicGenerator() {
   });
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    setLoading(true);
+    setLoadingSuggestions(true);
     setSuggestions(null);
+    setGeneratedPost(null);
     setError(null);
     try {
       const result = await suggestBlogTopic(data);
@@ -48,8 +56,31 @@ export default function BlogTopicGenerator() {
       setError('Failed to generate suggestions. Please try again.');
       console.error(e);
     } finally {
-      setLoading(false);
+      setLoadingSuggestions(false);
     }
+  };
+
+  const handleWritePost = async (topic: string) => {
+    setLoadingPost(true);
+    setGeneratedPost(null);
+    setError(null);
+    try {
+      const result = await writeBlogPost({ topic });
+      setGeneratedPost(result);
+    } catch (e) {
+      setError('Failed to generate the blog post. Please try again.');
+      console.error(e);
+    } finally {
+      setLoadingPost(false);
+    }
+  };
+  
+  const handleCopy = (text: string, field: string) => {
+    navigator.clipboard.writeText(text);
+    toast({
+      title: `${field} Copied!`,
+      description: "The text has been copied to your clipboard.",
+    });
   };
 
   return (
@@ -70,11 +101,11 @@ export default function BlogTopicGenerator() {
           <Input id="keywords" {...register('keywords')} placeholder="e.g., diesel repair, maintenance" />
           {errors.keywords && <p className="text-sm text-destructive mt-1">{errors.keywords.message}</p>}
         </div>
-        <Button type="submit" disabled={loading} className="w-full">
-          {loading ? (
+        <Button type="submit" disabled={loadingSuggestions || loadingPost} className="w-full">
+          {loadingSuggestions ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating...
+              Generating Topics...
             </>
           ) : (
             'Suggest Topics'
@@ -84,19 +115,77 @@ export default function BlogTopicGenerator() {
 
       {error && <p className="mt-4 text-center text-destructive">{error}</p>}
 
-      {suggestions && suggestions.topicSuggestions.length > 0 && (
+      {suggestions && !generatedPost && (
         <div className="mt-8">
           <h3 className="text-lg font-semibold text-center mb-4">Here are some ideas:</h3>
           <div className="space-y-4">
             {suggestions.topicSuggestions.map((topic, index) => (
               <Card key={index}>
-                <CardContent className="p-4 flex items-start space-x-4">
-                  <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <p className="text-foreground">{topic}</p>
+                <CardContent className="p-4 flex items-center justify-between space-x-4">
+                  <div className='flex items-start space-x-4'>
+                    <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                    <p className="text-foreground">{topic}</p>
+                  </div>
+                  <Button 
+                    size="sm" 
+                    onClick={() => handleWritePost(topic)} 
+                    disabled={loadingPost || loadingSuggestions}
+                  >
+                    {loadingPost ? (
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    ) : (
+                      <PenSquare className="mr-2 h-4 w-4" />
+                    )}
+                    Write Post
+                  </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
+        </div>
+      )}
+      
+      {loadingPost && (
+        <div className="mt-8 text-center">
+            <Loader2 className="mx-auto h-8 w-8 animate-spin text-primary" />
+            <p className="mt-2 text-muted-foreground">Writing your blog post...</p>
+        </div>
+      )}
+
+      {generatedPost && (
+        <div className="mt-8 space-y-6">
+          <h3 className="text-xl font-bold font-headline text-primary text-center">Generated Blog Post</h3>
+          <div className="space-y-2">
+            <div className="flex justify-between items-center">
+                <Label htmlFor="postTitle">Title</Label>
+                 <Button variant="ghost" size="sm" onClick={() => handleCopy(generatedPost.title, 'Title')}>
+                    <Copy className="mr-2 h-4 w-4" /> Copy
+                </Button>
+            </div>
+            <Input id="postTitle" readOnly value={generatedPost.title} />
+          </div>
+           <div className="space-y-2">
+            <div className="flex justify-between items-center">
+                <Label htmlFor="metaDescription">Meta Description</Label>
+                 <Button variant="ghost" size="sm" onClick={() => handleCopy(generatedPost.metaDescription, 'Description')}>
+                    <Copy className="mr-2 h-4 w-4" /> Copy
+                </Button>
+            </div>
+            <Textarea id="metaDescription" readOnly value={generatedPost.metaDescription} rows={3} />
+          </div>
+           <div className="space-y-2">
+            <div className="flex justify-between items-center">
+                <Label htmlFor="postContent">Content (Markdown)</Label>
+                 <Button variant="ghost" size="sm" onClick={() => handleCopy(generatedPost.content, 'Content')}>
+                    <Copy className="mr-2 h-4 w-4" /> Copy
+                </Button>
+            </div>
+            <Textarea id="postContent" readOnly value={generatedPost.content} rows={15} />
+          </div>
+
+           <Button onClick={() => setGeneratedPost(null)} className="w-full">
+            Generate Another
+          </Button>
         </div>
       )}
     </div>
