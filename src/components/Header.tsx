@@ -43,10 +43,6 @@ export default function Header() {
           </nav>
 
           <div className="flex flex-1 items-center justify-end">
-             <a href={`tel:${PHONE_NUMBER}`} className="hidden lg:inline-flex btn btn-primary">
-                Call Now
-             </a>
-            
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="lg:hidden">
                 <Button variant="ghost" size="icon">
