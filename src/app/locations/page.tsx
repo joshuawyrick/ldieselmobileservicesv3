@@ -7,11 +7,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
-import dynamic from 'next/dynamic';
-
-const InteractiveMap = dynamic(() => import('@/components/InteractiveMap'), {
-    ssr: false,
-});
+import InteractiveMapLoader from '@/components/InteractiveMapLoader';
 
 export const metadata: Metadata = {
   title: `Mobile Diesel Mechanic Service Locations | ${COMPANY_NAME}`,
@@ -104,7 +100,7 @@ export default function LocationsPage() {
               Full Heavy-Duty Coverage Area
             </h2>
             <div className="mt-12">
-               <InteractiveMap />
+               <InteractiveMapLoader />
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
