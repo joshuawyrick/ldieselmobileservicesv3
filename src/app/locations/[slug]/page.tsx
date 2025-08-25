@@ -161,7 +161,7 @@ export default function LocationDetailPage({ params }: PageProps) {
         <section className="relative h-[300px] md:h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
              <div className="absolute inset-0 w-full h-full">
                 <Image
-                    src={params.slug === 'paso-robles-ca' ? '/images/mobile-diesel-mechanic-paso-robles-ca.jpg' : 'https://placehold.co/2070x1380.png'}
+                    src={params.slug === 'paso-robles-ca' ? '/mobile-diesel-mechanic-paso-robles-ca.png' : 'https://placehold.co/2070x1380.png'}
                     alt={`Mobile Diesel Mechanic services in ${cityName}`}
                     className="w-full h-full object-cover"
                     fill
