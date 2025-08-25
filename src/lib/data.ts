@@ -24,7 +24,7 @@ export const services = [
     description: '24/7 emergency support for unexpected breakdowns. We provide fast, reliable roadside assistance to get you back on the road anytime, anywhere on the Central Coast, from Paso Robles south to Lompoc.',
     imageHint: 'towing truck',
     alt: 'Emergency roadside assistance for a heavy-duty truck',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/emergency-roadside-assistance-central-coast.jpg',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         '24/7 Emergency Dispatch',
