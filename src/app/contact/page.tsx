@@ -109,13 +109,13 @@ ${data.message}`
                 </CardContent>
             </Card>
 
-             <Card className="bg-accent text-accent-foreground">
+             <Card className="btn-primary text-accent-foreground">
                 <CardHeader>
                     <CardTitle>Emergency? Call Us Now!</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <p>For immediate assistance, please call us directly. We offer 24/7 emergency roadside service.</p>
-                    <Button asChild size="lg" className="mt-4 w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Button asChild size="lg" className="mt-4 w-full bg-white hover:bg-white/90 text-black">
                          <a href={`tel:${PHONE_NUMBER}`}>
                             <Phone className="mr-2 h-5 w-5" /> Click to Call
                         </a>

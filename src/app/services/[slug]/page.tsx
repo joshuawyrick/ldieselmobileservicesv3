@@ -74,10 +74,10 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           </p>
         </div>
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Need Emergency {service.title.replace('Mobile', '').replace('Services', '').trim()}?</h2>
-            <p className="mt-2 text-muted-foreground">We offer 24/7 emergency service. Call us anytime for immediate help.</p>
-            <Button asChild size="lg" className="mt-4 bg-accent hover:bg-accent/90">
+        <div className="mt-10 p-6 btn-primary text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Need Emergency {service.title.replace('Mobile', '').replace('Services', '').trim()}?</h2>
+            <p className="mt-2">We offer 24/7 emergency service. Call us anytime for immediate help.</p>
+            <Button asChild size="lg" className="mt-4 bg-white hover:bg-white/90 text-black">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

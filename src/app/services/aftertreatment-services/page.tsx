@@ -189,10 +189,10 @@ export default function ServiceDetailPage() {
         )}
 
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Emission System Problems? Call Now.</h2>
-            <p className="mt-2 text-muted-foreground">We offer 24/7 mobile DPF & DEF service across the Central Coast.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Emission System Problems? Call Now.</h2>
+            <p className="mt-2">We offer 24/7 mobile DPF & DEF service across the Central Coast.</p>
+            <Button asChild size="lg" className="mt-4 bg-white hover:bg-white/90 text-black">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

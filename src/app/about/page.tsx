@@ -66,10 +66,10 @@ export default function AboutPage() {
             </div>
         </div>
 
-        <div className="mt-16 text-center bg-primary/10 p-8 rounded-lg">
-             <h2 className="text-3xl font-bold font-headline text-primary">Ready to Experience the Difference?</h2>
-             <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">Contact us today for routine maintenance or emergency repairs. We're here to help.</p>
-             <Button asChild size="lg" className="mt-6">
+        <div className="mt-16 text-center btn-primary text-accent-foreground p-8 rounded-lg">
+             <h2 className="text-3xl font-bold font-headline">Ready to Experience the Difference?</h2>
+             <p className="mt-2 max-w-2xl mx-auto">Contact us today for routine maintenance or emergency repairs. We're here to help.</p>
+             <Button asChild size="lg" className="mt-6 bg-white text-black hover:bg-white/90">
                 <Link href="/contact">Get In Touch</Link>
              </Button>
         </div>
