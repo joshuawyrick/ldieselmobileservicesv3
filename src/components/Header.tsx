@@ -16,8 +16,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm shadow-md">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-[102px] lg:grid lg:grid-cols-3">
-          <div className="flex justify-start">
+        <div className="flex items-center justify-between h-[102px]">
+          <div className="flex-1 flex justify-start">
             <Link href="/" className="flex items-center space-x-2">
                 <Image
                 src="https://i.imgur.com/anSw5aG.png"
@@ -42,7 +42,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center justify-end">
+          <div className="flex-1 flex items-center justify-end">
              <a href={`tel:${PHONE_NUMBER}`} className="hidden md:inline-flex btn btn-primary">
                 Call Now
              </a>
