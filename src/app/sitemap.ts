@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/constants';
-import { services, locations } from '@/lib/data';
+import { services, locations, blogPosts } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
@@ -26,5 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...staticPages, ...servicePages, ...locationPages];
+  const blogPostPages = blogPosts.map((post) => ({
+    url: `${SITE_URL}/blog${post.url}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticPages, ...servicePages, ...locationPages, ...blogPostPages];
 }
