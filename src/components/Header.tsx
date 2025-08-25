@@ -43,7 +43,7 @@ export default function Header() {
           </nav>
 
           <div className="flex flex-1 items-center justify-end">
-             <a href={`tel:${PHONE_NUMBER}`} className="hidden md:inline-flex btn btn-primary">
+             <a href={`tel:${PHONE_NUMBER}`} className="hidden lg:inline-flex btn btn-primary">
                 Call Now
              </a>
             
