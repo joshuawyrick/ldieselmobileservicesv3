@@ -19,7 +19,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-[102px]">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/logo.png"
+              src="https://i.imgur.com/anSw5aG.png"
               alt={`${COMPANY_NAME} logo`}
               width={200}
               height={80}
@@ -57,7 +57,7 @@ export default function Header() {
                   <div className="flex items-center justify-between mb-8">
                     <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-2">
                        <Image
-                        src="/logo.png"
+                        src="https://i.imgur.com/anSw5aG.png"
                         alt={`${COMPANY_NAME} logo`}
                         width={180}
                         height={72}
