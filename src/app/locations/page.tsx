@@ -100,8 +100,9 @@ export default function LocationsPage() {
             </h2>
             <div className="mt-12">
                <Image 
-                src="https://i.imgur.com/8Z5f2Q5.png" 
+                src="https://placehold.co/1200x800.png"
                 alt="Service area map for L Diesel Mobile Services"
+                data-ai-hint="california coast map"
                 width={1200}
                 height={800}
                 className="rounded-2xl shadow-card border-2 border-foreground w-full h-auto"
