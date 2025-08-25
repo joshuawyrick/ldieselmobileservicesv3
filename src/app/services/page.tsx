@@ -92,7 +92,7 @@ export default function ServicesPage() {
                 }`}
               >
                 <Image
-                  src={service.imageUrl || `https://i.imgur.com/gT3h1eC.jpeg`}
+                  src={service.imageUrl}
                   alt={service.alt}
                   data-ai-hint={service.imageHint}
                   width={600}
@@ -130,7 +130,7 @@ export default function ServicesPage() {
             </div>
              <div className="btn-primary no-hover border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Mobile Truck Mechanic Now?</h2>
-                <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across {SERVICE_AREA} for emergency truck repair.</p>
+                <p className="text-lg text-accent-foreground/90 mt-4">We're available 24/7 across ${SERVICE_AREA} for emergency truck repair.</p>
                 <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground">
                     <Phone className='inline-block mr-3' />
                     {PHONE_NUMBER}

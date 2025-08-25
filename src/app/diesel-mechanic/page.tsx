@@ -70,7 +70,7 @@ export default function DieselMechanicPage() {
             Our Mobile Diesel Mechanic Expertise
           </h2>
           <p className="mt-2 text-muted-foreground max-w-2xl mx-auto text-center">
-            At {COMPANY_NAME}, our team is comprised of certified diesel mechanics specializing in mobile repair for:
+            At ${COMPANY_NAME}, our team is comprised of certified diesel mechanics specializing in mobile repair for:
           </p>
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service) => (
