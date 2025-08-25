@@ -58,7 +58,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             <Image 
                 src={service.imageUrl}
                 alt={`Image for ${service.title} service`}
-                data-ai-hint="diesel repair"
                 width={800}
                 height={400}
                 className="rounded-lg shadow-md"

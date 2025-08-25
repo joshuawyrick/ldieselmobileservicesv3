@@ -43,7 +43,6 @@ export default function BlogPage() {
                 <Image
                   src={post.image}
                   alt={post.alt}
-                  data-ai-hint={post.imageHint}
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"

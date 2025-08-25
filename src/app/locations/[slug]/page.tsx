@@ -161,12 +161,11 @@ export default function LocationDetailPage({ params }: PageProps) {
         <section className="relative h-[300px] md:h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
              <div className="absolute inset-0 w-full h-full">
                 <Image
-                    src="https://images.unsplash.com/photo-1579532589211-78229b35a395?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src="https://placehold.co/2070x1380.png"
                     alt={`Mobile Diesel Mechanic services in ${cityName}`}
                     className="w-full h-full object-cover"
                     fill
                     priority
-                    data-ai-hint="california highway"
                 />
                 <div className="absolute inset-0 bg-black/60"></div>
              </div>

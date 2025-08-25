@@ -70,12 +70,11 @@ export default function Home() {
         <section className="relative h-[912px] overflow-hidden -mt-[102px]">
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://images.unsplash.com/photo-1590854625329-a51394a11956?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://placehold.co/2070x1380.png"
               alt="24/7 Mobile Diesel Mechanic providing emergency roadside assistance on the Central Coast"
               className="w-full h-full object-cover"
               fill
               priority
-              data-ai-hint="diesel truck road"
             />
             <div className="absolute inset-0 bg-black/50"></div>
           </div>
@@ -195,9 +194,8 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full">
                         <Image
-                            src="https://storage.googleapis.com/stabl-media/mix-as-map.png"
+                            src="https://placehold.co/600x600.png"
                             alt="Map of the Central Coast service area for mobile diesel repair, covering San Luis Obispo and Santa Barbara counties"
-                            data-ai-hint="california coast map"
                             width={600}
                             height={600}
                             className="rounded-2xl shadow-card border-2 border-foreground w-full h-auto"
