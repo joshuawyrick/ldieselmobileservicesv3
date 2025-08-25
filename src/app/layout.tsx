@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   icons: {
-    icon: '/LDieselMobileMechanic.svg',
-    shortcut: '/LDieselMobileMechanic.svg',
-    apple: '/LDieselMobileMechanic.svg',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 };
 
