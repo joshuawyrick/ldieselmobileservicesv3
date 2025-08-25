@@ -91,55 +91,6 @@ export default function LocationsPage() {
                 </div>
             </div>
         </section>
-
-        {/* Map Section */}
-        <section id="coverage" className="py-24 bg-secondary">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-headline text-foreground">
-                Our Central Coast Service Area
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                24/7 Mobile Diesel Repair Services Along the Highway 101 Corridor
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="w-full">
-                <Image 
-                  src="https://placehold.co/600x600.png" 
-                  alt="A diesel truck driving along the Central Coast highway at sunset"
-                  data-ai-hint="diesel truck sunset"
-                  width={600}
-                  height={600}
-                  className="rounded-2xl shadow-card border-2 border-foreground w-full h-auto"
-                />
-              </div>
-              <div>
-                <div className="mb-8">
-                  <h3 className="text-2xl font-headline text-primary mb-4">San Luis Obispo County</h3>
-                  <div className="flex flex-wrap gap-3">
-                    {sloCountyLocations.map(location => (
-                      <Link href={`/locations${location.url}`} key={location.url} className="block border-2 border-foreground bg-card text-foreground rounded-full px-4 py-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-                        {location.name.replace(', CA', '')}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-headline text-primary mb-4">Santa Barbara County</h3>
-                  <div className="flex flex-wrap gap-3">
-                    {sbCountyLocations.map(location => (
-                      <Link href={`/locations${location.url}`} key={location.url} className="block border-2 border-foreground bg-card text-foreground rounded-full px-4 py-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-                        {location.name.replace(', CA', '')}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         
          <section className="py-24 bg-white">
             <div className="container mx-auto px-4">
