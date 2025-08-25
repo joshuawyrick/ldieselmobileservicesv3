@@ -14,7 +14,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex h-[102px] items-center justify-between">
           <div className="flex flex-1 justify-start">
