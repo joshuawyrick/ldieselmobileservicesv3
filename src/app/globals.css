@@ -4,50 +4,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 13%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
+    --background: 228 100% 98%;
+    --foreground: 222 84% 5%;
+    --card: 228 100% 98%;
+    --card-foreground: 222 84% 5%;
+    --popover: 228 100% 98%;
+    --popover-foreground: 222 84% 5%;
     /* Royal Blue */
     --primary: 221 83% 53%;
     --primary-foreground: 0 0% 98%;
     /* Light Grey */
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 228 60% 94%;
+    --secondary-foreground: 222 84% 5%;
     /* Grey */
-    --muted: 240 5% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 228 60% 94%;
+    --muted-foreground: 222 24% 35%;
     /* Cherry Red */
     --accent: 0 84% 60%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 13%;
-    --input: 240 5% 90%;
+    --border: 222 84% 5%;
+    --input: 228 40% 90%;
     --ring: 221 83% 53%;
     --radius: 1.25rem;
   }
   .dark {
-    --background: 0 0% 13%;
+    --background: 222 84% 5%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 13%;
+    --card: 222 84% 5%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 13%;
+    --popover: 222 84% 5%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 13%;
-    --secondary: 0 0% 20%;
+    --primary-foreground: 222 84% 5%;
+    --secondary: 222 44% 15%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 20%;
+    --muted: 222 44% 15%;
     --muted-foreground: 0 0% 60%;
     --accent: 0 84% 60%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
+    --border: 222 24% 25%;
+    --input: 222 24% 25%;
     --ring: 0 84% 60%;
   }
 }
@@ -60,7 +60,7 @@
     @apply bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-headline uppercase;
+    @apply font-headline font-bold uppercase;
   }
 }
 
