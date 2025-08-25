@@ -70,7 +70,7 @@ export default function Home() {
         <section className="relative h-[912px] overflow-hidden -mt-[102px]">
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://i.imgur.com/tOnFtUn.png"
+              src="https://i.imgur.com/pXlqbmD.jpeg"
               alt="Diesel mechanic working on truck"
               className="w-full h-full object-cover"
               fill
@@ -195,7 +195,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full">
                         <Image
-                            src="https://i.imgur.com/tOnFtUn.png"
+                            src="https://i.imgur.com/n0aWz1w.png"
                             alt="Map of the Central Coast service area"
                             data-ai-hint="california coast map"
                             width={600}
