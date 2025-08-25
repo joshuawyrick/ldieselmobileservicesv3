@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { locations } from '@/lib/data';
@@ -6,6 +7,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
+import dynamic from 'next/dynamic';
+
+const InteractiveMap = dynamic(() => import('@/components/InteractiveMap'), {
+    ssr: false,
+});
 
 export const metadata: Metadata = {
   title: `Mobile Diesel Mechanic Service Locations | ${COMPANY_NAME}`,
@@ -98,14 +104,7 @@ export default function LocationsPage() {
               Full Heavy-Duty Coverage Area
             </h2>
             <div className="mt-12">
-               <Image
-                  src="https://placehold.co/1200x600.png"
-                  alt={`Map of service area for mobile truck repair: ${SERVICE_AREA}`}
-                  data-ai-hint="service area map"
-                  width={1200}
-                  height={600}
-                  className="rounded-2xl shadow-card border-2 border-foreground mx-auto"
-                />
+               <InteractiveMap />
             </div>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">

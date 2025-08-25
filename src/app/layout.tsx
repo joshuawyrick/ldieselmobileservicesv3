@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA, SITE_URL } from '@/lib/constants';
 import Template from './template';
+import 'leaflet/dist/leaflet.css';
 
 export const metadata: Metadata = {
   title: {

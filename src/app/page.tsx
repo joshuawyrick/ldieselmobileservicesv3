@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { services, valueProps } from '@/lib/data';
@@ -26,6 +27,12 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
+import dynamic from 'next/dynamic';
+
+const InteractiveMap = dynamic(() => import('@/components/InteractiveMap'), {
+  ssr: false,
+});
+
 
 const icons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
   ShieldCheck,
@@ -185,14 +192,7 @@ export default function Home() {
               We provide 24/7 mobile diesel repair services from Paso Robles to Santa Maria, including full coverage of Highway 101 and all major routes in San Luis Obispo and Santa Barbara Counties.
             </p>
             <div className="mt-12">
-               <Image
-                  src="https://placehold.co/1200x600.png"
-                  alt="Service area map for San Luis Obispo and Santa Barbara counties"
-                  data-ai-hint="service area map"
-                  width={1200}
-                  height={600}
-                  className="rounded-2xl shadow-card border-2 border-foreground mx-auto"
-                />
+               <InteractiveMap />
             </div>
           </div>
         </section>
