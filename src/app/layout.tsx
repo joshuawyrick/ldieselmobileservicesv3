@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   icons: {
-    icon: { url: "/favicon.svg", type: "image/svg+xml" },
-    shortcut: { url: "/favicon.svg", type: "image/svg+xml" },
-    apple: { url: "/favicon.svg", type: "image/svg+xml" },
+    icon: { url: "/favicon.svg?v=1", type: "image/svg+xml" },
+    shortcut: { url: "/favicon.svg?v=1", type: "image/svg+xml" },
+    apple: { url: "/favicon.svg?v=1", type: "image/svg+xml" },
   },
 };
 
