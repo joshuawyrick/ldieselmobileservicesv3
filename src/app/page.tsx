@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { services, valueProps } from '@/lib/data';
+import { services, valueProps, locations } from '@/lib/data';
 import {
   ShieldCheck,
   Wrench,
@@ -60,6 +60,9 @@ const serviceIcons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } =
 
 
 export default function Home() {
+  const sloCountyLocations = locations.filter(l => l.county === 'San Luis Obispo');
+  const sbCountyLocations = locations.filter(l => l.county === 'Santa Barbara');
+
   return (
     <div className="flex flex-col">
       <main className="flex-1">
@@ -177,24 +180,51 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Coverage Area Map Section */}
+        {/* Coverage Area Section */}
         <section id="coverage" className="py-24 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl">
-              Our Central Coast Service Area
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              We provide 24/7 mobile diesel repair services from Paso Robles to Santa Maria, including full coverage of Highway 101 and all major routes in San Luis Obispo and Santa Barbara Counties.
-            </p>
-            <div className="mt-12">
-               <Image 
-                src="https://placehold.co/1200x800.png" 
-                alt="Service area map for L Diesel Mobile Services"
-                data-ai-hint="california coast map"
-                width={1200}
-                height={800}
-                className="rounded-2xl shadow-card border-2 border-foreground w-full h-auto"
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-headline text-foreground">
+                Our Central Coast Service Area
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                24/7 Mobile Diesel Repair Services Along the Highway 101 Corridor
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="w-full">
+                <Image 
+                  src="https://placehold.co/600x600.png" 
+                  alt="A diesel truck driving along the Central Coast highway at sunset"
+                  data-ai-hint="diesel truck sunset"
+                  width={600}
+                  height={600}
+                  className="rounded-2xl shadow-card border-2 border-foreground w-full h-auto"
                 />
+              </div>
+              <div>
+                <div className="mb-8">
+                  <h3 className="text-2xl font-headline text-primary mb-4">San Luis Obispo County</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {sloCountyLocations.map(location => (
+                      <Link href={`/locations${location.url}`} key={location.url} className="block border-2 border-foreground bg-card text-foreground rounded-full px-4 py-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
+                        {location.name.replace(', CA', '')}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-headline text-primary mb-4">Santa Barbara County</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {sbCountyLocations.map(location => (
+                      <Link href={`/locations${location.url}`} key={location.url} className="block border-2 border-foreground bg-card text-foreground rounded-full px-4 py-2 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
+                        {location.name.replace(', CA', '')}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
