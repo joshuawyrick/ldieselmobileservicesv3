@@ -1,3 +1,4 @@
+
 import { services } from '@/lib/data';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
@@ -45,7 +46,7 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://placehold.co/1440x400.png"
+              src="https://i.imgur.com/e5k45T5.jpeg"
               alt="Mobile aftertreatment service for a heavy-duty truck exhaust system"
               className="w-full h-full object-cover"
               fill

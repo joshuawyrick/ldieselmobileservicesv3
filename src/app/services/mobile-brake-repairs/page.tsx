@@ -1,3 +1,4 @@
+
 import { services } from '@/lib/data';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
@@ -6,6 +7,7 @@ import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 import { ArrowLeft, Phone, CheckCircle, ShieldCheck, FileText, Wrench, AlertTriangle, PlayCircle, Users, Clock } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { notFound } from 'next/navigation';
 
 const service = services.find((s) => s.url === '/mobile-brake-repairs');
 
@@ -50,7 +52,7 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://placehold.co/1440x400.png"
+              src="https://i.imgur.com/83n4Ua5.jpeg"
               alt="Mobile brake repair service for heavy-duty trucks on the Central Coast"
               className="w-full h-full object-cover"
               fill

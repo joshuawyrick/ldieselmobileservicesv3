@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { services } from '@/lib/data';
 import type { Metadata } from 'next';
@@ -54,7 +55,7 @@ export default function DieselMechanicPage() {
           </div>
           <div>
             <Image
-              src="https://placehold.co/600x400.png"
+              src="https://i.imgur.com/kQo4J42.jpeg"
               alt="Professional diesel mechanic at work on a semi-truck"
               data-ai-hint="diesel engine"
               width={600}

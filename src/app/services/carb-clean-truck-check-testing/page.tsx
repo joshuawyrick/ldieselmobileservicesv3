@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { services } from '@/lib/data';
 import type { Metadata } from 'next';
@@ -49,7 +50,7 @@ export default function ServiceDetailPage() {
 
         <div className="my-8">
             <Image 
-                src="https://placehold.co/800x400.png"
+                src="https://i.imgur.com/hYQd5u9.jpeg"
                 alt={service.title}
                 data-ai-hint="emission test"
                 width={800}

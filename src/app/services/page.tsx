@@ -31,7 +31,7 @@ export default function ServicesPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://placehold.co/1440x400.png"
+              src="https://i.imgur.com/kQo4J42.jpeg"
               alt="Diesel service truck on the Central Coast providing mobile repair"
               className="w-full h-full object-cover"
               fill
@@ -92,7 +92,7 @@ export default function ServicesPage() {
                 }`}
               >
                 <Image
-                  src={`https://placehold.co/600x400.png`}
+                  src={service.imageUrl || `https://i.imgur.com/gT3h1eC.jpeg`}
                   alt={service.alt}
                   data-ai-hint={service.imageHint}
                   width={600}

@@ -56,7 +56,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
         <div className="my-8">
             <Image 
-                src="https://placehold.co/800x400.png"
+                src={service.imageUrl || "https://i.imgur.com/kQo4J42.jpeg"}
                 alt={`Image for ${service.title} service`}
                 data-ai-hint="diesel repair"
                 width={800}
