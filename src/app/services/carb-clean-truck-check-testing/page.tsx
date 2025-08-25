@@ -50,7 +50,7 @@ export default function ServiceDetailPage() {
 
         <div className="my-8">
             <Image 
-                src="/clean-truck-check-santa-maria.png"
+                src="/CARB-Clean-Truck-Check-Credentialed-Tester.png"
                 alt={service.title}
                 width={800}
                 height={400}
@@ -213,3 +213,5 @@ export default function ServiceDetailPage() {
     </div>
   );
 }
+
+    
