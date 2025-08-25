@@ -297,7 +297,7 @@ export const footerLinks = {
 
 export const blogPosts = [
   {
-    url: '/carb-clean-truck-compliance-l-diesel-mobile-service-central-coast',
+    url: '/mobile-carb-compliance',
     title: 'Your Mobile Solution for CARB Clean Truck Check Compliance on the Central Coast',
     excerpt: 'Stay compliant with California\'s Clean Truck Check program. We offer mobile testing and on-site emissions repair in San Luis Obispo & Santa Barbara Counties.',
     date: 'July 26, 2024',
