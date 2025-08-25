@@ -195,7 +195,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full">
                         <Image
-                            src="https://i.imgur.com/n0aWz1w.png"
+                            src="https://i.imgur.com/tOnFtUn.png"
                             alt="Map of the Central Coast service area"
                             data-ai-hint="california coast map"
                             width={600}
