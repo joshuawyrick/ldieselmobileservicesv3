@@ -82,7 +82,13 @@
 }
 
 .btn-primary {
-    @apply bg-accent text-accent-foreground border-accent hover:bg-transparent hover:text-accent;
+    @apply text-accent-foreground border-accent;
+    background-image: linear-gradient(to bottom, hsl(var(--accent)), #991b1b);
+}
+
+.btn-primary:hover {
+    background-image: none;
+    @apply bg-transparent text-accent;
 }
 
 .btn-secondary {
