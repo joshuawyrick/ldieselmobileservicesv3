@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "mobile tire service, truck tire repair, commercial tire service, 24/7 tire repair, emergency tire service, San Luis Obispo, Santa Maria, Paso Robles, Highway 101",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/mobile-tire-services`,
     },
   };
 }
@@ -198,10 +198,10 @@ export default function ServiceDetailPage() {
         )}
 
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Flat Tire? Call for Immediate Help.</h2>
-            <p className="mt-2 text-muted-foreground">Our 24/7 mobile tire service is ready to respond across the Central Coast.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Flat Tire? Call for Immediate Help.</h2>
+            <p className="mt-2">Our 24/7 mobile tire service is ready to respond across the Central Coast.</p>
+            <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-white/90">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

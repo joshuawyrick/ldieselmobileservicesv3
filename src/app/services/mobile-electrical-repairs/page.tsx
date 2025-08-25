@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "mobile truck electrical repair, truck battery replacement, starter repair, alternator service, mobile diesel mechanic, San Luis Obispo, Santa Maria",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/mobile-electrical-repairs`,
     },
   };
 }
@@ -188,10 +188,10 @@ export default function ServiceDetailPage() {
             </div>
         )}
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Electrical Problems? Call Us 24/7.</h2>
-            <p className="mt-2 text-muted-foreground">Don't let electrical issues leave you stranded. Call us for immediate mobile assistance.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Electrical Problems? Call Us 24/7.</h2>
+            <p className="mt-2">Don't let electrical issues leave you stranded. Call us for immediate mobile assistance.</p>
+            <Button asChild size="lg" className="mt-4 bg-white hover:bg-white/90 text-black">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

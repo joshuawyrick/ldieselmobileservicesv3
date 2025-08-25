@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "mobile truck cooling system repair, radiator repair, water pump replacement, overheating truck, mobile diesel mechanic, San Luis Obispo, Santa Maria, Paso Robles",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/cooling-system-repairs`,
     },
   };
 }
@@ -189,10 +189,10 @@ export default function ServiceDetailPage() {
         )}
 
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Engine Overheating? Call Us Now.</h2>
-            <p className="mt-2 text-muted-foreground">Our mobile mechanics are available 24/7 for emergency cooling system repairs.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Engine Overheating? Call Us Now.</h2>
+            <p className="mt-2">Our mobile mechanics are available 24/7 for emergency cooling system repairs.</p>
+            <Button asChild size="lg" className="mt-4 bg-white hover:bg-white/90 text-black">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

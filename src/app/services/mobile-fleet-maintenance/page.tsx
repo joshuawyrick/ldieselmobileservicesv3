@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "mobile fleet maintenance, commercial truck service, on-site fleet repair, preventive maintenance, mobile diesel mechanic, San Luis Obispo, Santa Maria, Paso Robles",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/mobile-fleet-maintenance`,
     },
   };
 }
@@ -188,10 +188,10 @@ export default function ServiceDetailPage() {
             </div>
         )}
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Ready to Optimize Your Fleet?</h2>
-            <p className="mt-2 text-muted-foreground">Contact us today to discuss a custom mobile maintenance plan for your business.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Ready to Optimize Your Fleet?</h2>
+            <p className="mt-2">Contact us today to discuss a custom mobile maintenance plan for your business.</p>
+            <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-white/90">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Get a Quote Today
                 </a>

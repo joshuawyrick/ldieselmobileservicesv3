@@ -14,8 +14,8 @@ import {
 } from "@/components/ui/table"
 
 export const metadata: Metadata = {
-    title: 'Mobile CARB Clean Truck Check Compliance | L Diesel Mobile Service',
-    description: 'Stay compliant with California\'s Clean Truck Check program. L Diesel offers mobile testing and on-site emissions repair in San Luis Obispo & Santa Barbara Counties.',
+    title: `Mobile CARB Clean Truck Check Compliance | ${COMPANY_NAME}`,
+    description: `Stay compliant with California's Clean Truck Check program. ${COMPANY_NAME} offers mobile testing and on-site emissions repair in San Luis Obispo & Santa Barbara Counties.`,
     alternates: {
         canonical: '/blog/carb-clean-truck-compliance-l-diesel-mobile-service-central-coast',
     },
@@ -40,7 +40,7 @@ export default function BlogPostPage() {
                            Your Mobile Solution for CARB Clean Truck Check Compliance on the Central Coast
                         </h1>
                         <p className="mt-4 text-lg text-muted-foreground">
-                            L Diesel Mobile Service delivers streamlined on-site testing and expert emissions repairs across San Luis Obispo and Santa Barbara Counties to keep your fleet moving.
+                            {COMPANY_NAME} delivers streamlined on-site testing and expert emissions repairs across San Luis Obispo and Santa Barbara Counties to keep your fleet moving.
                         </p>
                     </header>
                     
@@ -57,7 +57,7 @@ export default function BlogPostPage() {
 
                     <div className="prose max-w-none prose-h2:text-primary prose-h2:uppercase prose-h2:font-headline prose-h3:text-primary prose-h3:uppercase prose-h3:font-headline prose-a:text-accent hover:prose-a:text-primary prose-strong:text-foreground">
                         <p className="text-xl">
-                            When your heavy-duty trucks operate throughout San Luis Obispo and Santa Barbara Counties—from the vineyards of <Link href="/locations/paso-robles-ca">Paso Robles</Link> to the coastal routes in <Link href="/locations/santa-maria-ca">Santa Maria</Link> and <Link href="/locations/lompoc-ca">Lompoc</Link>—maintaining CARB Clean Truck Check compliance can be a challenge. L Diesel Mobile Service delivers a streamlined solution: mobile compliance testing and expert emissions repairs, right where you're parked.
+                            When your heavy-duty trucks operate throughout San Luis Obispo and Santa Barbara Counties—from the vineyards of <Link href="/locations/paso-robles-ca">Paso Robles</Link> to the coastal routes in <Link href="/locations/santa-maria-ca">Santa Maria</Link> and <Link href="/locations/lompoc-ca">Lompoc</Link>—maintaining CARB Clean Truck Check compliance can be a challenge. {COMPANY_NAME} delivers a streamlined solution: mobile compliance testing and expert emissions repairs, right where you're parked.
                         </p>
                         
                         <h2>What We Offer</h2>
@@ -79,7 +79,7 @@ export default function BlogPostPage() {
                                     <TableHeader>
                                         <TableRow>
                                         <TableHead className="font-semibold">City / Area</TableHead>
-                                        <TableHead className="font-semibold">Benefit with L Diesel Mobile Service</TableHead>
+                                        <TableHead className="font-semibold">Benefit with {COMPANY_NAME}</TableHead>
                                         </TableRow>
                                     </TableHeader>
                                     <TableBody>
@@ -122,7 +122,7 @@ export default function BlogPostPage() {
                         
                         <h2>The Final Word on Central Coast Compliance</h2>
                         <p>
-                            For fleet operators in San Luis Obispo and Santa Barbara counties, L Diesel Mobile Service offers local convenience with regulatory confidence. Enjoy hassle-free testing, on-site repairs, and compliance solutions tailored to your city.
+                            For fleet operators in San Luis Obispo and Santa Barbara counties, {COMPANY_NAME} offers local convenience with regulatory confidence. Enjoy hassle-free testing, on-site repairs, and compliance solutions tailored to your city.
                         </p>
                          <p>
                            Ready to protect your operations from fines or downtime? Contact us to schedule your Clean Truck Check or emissions repair today.
@@ -131,12 +131,12 @@ export default function BlogPostPage() {
                     </div>
                 </article>
 
-                <div className="mt-12 p-6 bg-accent/10 rounded-lg text-center">
-                    <h2 className="text-3xl font-bold font-headline text-accent">Need Mobile Compliance Help Now?</h2>
-                    <p className="mt-2 text-muted-foreground max-w-xl mx-auto">
+                <div className="mt-12 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+                    <h2 className="text-3xl font-bold font-headline">Need Mobile Compliance Help Now?</h2>
+                    <p className="mt-2 max-w-xl mx-auto">
                         Call us for immediate on-site CARB testing and emissions repair across the Central Coast.
                     </p>
-                    <Button asChild size="lg" className="mt-6 btn-primary">
+                    <Button asChild size="lg" className="mt-6 bg-white text-black hover:bg-white/90">
                         <a href={`tel:${PHONE_NUMBER}`}>
                             <Phone className="mr-2 h-5 w-5" /> Schedule Your Service
                         </a>

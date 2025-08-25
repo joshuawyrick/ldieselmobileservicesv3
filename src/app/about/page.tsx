@@ -7,8 +7,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Us | Mobile Diesel Mechanics San Luis Obispo & Santa Maria',
-  description: `Learn about ${COMPANY_NAME}, our team's experience, and our commitment to providing reliable 24/7 mobile diesel services across the Central Coast.`,
+  title: `About Us | ${COMPANY_NAME}`,
+  description: `Learn about ${COMPANY_NAME}, our team's experience, and our commitment to providing reliable 24/7 mobile diesel services across ${SERVICE_AREA}.`,
 };
 
 export default function AboutPage() {

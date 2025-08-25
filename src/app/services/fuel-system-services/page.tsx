@@ -6,6 +6,7 @@ import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 import { ArrowLeft, Phone, CheckCircle, Award, ShieldCheck, Clock, Users, Truck, MapPin, AlertCircle, CalendarDays, Fuel, Wrench, Siren } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { notFound } from 'next/navigation';
 
 const service = services.find((s) => s.url === '/fuel-system-services');
 
@@ -22,19 +23,14 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "diesel fuel system, fuel injector repair, fuel pump repair, mobile diesel mechanic, San Luis Obispo, Santa Maria",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/fuel-system-services`,
     },
   };
 }
 
 export default function ServiceDetailPage() {
   if (!service) {
-    return (
-        <div className="container mx-auto px-4 py-12">
-            <h1 className="text-4xl font-bold">Service not found</h1>
-            <Link href="/services">Back to services</Link>
-        </div>
-    );
+    notFound();
   }
   
   const relatedServices = [
@@ -204,10 +200,10 @@ export default function ServiceDetailPage() {
         )}
 
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Need {service.title} Now?</h2>
-            <p className="mt-2 text-muted-foreground">We offer 24/7 emergency service. Call us anytime.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Need {service.title} Now?</h2>
+            <p className="mt-2">We offer 24/7 emergency service. Call us anytime.</p>
+            <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-white/90">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

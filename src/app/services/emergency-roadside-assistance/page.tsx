@@ -6,6 +6,7 @@ import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
 import { ArrowLeft, Phone, CheckCircle, ShieldCheck, Clock, Users, Zap, Fuel, Tractor, Wrench, Siren, MapPin, PlayCircle, FileText, AlertTriangle } from 'lucide-react';
 import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { notFound } from 'next/navigation';
 
 const service = services.find((s) => s.url === '/emergency-roadside-assistance');
 
@@ -22,19 +23,14 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "emergency roadside assistance, 24/7 truck repair, mobile diesel mechanic, Highway 101 truck service, San Luis Obispo, Santa Maria, Paso Robles, heavy-duty towing",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/emergency-roadside-assistance`,
     },
   };
 }
 
 export default function ServiceDetailPage() {
   if (!service) {
-    return (
-        <div className="container mx-auto px-4 py-12">
-            <h1 className="text-4xl font-bold">Service not found</h1>
-            <Link href="/services">Back to services</Link>
-        </div>
-    );
+    notFound();
   }
   
   const relatedServices = [
@@ -200,10 +196,10 @@ export default function ServiceDetailPage() {
         )}
 
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Stranded? Call Us Now.</h2>
-            <p className="mt-2 text-muted-foreground">We offer 24/7 emergency roadside assistance. Call us anytime for immediate help.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Stranded? Call Us Now.</h2>
+            <p className="mt-2">We offer 24/7 emergency roadside assistance. Call us anytime for immediate help.</p>
+            <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-white/90">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

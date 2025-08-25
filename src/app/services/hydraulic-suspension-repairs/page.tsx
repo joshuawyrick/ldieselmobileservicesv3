@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "mobile hydraulic repair, truck suspension repair, air suspension service, hydraulic hose replacement, mobile diesel mechanic, San Luis Obispo, Santa Maria, Paso Robles",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/hydraulic-suspension-repairs`,
     },
   };
 }
@@ -188,10 +188,10 @@ export default function ServiceDetailPage() {
             </div>
         )}
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Need On-Site Hydraulic or Suspension Help?</h2>
-            <p className="mt-2 text-muted-foreground">Call us now for fast mobile service anywhere on the Central Coast.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Need On-Site Hydraulic or Suspension Help?</h2>
+            <p className="mt-2">Call us now for fast mobile service anywhere on the Central Coast.</p>
+            <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-white/90">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>

@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description,
     keywords: "Clean Truck Check, mobile diesel emissions testing, CARB compliance, HD I/M testing, San Luis Obispo, Santa Barbara, Paso Robles, Santa Maria, Lompoc, Atascadero",
     alternates: {
-      canonical: `/services${service.url}`,
+      canonical: `/services/carb-clean-truck-check-testing`,
     },
   };
 }
@@ -200,10 +200,10 @@ export default function ServiceDetailPage() {
          </div>
 
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Need {service.title} Now?</h2>
-            <p className="mt-2 text-muted-foreground">We offer 24/7 emergency service. Call us anytime.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Need {service.title} Now?</h2>
+            <p className="mt-2">We offer 24/7 emergency service. Call us anytime.</p>
+            <Button asChild size="lg" className="mt-4 bg-white text-black hover:bg-white/90">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Help
                 </a>
