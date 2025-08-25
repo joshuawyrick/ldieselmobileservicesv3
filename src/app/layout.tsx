@@ -65,8 +65,9 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'MobileBusiness',
     name: COMPANY_NAME,
+    image: 'https://i.imgur.com/pHfPUUt.png',
     url: SITE_URL,
     telephone: PHONE_NUMBER,
     address: {
