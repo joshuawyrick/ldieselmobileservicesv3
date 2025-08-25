@@ -1,3 +1,4 @@
+
 import { services } from '@/lib/data';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
@@ -104,20 +105,20 @@ export default function ServiceDetailPage() {
         {/* Common Engine Problems */}
         <div className="my-16">
             <h2 className="text-3xl font-bold font-headline text-primary text-center mb-8">Common Engine Problems We Diagnose & Fix</h2>
-            <div className="grid md:grid-cols-2 gap-8 p-6 bg-secondary/50 border-2 border-foreground rounded-2xl shadow-card">
-                 <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
+            <div className="grid md:grid-cols-2 gap-8 p-6 bg-card border-2 border-foreground rounded-2xl shadow-card">
+                 <div className="p-4 border-l-4 border-primary bg-background rounded-lg">
                     <h4 className="font-bold">Loss of Power or Poor Performance</h4>
                     <p className="text-muted-foreground">We diagnose issues from clogged fuel filters and faulty injectors to turbocharger problems that cause sluggish performance.</p>
                 </div>
-                 <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
+                 <div className="p-4 border-l-4 border-primary bg-background rounded-lg">
                     <h4 className="font-bold">Active Check Engine Light</h4>
                     <p className="text-muted-foreground">Don't ignore the light. We read the codes, interpret the data, and find the root cause to perform an accurate repair.</p>
                 </div>
-                 <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
+                 <div className="p-4 border-l-4 border-primary bg-background rounded-lg">
                     <h4 className="font-bold">Excessive Smoke or Emissions</h4>
                     <p className="text-muted-foreground">Whether it's black, white, or blue smoke, we can diagnose the underlying issue, from injector problems to internal engine wear.</p>
                 </div>
-                <div className="p-4 border-l-4 border-primary bg-background rounded-r-lg">
+                <div className="p-4 border-l-4 border-primary bg-background rounded-lg">
                     <h4 className="font-bold">Hard Starting or No-Start</h4>
                     <p className="text-muted-foreground">We troubleshoot the fuel, air, and electrical systems to find out why your engine won't start and provide the right fix on-site.</p>
                 </div>
@@ -188,10 +189,10 @@ export default function ServiceDetailPage() {
             </div>
         )}
 
-        <div className="mt-10 p-6 bg-primary/10 rounded-lg text-center">
-            <h2 className="text-2xl font-bold text-primary">Engine Trouble? We Come To You.</h2>
-            <p className="mt-2 text-muted-foreground">Call now for 24/7 mobile engine diagnostics and repair.</p>
-            <Button asChild size="lg" className="mt-4 btn-primary">
+        <div className="mt-10 p-6 btn-primary no-hover rounded-lg text-center">
+            <h2 className="text-2xl font-bold">Engine Trouble? We Come To You.</h2>
+            <p className="mt-2">Call now for 24/7 mobile engine diagnostics and repair.</p>
+            <Button asChild size="lg" className="mt-4 bg-white hover:bg-white/90 text-black">
                 <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="mr-2 h-5 w-5" /> Call for Immediate Service
                 </a>
