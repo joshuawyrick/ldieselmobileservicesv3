@@ -1,10 +1,11 @@
 
 'use client';
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA, EMAIL_ADDRESS } from '@/lib/constants';
-import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,6 +14,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useToast } from '@/hooks/use-toast';
 import { Toaster } from '@/components/ui/toaster';
+import { sendContactEmail } from '@/ai/flows/send-contact-email';
 
 
 const FormSchema = z.object({
@@ -27,34 +29,38 @@ type FormValues = z.infer<typeof FormSchema>;
 
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
   const { toast } = useToast();
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>({
       resolver: zodResolver(FormSchema),
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-      const subject = encodeURIComponent(`Contact Form Inquiry from ${data.name} - ${data.service}`);
-      const body = encodeURIComponent(
-`Name: ${data.name}
-Phone: ${data.phone}
-Email: ${data.email}
-Service Needed: ${data.service}
-
-Message:
-${data.message}`
-      );
-      
-      // Still uses mailto, but now we provide user feedback.
-      window.location.href = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`;
-
-      // Show a success message
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. We will get back to you shortly.",
-      });
-
-      // Reset the form
-      reset();
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
+      setLoading(true);
+      try {
+        const result = await sendContactEmail(data);
+        if (result.success) {
+          toast({
+            title: "Message Sent!",
+            description: "Thank you for reaching out. We will get back to you shortly.",
+          });
+          reset();
+        } else {
+          toast({
+            variant: "destructive",
+            title: "Error",
+            description: result.message,
+          });
+        }
+      } catch (e) {
+         toast({
+            variant: "destructive",
+            title: "Error",
+            description: "An unexpected error occurred. Please try again.",
+          });
+      } finally {
+        setLoading(false);
+      }
   };
 
 
@@ -109,7 +115,7 @@ ${data.message}`
                 </CardContent>
             </Card>
 
-             <Card className="btn-primary text-accent-foreground">
+             <Card className="btn-primary no-hover text-accent-foreground">
                 <CardHeader>
                     <CardTitle>Emergency? Call Us Now!</CardTitle>
                 </CardHeader>
@@ -158,7 +164,16 @@ ${data.message}`
                   <Textarea id="message" {...register('message')} placeholder="Please describe your issue and location." className="flex-grow" />
                   {errors.message && <p className="text-sm text-destructive mt-1">{errors.message.message}</p>}
                 </div>
-                <Button type="submit" className="w-full">Submit Request</Button>
+                <Button type="submit" className="w-full" disabled={loading}>
+                 {loading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    'Submit Request'
+                  )}
+                </Button>
               </form>
             </CardContent>
           </Card>
