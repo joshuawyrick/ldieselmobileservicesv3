@@ -40,7 +40,7 @@ export const services = [
     description: 'Complete mobile tire services, including repairs, replacements, and installations for commercial trucks and agricultural equipment in the Santa Maria Valley and beyond. We bring the tire shop to you.',
     imageHint: 'truck tire',
     alt: 'Mobile tire service for a commercial semi-truck',
-    imageUrl: '/mobile-tire-service-paso-robles-santa-maria.png',
+    imageUrl: '/mobile-tire-service-paso-robles-santa-maria.jpg',
     serviceArea: 'Santa Maria Valley & SLO County',
     subServices: [
         'Tire Repair & Patching',
@@ -56,7 +56,7 @@ export const services = [
     description: 'Expert on-site brake repairs and inspections for heavy-duty trucks. We service air brakes and hydraulic systems to ensure your vehicle meets DOT standards and operates safely on highways like the US-101.',
     imageHint: 'truck brakes',
     alt: 'Mobile brake repair for a heavy-duty truck',
-    imageUrl: '/mobile-brake-repairs-US-101-santa-maria.png',
+    imageUrl: '/mobile-brake-repairs-US-101-santa-maria.jpg',
     serviceArea: 'Central Coast, including US-101 corridor',
     subServices: [
         'Air Brake System Diagnostics',
@@ -72,7 +72,7 @@ export const services = [
     description: 'Comprehensive cooling system diagnostics and repairs to prevent engine overheating, crucial for vehicles operating in the variable climates of the Central Coast. We handle everything from radiator leaks to thermostat replacements.',
     imageHint: 'truck radiator',
     alt: 'Truck cooling system and radiator repair',
-    imageUrl: '/diesel-radiator-repair-central-coast.png',
+    imageUrl: '/diesel-radiator-repair-central-coast.jpg',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         'Radiator & Hose Repair',
@@ -308,3 +308,5 @@ export const blogPosts = [
   },
   // Add other blog posts here as needed
 ];
+
+    
