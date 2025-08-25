@@ -15,7 +15,17 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useToast } from '@/hooks/use-toast';
 import { Toaster } from '@/components/ui/toaster';
 import { sendContactEmail } from '@/ai/flows/send-contact-email';
+import type { Metadata } from 'next';
 
+// This is a client component, so we can't export metadata directly.
+// We can set it in the parent layout or handle it differently if needed.
+// For now, this is a placeholder to show what it would be.
+/*
+export const metadata: Metadata = {
+  title: 'Contact Us | 24/7 Mobile Diesel Mechanic',
+  description: `Contact ${COMPANY_NAME} for 24/7 emergency mobile diesel repair or to schedule maintenance in ${SERVICE_AREA}. Call ${PHONE_NUMBER} or use our contact form.`,
+};
+*/
 
 const FormSchema = z.object({
     name: z.string().min(2, 'Name is required.'),

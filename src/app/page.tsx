@@ -27,6 +27,12 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA } from '@/lib/constants';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: `24/7 Mobile Diesel Mechanic on the Central Coast | ${COMPANY_NAME}`,
+  description: `Need a 24/7 mobile diesel mechanic in San Luis Obispo or Santa Barbara County? We offer emergency roadside assistance, on-site heavy-duty truck repair, and fleet maintenance. Call ${PHONE_NUMBER} for fast service.`,
+};
 
 
 const icons: { [key: string]: React.FC<React.SVGProps<SVGSVGElement>> } = {
@@ -159,6 +165,10 @@ export default function Home() {
                     {PHONE_NUMBER}
                 </a>
             </div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl">{COMPANY_NAME}: Your Trusted Partner for Mobile Truck Service</h2>
+              <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">We are dedicated to providing fast, reliable, and professional mobile diesel mechanic services. Our commitment is to get your heavy-duty truck or agricultural equipment back in operation with minimal downtime, ensuring your business keeps moving forward.</p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto mb-24">
               {valueProps.map((prop) => {
                 const Icon = icons[prop.icon];
@@ -173,9 +183,6 @@ export default function Home() {
                 );
               })}
             </div>
-            <div className="text-center">
-                 <h2 className="text-3xl md:text-4xl">{COMPANY_NAME}: Your Trusted Partner for Mobile Truck Service</h2>
-            </div>
           </div>
         </section>
 
@@ -187,7 +194,7 @@ export default function Home() {
                         Our Central Coast Service Area
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                        24/7 Mobile Diesel Repair Services Along the Highway 101 Corridor
+                        From the vineyards of Paso Robles to the agricultural fields of Santa Maria, our mobile service trucks are strategically positioned to provide rapid 24/7 mobile diesel repair along the Highway 101 corridor and throughout the entire Central Coast.
                     </p>
                 </div>
 
@@ -222,6 +229,7 @@ export default function Home() {
                                 ))}
                             </div>
                         </div>
+                        <p className="mt-8 text-muted-foreground">No matter where you are in the {SERVICE_AREA}, our certified mobile mechanics can reach you. We provide complete on-site repair and maintenance for heavy-duty trucks, semi-trailers, agricultural equipment, and commercial fleets.</p>
                     </div>
                 </div>
             </div>
