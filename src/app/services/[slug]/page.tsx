@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { services } from '@/lib/data';
 import type { Metadata } from 'next';
@@ -56,7 +57,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         <div className="my-8">
             <Image 
                 src="https://placehold.co/800x400.png"
-                alt={service.title}
+                alt={`Image for ${service.title} service`}
                 data-ai-hint="diesel repair"
                 width={800}
                 height={400}
@@ -74,7 +75,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           </p>
         </div>
 
-        <div className="mt-10 p-6 btn-primary text-accent-foreground rounded-lg text-center">
+        <div className="mt-10 p-6 btn-primary no-hover text-accent-foreground rounded-lg text-center">
             <h2 className="text-2xl font-bold">Need Emergency {service.title.replace('Mobile', '').replace('Services', '').trim()}?</h2>
             <p className="mt-2">We offer 24/7 emergency service. Call us anytime for immediate help.</p>
             <Button asChild size="lg" className="mt-4 bg-white hover:bg-white/90 text-black">

@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { COMPANY_NAME, SERVICE_AREA } from '@/lib/constants';
 import { Award, ShieldCheck, Users } from 'lucide-react';
@@ -36,7 +37,7 @@ export default function AboutPage() {
             <div className="order-1 md:order-2">
                 <Image
                 src="https://placehold.co/600x400.png"
-                alt="Our team of diesel mechanics"
+                alt="Our team of diesel mechanics ready for mobile truck repair"
                 data-ai-hint="team portrait"
                 width={600}
                 height={400}
@@ -66,7 +67,7 @@ export default function AboutPage() {
             </div>
         </div>
 
-        <div className="mt-16 text-center btn-primary text-accent-foreground p-8 rounded-lg">
+        <div className="mt-16 text-center btn-primary no-hover text-accent-foreground p-8 rounded-lg">
              <h2 className="text-3xl font-bold font-headline">Ready to Experience the Difference?</h2>
              <p className="mt-2 max-w-2xl mx-auto">Contact us today for routine maintenance or emergency repairs. We're here to help.</p>
              <Button asChild size="lg" className="mt-6 bg-white text-black hover:bg-white/90">

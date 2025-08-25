@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from 'lucide-react';
 import { Award, Clock, ShieldCheck, Truck, Users, Wrench } from 'lucide-react';
 
@@ -19,9 +20,10 @@ export const services = [
   {
     title: 'Emergency Roadside Assistance',
     url: '/emergency-roadside-assistance',
-    keywords: 'emergency diesel repair, roadside assistance, breakdown service',
+    keywords: 'emergency diesel repair, roadside assistance, breakdown service, Highway 101 truck repair',
     description: '24/7 emergency support for unexpected breakdowns. We provide fast, reliable roadside assistance to get you back on the road anytime, anywhere on the Central Coast, from Paso Robles to Santa Barbara.',
     imageHint: 'towing truck',
+    alt: 'Emergency roadside assistance for a heavy-duty truck',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         '24/7 Emergency Dispatch',
@@ -33,9 +35,10 @@ export const services = [
   {
     title: 'Mobile Tire Services',
     url: '/mobile-tire-services',
-    keywords: 'mobile tire repair, truck tire service, commercial tires',
+    keywords: 'mobile tire repair, truck tire service, commercial tires, 24 hour mobile tire service',
     description: 'Complete mobile tire services, including repairs, replacements, and installations for commercial trucks and agricultural equipment in the Santa Maria Valley and beyond. We bring the tire shop to you.',
     imageHint: 'truck tire',
+    alt: 'Mobile tire service for a commercial semi-truck',
     serviceArea: 'Santa Maria Valley & SLO County',
     subServices: [
         'Tire Repair & Patching',
@@ -47,9 +50,10 @@ export const services = [
   {
     title: 'Mobile Brake Repairs',
     url: '/mobile-brake-repairs',
-    keywords: 'brake repair, air brake service, DOT brake inspection',
+    keywords: 'brake repair, air brake service, DOT brake inspection, mobile truck brake repair',
     description: 'Expert on-site brake repairs and inspections for heavy-duty trucks. We service air brakes and hydraulic systems to ensure your vehicle meets DOT standards and operates safely on highways like the US-101.',
     imageHint: 'truck brakes',
+    alt: 'Mobile brake repair for a heavy-duty truck',
     serviceArea: 'Central Coast, including US-101 corridor',
     subServices: [
         'Air Brake System Diagnostics',
@@ -61,9 +65,10 @@ export const services = [
   {
     title: 'Cooling System Repairs',
     url: '/cooling-system-repairs',
-    keywords: 'cooling system repair, radiator repair, overheating',
+    keywords: 'cooling system repair, radiator repair, overheating, truck radiator repair',
     description: 'Comprehensive cooling system diagnostics and repairs to prevent engine overheating, crucial for vehicles operating in the variable climates of the Central Coast. We handle everything from radiator leaks to thermostat replacements.',
     imageHint: 'truck radiator',
+    alt: 'Truck cooling system and radiator repair',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         'Radiator & Hose Repair',
@@ -75,9 +80,10 @@ export const services = [
   {
     title: 'Aftertreatment Services (DPF & DEF)',
     url: '/aftertreatment-services',
-    keywords: 'DPF cleaning, DEF system, emissions repair',
+    keywords: 'DPF cleaning, DEF system, emissions repair, forced regen service',
     description: 'Specialized diesel particulate filter (DPF) and diesel exhaust fluid (DEF) system services. We help you meet California\'s strict emissions standards and maintain engine performance across SLO and Santa Barbara counties.',
     imageHint: 'exhaust system',
+    alt: 'Truck aftertreatment system with DPF and DEF components',
     serviceArea: 'California Central Coast',
     subServices: [
         'Forced DPF Regeneration',
@@ -89,9 +95,10 @@ export const services = [
   {
     title: 'CARB Clean Truck Check Testing',
     url: '/carb-clean-truck-check-testing',
-    keywords: 'CARB testing, clean truck check, diesel emissions test, California compliance',
+    keywords: 'CARB testing, clean truck check, diesel emissions test, HD I/M testing mobile',
     description: 'We provide official CARB Clean Truck Check testing to ensure your heavy-duty vehicles are compliant with California\'s emissions regulations, helping you avoid penalties and keep your fleet on the road.',
     imageHint: 'emission test',
+    alt: 'Mobile CARB Clean Truck Check emissions testing',
     serviceArea: 'California Central Coast',
     subServices: [
         'Official On-Board Diagnostics (OBD) Data Submission',
@@ -103,9 +110,10 @@ export const services = [
   {
     title: 'Engine Diagnostics & Repair',
     url: '/engine-diagnostics-repair',
-    keywords: 'engine diagnostics, diesel engine repair, check engine light',
+    keywords: 'engine diagnostics, diesel engine repair, check engine light, mobile diesel diagnostics',
     description: 'Advanced mobile engine diagnostics to accurately identify issues. Our mechanics perform expert repairs on all major diesel engine makes and models, serving industries from agriculture in Santa Maria to transport in San Luis Obispo.',
     imageHint: 'diesel engine',
+    alt: 'Mobile diesel engine diagnostics and repair',
     serviceArea: 'San Luis Obispo & Santa Maria',
     subServices: [
         'Check Engine Light Diagnostics',
@@ -117,9 +125,10 @@ export const services = [
   {
     title: 'Mobile Electrical Repairs',
     url: '/mobile-electrical-repairs',
-    keywords: 'electrical repair, alternator, starter, battery',
+    keywords: 'electrical repair, alternator, starter, battery, mobile truck electrical repair',
     description: 'On-site diagnosis and repair of complex truck electrical systems. We service batteries, alternators, starters, and wiring to resolve power issues quickly and efficiently, wherever you are located.',
     imageHint: 'truck wiring',
+    alt: 'Mobile repair of a truck\'s electrical system',
     serviceArea: 'Central Coast',
     subServices: [
         'Battery Testing & Replacement',
@@ -131,9 +140,10 @@ export const services = [
   {
     title: 'Fuel System Services',
     url: '/fuel-system-services',
-    keywords: 'fuel system repair, fuel injector, fuel pump',
+    keywords: 'fuel system repair, fuel injector, fuel pump, diesel fuel system service',
     description: 'Complete fuel system services to ensure optimal engine efficiency and power. We repair and replace fuel pumps, injectors, and filters to resolve performance problems for fleets and independent operators.',
     imageHint: 'fuel tank',
+    alt: 'Repair of a diesel fuel system',
     serviceArea: 'Paso Robles to Santa Barbara',
      subServices: [
         'Fuel Filter Replacement',
@@ -145,9 +155,10 @@ export const services = [
   {
     title: 'Hydraulic & Suspension Repairs',
     url: '/hydraulic-suspension-repairs',
-    keywords: 'hydraulic repair, suspension repair, air suspension',
+    keywords: 'hydraulic repair, suspension repair, air suspension, truck suspension repair',
     description: 'Expert mobile repairs for hydraulic systems on heavy equipment and vehicle suspensions. We service everything from hydraulic leaks to air suspension components for agricultural machinery and commercial trucks.',
     imageHint: 'truck suspension',
+    alt: 'Mobile repair of truck hydraulic and suspension systems',
     serviceArea: 'Santa Maria & San Luis Obispo Agricultural Areas',
      subServices: [
         'Hydraulic Hose Repair',
@@ -159,9 +170,10 @@ export const services = [
   {
     title: 'Mobile Fleet Maintenance',
     url: '/mobile-fleet-maintenance',
-    keywords: 'fleet maintenance, commercial fleet, preventive maintenance',
+    keywords: 'fleet maintenance, commercial fleet, preventive maintenance, mobile fleet repair',
     description: 'Customized preventive maintenance programs for commercial fleets in San Luis Obispo and Santa Barbara counties. We help you minimize downtime, reduce costs, and extend the life of your vehicles with on-site service.',
     imageHint: 'fleet trucks',
+    alt: 'Mobile maintenance service for a fleet of commercial trucks',
     serviceArea: 'Central Coast Fleets',
      subServices: [
         'Scheduled Oil & Filter Changes',
@@ -281,6 +293,7 @@ export const blogPosts = [
     category: 'Compliance Guide',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'emission test',
+    alt: 'Mobile CARB Clean Truck Check testing being performed',
   },
   // Add other blog posts here as needed
 ];

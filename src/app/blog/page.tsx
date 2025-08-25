@@ -42,7 +42,7 @@ export default function BlogPage() {
               <div className="overflow-hidden">
                 <Image
                   src={post.image}
-                  alt={post.title}
+                  alt={post.alt}
                   data-ai-hint={post.imageHint}
                   width={600}
                   height={400}

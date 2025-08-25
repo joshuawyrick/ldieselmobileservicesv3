@@ -6,6 +6,21 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA, SITE_URL } from '@/lib/constants';
 import Template from './template';
+import { Roboto, Roboto_Condensed } from 'next/font/google'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto',
+  display: 'swap',
+});
+
+const robotoCondensed = Roboto_Condensed({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-roboto-condensed',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -81,11 +96,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`${roboto.variable} ${robotoCondensed.variable} scroll-smooth`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

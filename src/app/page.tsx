@@ -71,7 +71,7 @@ export default function Home() {
           <div className="absolute inset-0 w-full h-full">
             <Image
               src="https://i.imgur.com/pXlqbmD.jpeg"
-              alt="Diesel mechanic working on truck"
+              alt="24/7 Mobile Diesel Mechanic providing emergency roadside assistance on the Central Coast"
               className="w-full h-full object-cover"
               fill
               priority
@@ -196,7 +196,7 @@ export default function Home() {
                     <div className="w-full">
                         <Image
                             src="https://i.imgur.com/tOnFtUn.png"
-                            alt="Map of the Central Coast service area"
+                            alt="Map of the Central Coast service area for mobile diesel repair, covering San Luis Obispo and Santa Barbara counties"
                             data-ai-hint="california coast map"
                             width={600}
                             height={600}

@@ -1,3 +1,4 @@
+
 import { notFound } from 'next/navigation';
 import { locations, services } from '@/lib/data';
 import type { Metadata } from 'next';
