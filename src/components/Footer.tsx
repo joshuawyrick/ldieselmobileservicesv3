@@ -2,9 +2,10 @@
 'use client';
 
 import Link from 'next/link';
-import { Truck, Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
 import { footerLinks } from '@/lib/data';
 import { COMPANY_NAME, PHONE_NUMBER, PHONE_NUMBER_RAW, EMAIL_ADDRESS } from '@/lib/constants';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,8 +16,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-background/10">
           <div className="lg:col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Truck className="h-8 w-8 text-accent" />
-              <span className="font-bold text-lg font-headline">{COMPANY_NAME}</span>
+               <Image
+                src="/logo-white.png"
+                alt={`${COMPANY_NAME} logo`}
+                width={200}
+                height={80}
+                className="h-auto"
+              />
             </Link>
             <div className="mt-4 space-y-4">
                 <div>

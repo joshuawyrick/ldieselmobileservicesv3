@@ -1,12 +1,14 @@
+
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, Truck } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { navLinks } from '@/lib/data';
 import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
+import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +18,14 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-[102px]">
           <Link href="/" className="flex items-center space-x-2">
-            <Truck className="h-10 w-10 text-primary" />
-            <span className="font-bold text-2xl font-headline hidden sm:inline-block">{COMPANY_NAME}</span>
+            <Image
+              src="/logo.png"
+              alt={`${COMPANY_NAME} logo`}
+              width={200}
+              height={80}
+              className="h-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-8">
@@ -48,8 +56,13 @@ export default function Header() {
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-8">
                     <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-2">
-                      <Truck className="h-8 w-8 text-primary" />
-                      <span className="font-bold text-lg font-headline">{COMPANY_NAME}</span>
+                       <Image
+                        src="/logo.png"
+                        alt={`${COMPANY_NAME} logo`}
+                        width={180}
+                        height={72}
+                        className="h-auto"
+                      />
                     </Link>
                     <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                       <X className="h-6 w-6" />
