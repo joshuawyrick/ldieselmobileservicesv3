@@ -23,7 +23,7 @@ export default function LocationsPage() {
         <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
             <div className="absolute inset-0 w-full h-full">
             <Image
-                src="https://placehold.co/2070x1380.png"
+                src="/diesel-repair-service-locations-san-luis-obispo-santa-barbara-county.png"
                 alt="Diesel service truck on Highway 101 on the Central Coast"
                 className="w-full h-full object-cover"
                 fill
