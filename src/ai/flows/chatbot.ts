@@ -51,12 +51,16 @@ export async function chat(input: ChatInput): Promise<ChatOutput> {
   5. Do not make up information. Stick to the facts provided.
   `;
 
-  const { output } = await ai.generate({
+  const response = await ai.generate({
     model: 'googleai/gemini-2.0-flash',
     system: systemPrompt,
     history: history.map(msg => ({ role: msg.role, content: [{ text: msg.content }] })),
     prompt: message,
   });
 
-  return output!.text!;
+  if (!response.text) {
+    return "I'm sorry, I couldn't process that. Please try rephrasing your question or call us for assistance.";
+  }
+  
+  return response.text;
 }
