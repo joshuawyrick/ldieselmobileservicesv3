@@ -70,7 +70,7 @@ export default function Home() {
         <section className="relative h-[912px] overflow-hidden -mt-[102px]">
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://placehold.co/2070x1380.png"
+              src="https://i.imgur.com/pXlqbmD.png"
               alt="24/7 Mobile Diesel Mechanic providing emergency roadside assistance on the Central Coast"
               className="w-full h-full object-cover"
               fill
@@ -194,7 +194,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full">
                         <Image
-                            src="https://placehold.co/600x600.png"
+                            src="https://i.imgur.com/tOnFtUn.png"
                             alt="Map of the Central Coast service area for mobile diesel repair, covering San Luis Obispo and Santa Barbara counties"
                             width={600}
                             height={600}
