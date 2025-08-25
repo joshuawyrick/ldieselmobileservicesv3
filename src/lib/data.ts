@@ -104,7 +104,7 @@ export const services = [
     description: 'We provide official CARB Clean Truck Check testing to ensure your heavy-duty vehicles are compliant with California\'s emissions regulations, helping you avoid penalties and keep your fleet on the road.',
     imageHint: 'emission test',
     alt: 'Mobile CARB Clean Truck Check emissions testing',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/clean-truck-check-santa-maria.jpg',
     serviceArea: 'California Central Coast',
     subServices: [
         'Official On-Board Diagnostics (OBD) Data Submission',
