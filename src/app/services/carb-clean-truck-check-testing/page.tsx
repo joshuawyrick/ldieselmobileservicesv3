@@ -50,7 +50,7 @@ export default function ServiceDetailPage() {
 
         <div className="my-8">
             <Image 
-                src="https://placehold.co/800x400.png"
+                src="/clean-truck-check-santa-maria.png"
                 alt={service.title}
                 width={800}
                 height={400}
