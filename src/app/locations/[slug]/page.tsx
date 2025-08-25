@@ -8,14 +8,19 @@ import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
 import { ArrowLeft, Check, Phone } from 'lucide-react';
 import Image from 'next/image';
 
+type PageProps = {
+  params: { slug: string };
+};
+
 export async function generateStaticParams() {
   return locations.map((location) => ({
     slug: location.url.substring(1),
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug:string } }): Promise<Metadata> {
-  const location = locations.find((l) => l.url === `/${params.slug}`);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const slug = params.slug;
+  const location = locations.find((l) => l.url === `/${slug}`);
   if (!location) {
     return {};
   }
@@ -26,7 +31,7 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
   let description = `24/7 mobile diesel mechanic in ${cityName}, CA. Emergency roadside assistance for heavy-duty trucks, on-site repairs, and fleet maintenance. Fast response. Call ${PHONE_NUMBER}.`;
 
   // Custom metadata for key locations
-  switch(params.slug) {
+  switch(slug) {
     case 'santa-maria-ca':
       title = `Mobile Diesel Mechanic Santa Maria, CA | 24/7 Truck Repair`;
       description = `Professional mobile diesel mechanics serving Santa Maria CA. Expert heavy-duty truck repair, emergency roadside assistance on Highway 101, and fleet maintenance for agricultural and commercial vehicles.`;
@@ -54,13 +59,13 @@ export async function generateMetadata({ params }: { params: { slug:string } }):
     description,
     keywords: `mobile diesel mechanic ${cityName}, diesel repair ${cityName}, truck repair ${cityName}, emergency diesel service ${cityName}, roadside assistance ${cityName}, heavy-duty mechanic ${cityName}`,
     alternates: {
-      canonical: `/locations/${params.slug}`,
+      canonical: `/locations/${slug}`,
     },
   };
 }
 
 
-export default function LocationDetailPage({ params }: { params: { slug: string } }) {
+export default function LocationDetailPage({ params }: PageProps) {
   const location = locations.find((l) => l.url === `/${params.slug}`);
 
   if (!location) {
