@@ -70,7 +70,7 @@ export default function Home() {
         <section className="relative h-[912px] overflow-hidden -mt-[102px]">
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://placehold.co/1440x912.png"
+              src="https://i.imgur.com/tOnFtUn.png"
               alt="Diesel mechanic working on truck"
               className="w-full h-full object-cover"
               fill
