@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: `24/7 Mobile Diesel Mechanic on the Central Coast | ${COMPANY_NAME}`,
     template: `%s | ${COMPANY_NAME}`,
   },
-  description: `24/7 mobile diesel mechanic for San Luis Obispo & Santa Barbara. Emergency roadside assistance for heavy-duty trucks, on-site repair & fleet maintenance on Highway 101. Call ${PHONE_NUMBER} now!`,
+  description: `Need a 24/7 mobile diesel mechanic in San Luis Obispo or Santa Barbara County? We offer emergency roadside assistance, on-site heavy-duty truck repair, and fleet maintenance. Call ${PHONE_NUMBER} for fast service.`,
   metadataBase: new URL(SITE_URL),
   openGraph: {
     title: `24/7 Mobile Diesel Mechanic on the Central Coast | ${COMPANY_NAME}`,
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   icons: {
-    icon: { url: "/favicon.svg?v=1", type: "image/svg+xml" },
-    shortcut: { url: "/favicon.svg?v=1", type: "image/svg+xml" },
-    apple: { url: "/favicon.svg?v=1", type: "image/svg+xml" },
+    icon: { url: "/favicon.svg", type: "image/svg+xml" },
+    shortcut: { url: "/favicon.svg", type: "image/svg+xml" },
+    apple: { url: "/favicon.svg", type: "image/svg+xml" },
   },
 };
 
