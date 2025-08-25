@@ -40,7 +40,7 @@ export const services = [
     description: 'Complete mobile tire services, including repairs, replacements, and installations for commercial trucks and agricultural equipment in the Santa Maria Valley and beyond. We bring the tire shop to you.',
     imageHint: 'truck tire',
     alt: 'Mobile tire service for a commercial semi-truck',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/mobile-tire-service-paso-robles-santa-maria.jpg',
     serviceArea: 'Santa Maria Valley & SLO County',
     subServices: [
         'Tire Repair & Patching',
