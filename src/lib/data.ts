@@ -56,7 +56,7 @@ export const services = [
     description: 'Expert on-site brake repairs and inspections for heavy-duty trucks. We service air brakes and hydraulic systems to ensure your vehicle meets DOT standards and operates safely on highways like the US-101.',
     imageHint: 'truck brakes',
     alt: 'Mobile brake repair for a heavy-duty truck',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/mobile-brake-repairs-US-101-santa-maria.jpg',
     serviceArea: 'Central Coast, including US-101 corridor',
     subServices: [
         'Air Brake System Diagnostics',
@@ -300,7 +300,7 @@ export const blogPosts = [
     url: '/mobile-carb-compliance',
     title: 'Your Mobile Solution for CARB Clean Truck Check Compliance on the Central Coast',
     excerpt: 'Stay compliant with California\'s Clean Truck Check program. We offer mobile testing and on-site emissions repair in San Luis Obispo & Santa Barbara Counties.',
-    date: 'July 26, 2024',
+    date: 'July 26, 2042',
     category: 'Compliance Guide',
     image: 'https://placehold.co/600x400.png',
     imageHint: 'emission test',
