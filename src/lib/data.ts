@@ -72,7 +72,7 @@ export const services = [
     description: 'Comprehensive cooling system diagnostics and repairs to prevent engine overheating, crucial for vehicles operating in the variable climates of the Central Coast. We handle everything from radiator leaks to thermostat replacements.',
     imageHint: 'truck radiator',
     alt: 'Truck cooling system and radiator repair',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/diesel-radiator-repair-central-coast.jpg',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         'Radiator & Hose Repair',
