@@ -52,7 +52,7 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://i.imgur.com/83n4Ua5.jpeg"
+              src="https://images.unsplash.com/photo-1617814086920-f4d3b811aa96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Mobile brake repair service for heavy-duty trucks on the Central Coast"
               className="w-full h-full object-cover"
               fill

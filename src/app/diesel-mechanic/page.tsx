@@ -55,7 +55,7 @@ export default function DieselMechanicPage() {
           </div>
           <div>
             <Image
-              src="https://i.imgur.com/r62a2C2.jpeg"
+              src="https://images.unsplash.com/photo-1543315796-a8138e62f026?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Professional diesel mechanic at work on a semi-truck"
               data-ai-hint="diesel engine"
               width={600}

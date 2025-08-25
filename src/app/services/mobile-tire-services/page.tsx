@@ -47,7 +47,7 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://i.imgur.com/u15k3aT.jpeg"
+              src="https://images.unsplash.com/photo-1624258957494-b77a33a1e4e3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Mobile tire service for a heavy-duty truck on the Central Coast"
               className="w-full h-full object-cover"
               fill

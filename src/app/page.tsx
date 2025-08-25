@@ -70,7 +70,7 @@ export default function Home() {
         <section className="relative h-[912px] overflow-hidden -mt-[102px]">
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://i.imgur.com/z1Q4tXa.jpeg"
+              src="https://images.unsplash.com/photo-1590854625329-a51394a11956?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="24/7 Mobile Diesel Mechanic providing emergency roadside assistance on the Central Coast"
               className="w-full h-full object-cover"
               fill
@@ -195,7 +195,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full">
                         <Image
-                            src="https://i.imgur.com/8Dab31r.png"
+                            src="https://storage.googleapis.com/stabl-media/mix-as-map.png"
                             alt="Map of the Central Coast service area for mobile diesel repair, covering San Luis Obispo and Santa Barbara counties"
                             data-ai-hint="california coast map"
                             width={600}

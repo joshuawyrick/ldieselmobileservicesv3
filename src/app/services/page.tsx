@@ -31,7 +31,7 @@ export default function ServicesPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://i.imgur.com/V72V58q.jpeg"
+              src="https://images.unsplash.com/photo-1617846337253-b248a86737ae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Diesel service truck on the Central Coast providing mobile repair"
               className="w-full h-full object-cover"
               fill

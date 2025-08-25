@@ -50,7 +50,7 @@ export default function ServiceDetailPage() {
 
         <div className="my-8">
             <Image 
-                src="https://placehold.co/800x400.png"
+                src="https://images.unsplash.com/photo-1662194073859-add38a8a493a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt={service.title}
                 data-ai-hint="emission test"
                 width={800}

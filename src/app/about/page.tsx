@@ -36,7 +36,7 @@ export default function AboutPage() {
             </div>
             <div className="order-1 md:order-2">
                 <Image
-                src="https://i.imgur.com/4z25mGW.jpeg"
+                src="https://images.unsplash.com/photo-1581092916274-a0208b539962?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Our team of diesel mechanics ready for mobile truck repair"
                 data-ai-hint="team portrait"
                 width={600}

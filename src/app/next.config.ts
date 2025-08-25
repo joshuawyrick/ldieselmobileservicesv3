@@ -19,13 +19,13 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i.imgur.com',
+        hostname: 'images.unsplash.com',
         port: '',
         pathname: '/**',
       },
-      {
+       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/**',
       }
