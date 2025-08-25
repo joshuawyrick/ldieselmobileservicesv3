@@ -88,7 +88,7 @@ export const services = [
     description: 'Specialized diesel particulate filter (DPF) and diesel exhaust fluid (DEF) system services. We help you meet California\'s strict emissions standards and maintain engine performance across SLO and Santa Barbara counties.',
     imageHint: 'exhaust system',
     alt: 'Truck aftertreatment system with DPF and DEF components',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/one-box-dpf-repair-SLO-Santa-Barbara-County.jpg',
     serviceArea: 'California Central Coast',
     subServices: [
         'Forced DPF Regeneration',
