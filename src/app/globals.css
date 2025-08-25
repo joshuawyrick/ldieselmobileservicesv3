@@ -86,7 +86,7 @@
     background-image: linear-gradient(to bottom, hsl(var(--accent)), #991b1b);
 }
 
-.btn-primary:hover {
+.btn-primary:not(.no-hover):hover {
     background-image: none;
     @apply bg-transparent text-accent;
 }

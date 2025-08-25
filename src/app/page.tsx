@@ -153,7 +153,7 @@ export default function Home() {
         {/* Why Us Section */}
         <section id="why-us" className="py-24 bg-secondary">
           <div className="container mx-auto px-4">
-             <div className="btn-primary border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto mb-24">
+             <div className="btn-primary no-hover border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto mb-24">
                 <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Heavy-Duty Mobile Mechanic Now?</h2>
                 <p className="text-lg text-accent-foreground/90 mt-4">Call us 24/7 for immediate mobile diesel repair near you.</p>
                 <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground">
@@ -195,7 +195,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full">
                         <Image
-                            src="https://i.imgur.com/n0aWz1w.png"
+                            src="https://i.imgur.com/tOnFtUn.png"
                             alt="Map of the Central Coast service area"
                             data-ai-hint="california coast map"
                             width={600}
