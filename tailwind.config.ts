@@ -17,9 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['"PT Sans"', 'sans-serif'],
-        headline: ['"PT Sans"', 'sans-serif'],
-        code: ['"Source Code Pro"', 'monospace'],
+        body: ['"Roboto"', 'sans-serif'],
+        headline: ['"Roboto Condensed"', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
