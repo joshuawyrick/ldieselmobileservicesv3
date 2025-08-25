@@ -40,7 +40,7 @@ export const services = [
     description: 'Complete mobile tire services, including repairs, replacements, and installations for commercial trucks and agricultural equipment in the Santa Maria Valley and beyond. We bring the tire shop to you.',
     imageHint: 'truck tire',
     alt: 'Mobile tire service for a commercial semi-truck',
-    imageUrl: '/mobile-tire-service-paso-robles-santa-maria.jpg',
+    imageUrl: '/mobile-tire-service-paso-robles-santa-maria.png',
     serviceArea: 'Santa Maria Valley & SLO County',
     subServices: [
         'Tire Repair & Patching',
@@ -56,7 +56,7 @@ export const services = [
     description: 'Expert on-site brake repairs and inspections for heavy-duty trucks. We service air brakes and hydraulic systems to ensure your vehicle meets DOT standards and operates safely on highways like the US-101.',
     imageHint: 'truck brakes',
     alt: 'Mobile brake repair for a heavy-duty truck',
-    imageUrl: '/mobile-brake-repairs-US-101-santa-maria.jpg',
+    imageUrl: '/mobile-brake-repairs-US-101-santa-maria.png',
     serviceArea: 'Central Coast, including US-101 corridor',
     subServices: [
         'Air Brake System Diagnostics',
@@ -72,7 +72,7 @@ export const services = [
     description: 'Comprehensive cooling system diagnostics and repairs to prevent engine overheating, crucial for vehicles operating in the variable climates of the Central Coast. We handle everything from radiator leaks to thermostat replacements.',
     imageHint: 'truck radiator',
     alt: 'Truck cooling system and radiator repair',
-    imageUrl: '/diesel-radiator-repair-central-coast.jpg',
+    imageUrl: '/diesel-radiator-repair-central-coast.png',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         'Radiator & Hose Repair',
@@ -88,7 +88,7 @@ export const services = [
     description: 'Specialized diesel particulate filter (DPF) and diesel exhaust fluid (DEF) system services. We help you meet California\'s strict emissions standards and maintain engine performance across SLO and Santa Barbara counties.',
     imageHint: 'exhaust system',
     alt: 'Truck aftertreatment system with DPF and DEF components',
-    imageUrl: '/one-box-dpf-repair-SLO-Santa-Barbara-County.jpg',
+    imageUrl: '/one-box-dpf-repair-SLO-Santa-Barbara-County.png',
     serviceArea: 'California Central Coast',
     subServices: [
         'Forced DPF Regeneration',
@@ -104,7 +104,7 @@ export const services = [
     description: 'We provide official CARB Clean Truck Check testing to ensure your heavy-duty vehicles are compliant with California\'s emissions regulations, helping you avoid penalties and keep your fleet on the road.',
     imageHint: 'emission test',
     alt: 'Mobile CARB Clean Truck Check emissions testing',
-    imageUrl: '/clean-truck-check-santa-maria.jpg',
+    imageUrl: '/clean-truck-check-santa-maria.png',
     serviceArea: 'California Central Coast',
     subServices: [
         'Official On-Board Diagnostics (OBD) Data Submission',
