@@ -5,19 +5,15 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { COMPANY_NAME, PHONE_NUMBER, SERVICE_AREA, EMAIL_ADDRESS } from '@/lib/constants';
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
-import type { Metadata } from 'next';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm, type SubmitHandler } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Toaster } from '@/components/ui/toaster';
 
-// export const metadata: Metadata = {
-//   title: 'Contact Us - Mobile Diesel Mechanic Service',
-//   description: `Contact ${COMPANY_NAME} for 24/7 mobile diesel repair. Call us, send a message, or find our service area information. We serve ${SERVICE_AREA}.`,
-// };
 
 const FormSchema = z.object({
     name: z.string().min(2, 'Name is required.'),
@@ -31,7 +27,8 @@ type FormValues = z.infer<typeof FormSchema>;
 
 
 export default function ContactPage() {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({
+  const { toast } = useToast();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<FormValues>({
       resolver: zodResolver(FormSchema),
   });
 
@@ -46,11 +43,24 @@ Service Needed: ${data.service}
 Message:
 ${data.message}`
       );
+      
+      // Still uses mailto, but now we provide user feedback.
       window.location.href = `mailto:${EMAIL_ADDRESS}?subject=${subject}&body=${body}`;
+
+      // Show a success message
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. We will get back to you shortly.",
+      });
+
+      // Reset the form
+      reset();
   };
 
 
   return (
+    <>
+    <Toaster />
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold font-headline text-primary">
@@ -155,5 +165,6 @@ ${data.message}`
         </div>
       </div>
     </div>
+    </>
   );
 }
