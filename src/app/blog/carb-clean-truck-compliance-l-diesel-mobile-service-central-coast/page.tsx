@@ -47,7 +47,7 @@ export default function BlogPostPage() {
                     
                     <div className="my-8">
                         <Image
-                            src="https://placehold.co/800x400.png"
+                            src="https://i.imgur.com/e3n0d52.jpeg"
                             alt="CARB Clean Truck Check testing being performed on a heavy-duty truck"
                             data-ai-hint="emission test"
                             width={800}

@@ -55,7 +55,7 @@ export default function DieselMechanicPage() {
           </div>
           <div>
             <Image
-              src="https://placehold.co/600x400.png"
+              src="https://i.imgur.com/r62a2C2.jpeg"
               alt="Professional diesel mechanic at work on a semi-truck"
               data-ai-hint="diesel engine"
               width={600}

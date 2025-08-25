@@ -24,7 +24,7 @@ export const services = [
     description: '24/7 emergency support for unexpected breakdowns. We provide fast, reliable roadside assistance to get you back on the road anytime, anywhere on the Central Coast, from Paso Robles to Santa Barbara.',
     imageHint: 'towing truck',
     alt: 'Emergency roadside assistance for a heavy-duty truck',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/r23nLw5.png',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         '24/7 Emergency Dispatch',
@@ -40,7 +40,7 @@ export const services = [
     description: 'Complete mobile tire services, including repairs, replacements, and installations for commercial trucks and agricultural equipment in the Santa Maria Valley and beyond. We bring the tire shop to you.',
     imageHint: 'truck tire',
     alt: 'Mobile tire service for a commercial semi-truck',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/Vna5g6N.jpeg',
     serviceArea: 'Santa Maria Valley & SLO County',
     subServices: [
         'Tire Repair & Patching',
@@ -56,7 +56,7 @@ export const services = [
     description: 'Expert on-site brake repairs and inspections for heavy-duty trucks. We service air brakes and hydraulic systems to ensure your vehicle meets DOT standards and operates safely on highways like the US-101.',
     imageHint: 'truck brakes',
     alt: 'Mobile brake repair for a heavy-duty truck',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/m2p2g0p.jpeg',
     serviceArea: 'Central Coast, including US-101 corridor',
     subServices: [
         'Air Brake System Diagnostics',
@@ -72,7 +72,7 @@ export const services = [
     description: 'Comprehensive cooling system diagnostics and repairs to prevent engine overheating, crucial for vehicles operating in the variable climates of the Central Coast. We handle everything from radiator leaks to thermostat replacements.',
     imageHint: 'truck radiator',
     alt: 'Truck cooling system and radiator repair',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/BH41tPlatform.jpeg',
     serviceArea: 'San Luis Obispo & Santa Barbara Counties',
     subServices: [
         'Radiator & Hose Repair',
@@ -88,7 +88,7 @@ export const services = [
     description: 'Specialized diesel particulate filter (DPF) and diesel exhaust fluid (DEF) system services. We help you meet California\'s strict emissions standards and maintain engine performance across SLO and Santa Barbara counties.',
     imageHint: 'exhaust system',
     alt: 'Truck aftertreatment system with DPF and DEF components',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/G20E21s.jpeg',
     serviceArea: 'California Central Coast',
     subServices: [
         'Forced DPF Regeneration',
@@ -104,7 +104,7 @@ export const services = [
     description: 'We provide official CARB Clean Truck Check testing to ensure your heavy-duty vehicles are compliant with California\'s emissions regulations, helping you avoid penalties and keep your fleet on the road.',
     imageHint: 'emission test',
     alt: 'Mobile CARB Clean Truck Check emissions testing',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/e3n0d52.jpeg',
     serviceArea: 'California Central Coast',
     subServices: [
         'Official On-Board Diagnostics (OBD) Data Submission',
@@ -120,7 +120,7 @@ export const services = [
     description: 'Advanced mobile engine diagnostics to accurately identify issues. Our mechanics perform expert repairs on all major diesel engine makes and models, serving industries from agriculture in Santa Maria to transport in San Luis Obispo.',
     imageHint: 'diesel engine',
     alt: 'Mobile diesel engine diagnostics and repair',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/r62a2C2.jpeg',
     serviceArea: 'San Luis Obispo & Santa Maria',
     subServices: [
         'Check Engine Light Diagnostics',
@@ -136,7 +136,7 @@ export const services = [
     description: 'On-site diagnosis and repair of complex truck electrical systems. We service batteries, alternators, starters, and wiring to resolve power issues quickly and efficiently, wherever you are located.',
     imageHint: 'truck wiring',
     alt: 'Mobile repair of a truck\'s electrical system',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/kQo4J42.jpeg',
     serviceArea: 'Central Coast',
     subServices: [
         'Battery Testing & Replacement',
@@ -152,7 +152,7 @@ export const services = [
     description: 'Complete fuel system services to ensure optimal engine efficiency and power. We repair and replace fuel pumps, injectors, and filters to resolve performance problems for fleets and independent operators.',
     imageHint: 'fuel tank',
     alt: 'Repair of a diesel fuel system',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/lM38Zod.jpeg',
     serviceArea: 'Paso Robles to Santa Barbara',
      subServices: [
         'Fuel Filter Replacement',
@@ -168,7 +168,7 @@ export const services = [
     description: 'Expert mobile repairs for hydraulic systems on heavy equipment and vehicle suspensions. We service everything from hydraulic leaks to air suspension components for agricultural machinery and commercial trucks.',
     imageHint: 'truck suspension',
     alt: 'Mobile repair of truck hydraulic and suspension systems',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/mOxfg6C.jpeg',
     serviceArea: 'Santa Maria & San Luis Obispo Agricultural Areas',
      subServices: [
         'Hydraulic Hose Repair',
@@ -184,7 +184,7 @@ export const services = [
     description: 'Customized preventive maintenance programs for commercial fleets in San Luis Obispo and Santa Barbara counties. We help you minimize downtime, reduce costs, and extend the life of your vehicles with on-site service.',
     imageHint: 'fleet trucks',
     alt: 'Mobile maintenance service for a fleet of commercial trucks',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://i.imgur.com/5zY2zFz.jpeg',
     serviceArea: 'Central Coast Fleets',
      subServices: [
         'Scheduled Oil & Filter Changes',
@@ -302,7 +302,7 @@ export const blogPosts = [
     excerpt: 'Stay compliant with California\'s Clean Truck Check program. We offer mobile testing and on-site emissions repair in San Luis Obispo & Santa Barbara Counties.',
     date: 'July 26, 2024',
     category: 'Compliance Guide',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://i.imgur.com/e3n0d52.jpeg',
     imageHint: 'emission test',
     alt: 'Mobile CARB Clean Truck Check testing being performed',
   },
