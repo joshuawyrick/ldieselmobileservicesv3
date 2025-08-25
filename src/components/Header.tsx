@@ -14,10 +14,10 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-md">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-[102px]">
-          <div className="flex-1 flex justify-start">
+        <div className="flex h-[102px] items-center justify-between">
+          <div className="flex flex-1 justify-start">
             <Link href="/" className="flex items-center space-x-2">
                 <Image
                 src="https://i.imgur.com/anSw5aG.png"
@@ -30,7 +30,7 @@ export default function Header() {
             </Link>
           </div>
 
-          <nav className="hidden lg:flex items-center justify-center flex-1 space-x-8">
+          <nav className="hidden lg:flex flex-1 items-center justify-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -42,7 +42,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex-1 flex items-center justify-end">
+          <div className="flex flex-1 items-center justify-end">
              <a href={`tel:${PHONE_NUMBER}`} className="hidden md:inline-flex btn btn-primary">
                 Call Now
              </a>
