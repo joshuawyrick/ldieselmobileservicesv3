@@ -47,12 +47,11 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://images.unsplash.com/photo-1533106418989-88406e768d67?q=80&w=2070&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/emergency-roadside-assistance-central-coast.jpg"
               alt="Emergency roadside assistance for a heavy-duty truck on the Central Coast"
               className="w-full h-full object-cover"
               fill
               priority
-              data-ai-hint="truck roadside night"
             />
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
