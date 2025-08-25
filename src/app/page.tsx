@@ -156,7 +156,7 @@ export default function Home() {
              <div className="btn-primary border-2 border-foreground rounded-2xl shadow-card p-10 text-center max-w-4xl mx-auto mb-24">
                 <h2 className="text-4xl md:text-5xl text-accent-foreground">Need a Heavy-Duty Mobile Mechanic Now?</h2>
                 <p className="text-lg text-accent-foreground/90 mt-4">Call us 24/7 for immediate mobile diesel repair near you.</p>
-                <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground hover:-translate-y-0.5 transition-transform">
+                <a href={`tel:${PHONE_NUMBER}`} className="inline-block bg-white text-black font-headline text-3xl md:text-4xl py-4 px-8 rounded-full mt-6 border-2 border-foreground">
                     {PHONE_NUMBER}
                 </a>
             </div>
