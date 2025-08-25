@@ -83,12 +83,6 @@ export default function Header() {
                       </Link>
                     ))}
                   </nav>
-                   <div className="mt-8 pt-8 border-t">
-                    <a href={`tel:${PHONE_NUMBER}`} className="w-full btn btn-primary text-lg py-3 px-6 whitespace-nowrap">
-                        <Phone className="mr-2 h-5 w-5" />
-                        Call Now
-                    </a>
-                   </div>
                 </div>
               </SheetContent>
             </Sheet>
