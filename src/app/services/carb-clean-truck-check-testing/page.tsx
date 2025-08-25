@@ -50,7 +50,7 @@ export default function ServiceDetailPage() {
 
         <div className="my-8">
             <Image 
-                src="/CARB-Clean-Truck-Check-Credentialed-Tester.png"
+                src="/CARB-clean-truck-testing-san-luis-obispo-county.png"
                 alt={service.title}
                 width={800}
                 height={400}
@@ -60,7 +60,7 @@ export default function ServiceDetailPage() {
 
         <div className="prose max-w-none prose-h2:text-primary prose-h2:uppercase prose-h2:font-headline prose-h3:text-primary prose-h3:uppercase prose-h3:font-headline prose-headings:font-headline prose-headings:uppercase prose-strong:text-foreground">
             <p>
-                At {COMPANY_NAME}, we understand that downtime is costly. That's why we bring our expert {service.title} directly to your location. Our mobile service trucks are fully equipped with advanced diagnostic tools and high-quality parts to perform tests efficiently and effectively, minimizing your vehicle's time off the road.
+                At ${COMPANY_NAME}, we understand that downtime is costly. That's why we bring our expert {service.title} directly to your location. Our mobile service trucks are fully equipped with advanced diagnostic tools and high-quality parts to perform tests efficiently and effectively, minimizing your vehicle's time off the road.
             </p>
             <h2>Stay Compliant with California's Clean Truck Check Program</h2>
             <p>
@@ -133,7 +133,7 @@ export default function ServiceDetailPage() {
 
         {/* Why Choose Us */}
         <div className="my-16">
-            <h2 className="text-3xl font-bold font-headline text-primary text-center mb-8">Why Choose {COMPANY_NAME}?</h2>
+            <h2 className="text-3xl font-bold font-headline text-primary text-center mb-8">Why Choose ${COMPANY_NAME}?</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="p-6 border rounded-lg bg-card text-center">
                     <Award className="h-10 w-10 text-primary mx-auto mb-4" />
