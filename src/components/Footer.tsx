@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="lg:col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
                <Image
-                src="https://i.imgur.com/anSw5aG.png"
+                src="https://i.imgur.com/A685y9j.png"
                 alt={`${COMPANY_NAME} logo`}
                 width={200}
                 height={80}
