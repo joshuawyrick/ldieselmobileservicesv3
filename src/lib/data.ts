@@ -184,7 +184,7 @@ export const services = [
     description: 'Customized preventive maintenance programs for commercial fleets in San Luis Obispo and Santa Barbara counties. We help you minimize downtime, reduce costs, and extend the life of your vehicles with on-site service.',
     imageHint: 'fleet trucks',
     alt: 'Mobile maintenance service for a fleet of commercial trucks',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: '/mobile-fleet-maintenance-central-coast.jpg',
     serviceArea: 'Central Coast Fleets',
      subServices: [
         'Scheduled Oil & Filter Changes',
