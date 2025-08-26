@@ -46,7 +46,7 @@ export default function ServiceDetailPage() {
       <section className="relative h-[400px] overflow-hidden bg-background flex items-center justify-center text-center text-foreground">
          <div className="absolute inset-0 w-full h-full">
             <Image
-              src="https://images.unsplash.com/photo-1543315796-a8138e62f026?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/diesel-engine-diagnostics-paso-robles-ca.png"
               alt="Mobile diesel engine diagnostics and repair"
               className="w-full h-full object-cover"
               fill
