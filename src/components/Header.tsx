@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { navLinks } from '@/lib/data';
 import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
 import Image from 'next/image';
@@ -51,9 +51,9 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-8">
-                    <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-2">
+                <SheetHeader className='p-4 text-left'>
+                  <SheetTitle>
+                     <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-2">
                        <Image
                         src="https://i.imgur.com/pHfPUUt.png"
                         alt={`${COMPANY_NAME} logo`}
@@ -62,11 +62,12 @@ export default function Header() {
                         className="h-auto"
                       />
                     </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                      <X className="h-6 w-6" />
-                      <span className="sr-only">Close menu</span>
-                    </Button>
-                  </div>
+                  </SheetTitle>
+                  <SheetDescription>
+                    Mobile navigation menu
+                  </SheetDescription>
+                </SheetHeader>
+                <div className="p-4">
                   <nav className="flex flex-col space-y-4">
                     {navLinks.map((link) => (
                       <Link
